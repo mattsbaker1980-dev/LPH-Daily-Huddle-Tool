@@ -100,14 +100,14 @@ function commitmentCard(dept, p) {
     <details><summary>Jobs on the 8 AM board (${p.jobs.length})</summary><table><tr><th>Type</th><th>Job</th><th class="n">Sold $</th><th>Not counted because</th></tr>${rows}</table></details></div>`;
 }
 
-function resultsCard(dept, r, why, plan) {
+function resultsCard(dept, r, why, plan, whyLong) {
   if (!r) return `<div class="card"><h3>${dept}</h3><p class="empty">No completed-job data yet.</p></div>`;
   const plain = String(Math.round(r.actual * 100) / 100);
   let h = `<div class="card"><h3>${dept}</h3><div class="fields">
     <div class="lab">Actual revenue</div>${copyable(plain, money2(r.actual))}
     <div class="lab">Projection (8 AM board)</div><span class="val" style="cursor:default">${money(r.projection)}</span>
     <div class="lab">Variance vs projection</div><span>${pill(r.variance)}</span></div>
-    <div class="why"><button data-copy="${esc(why)}">Copy</button><p>${esc(why)}</p></div>`;
+    <div class="why"><button data-copy="${esc(why)}">Copy</button><p>${esc(why)}</p></div>${whyLong ? `<details><summary>Full explanation</summary><p class="muted" style="font-size:13px;line-height:1.45">${esc(whyLong)}</p></details>` : ''}`;
   if (r.check) h += `<div class="check ${r.check.ok ? '' : 'no'}">${r.check.ok ? '✓' : '⚠'} ${r.jobsCompleted} completed job(s) totaling ${money2(r.actual)} — ${r.check.ok ? 'every dollar of the variance is explained below' : 'unexplained ' + money2(r.unexplained)}</div>`;
   if (r.effects && r.effects.length) {
     const eff = r.effects.filter((e) => Math.abs(e.amount) >= 0.5).sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount));
@@ -138,7 +138,7 @@ async function render(date) {
   let h = '';
   h += `<h2>Yesterday's Results <small>${prev ? fmtDate(prev, true) : ''} — enter Actual + the "why"</small></h2>`;
   if (yest && yest.results) {
-    h += `<div class="grid">${DEPTS.map((d) => resultsCard(d, yest.results.depts[d], yest.why[d], yest.plan && yest.plan.depts[d])).join('')}</div>`;
+    h += `<div class="grid">${DEPTS.map((d) => resultsCard(d, yest.results.depts[d], yest.why[d], yest.plan && yest.plan.depts[d], (yest.whyLong || {})[d])).join('')}</div>`;
     h += `<div class="legend">Completed jobs from ServiceTitan's Daily Job Detail (${esc(yest.results.source)}). Revenue = Jobs Total Revenue, which matches the ServiceTitan dashboard.</div>`;
   } else h += `<p class="empty">No completed-job data for the previous working day yet — it arrives in the 8 AM Daily Job Report.</p>`;
   h += `<h2>Today's Commitment <small>${fmtDate(date, true)} — from the ${today && today.plan ? '8 AM' : ''} board</small></h2>`;

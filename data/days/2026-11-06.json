@@ -1,6 +1,6 @@
 {
  "date": "2026-11-06",
- "generatedAt": "2026-11-06T17:38:01.158Z",
+ "generatedAt": "2026-11-06T17:59:53.911Z",
  "plan": {
   "date": "2026-11-06",
   "capturedFrom": "10_Sold Work_Dated 11_06_26 - 11_06_26.xlsx",
@@ -521,5 +521,6 @@
   }
  },
  "results": null,
- "why": {}
+ "why": {},
+ "whyLong": {}
 }

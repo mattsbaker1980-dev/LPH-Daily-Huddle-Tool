@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "generatedAt": "2026-11-06T17:38:01.144Z",
+ "generatedAt": "2026-11-06T17:59:53.894Z",
  "plan": {
   "date": "2026-10-29",
   "capturedFrom": "3_Sold Work_Dated 10_29_26 - 10_29_26.xlsx",
@@ -978,6 +978,11 @@
   }
  },
  "why": {
+  "Plumbing": "Warranty/NC revenue +$1.7K · Demand conv 0% vs 72% −$1.2K · SPP conv 0% vs 40% −$700",
+  "Sewer Service": "Calls avg $401 vs $242 (Ethan $709 drain) +$318 · Calls conv 100% vs 60% +$194",
+  "Sewer Install": "On plan."
+ },
+ "whyLong": {
   "Plumbing": "Plumbing missed projection by $1,858 ($11,649 vs $13,507). Ran 2 demand calls vs 3 planned (1 closed as warranty/no-charge) -$576; converted 0 of 2 (0% vs 72%) -$1,152. Ran 5 SPP calls vs 9 planned (3 planned didn't run, 1 closed as warranty/no-charge) -$560; converted 0 of 5 (0% vs 40%) -$700. Scheduled sold work billed -$648 vs the estimate. $1,699 came from warranty/callback/no-charge calls.",
   "Sewer Service": "Sewer Service beat projection by $512 ($802 vs $290). Converted 2 of 2 (100% vs 60%) +$194; average demand ticket $401 vs $242 +$318 — Ethan's $709 drain stoppage.",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."

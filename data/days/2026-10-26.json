@@ -1,6 +1,6 @@
 {
  "date": "2026-10-26",
- "generatedAt": "2026-11-06T17:38:01.134Z",
+ "generatedAt": "2026-11-06T17:59:53.881Z",
  "plan": {
   "date": "2026-10-26",
   "capturedFrom": "0_Sold Work_Dated 10_26_26 - 10_26_26.xlsx",
@@ -1109,6 +1109,11 @@
   }
  },
  "why": {
+  "Plumbing": "Sold work not done (Josh $3.7K) −$3.7K · Demand ran 7 vs 2 (5 added) +$2.9K · SPP conv 11% vs 40% −$2K",
+  "Sewer Service": "Calls avg $130 vs $242 −$335 · Calls ran 4 vs 2 (2 added) +$290 · Calls conv 75% vs 60% +$145",
+  "Sewer Install": "On plan."
+ },
+ "whyLong": {
   "Plumbing": "Plumbing missed projection by $4,600 ($3,174 vs $7,775). Ran 7 demand calls vs 2 planned (5 added during the day) +$2,880; converted 3 of 7 (43% vs 72%) -$1,632; average demand ticket $650 vs $800 -$449. Ran 19 SPP calls vs 21 planned (2 planned didn't run) -$280; converted 2 of 19 (11% vs 40%) -$1,960; average SPP ticket $508 vs $350 +$316. $3,683 of scheduled sold work didn't finish (Josh's $3,683 sold work, completed 10/27).",
   "Sewer Service": "Sewer Service beat projection by $144 ($434 vs $290). Ran 4 demand calls vs 2 planned (2 added during the day) +$290; average demand ticket $130 vs $242 -$335.",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."

@@ -1,6 +1,6 @@
 {
  "date": "2026-11-03",
- "generatedAt": "2026-11-06T17:38:01.151Z",
+ "generatedAt": "2026-11-06T17:59:53.903Z",
  "plan": {
   "date": "2026-11-03",
   "capturedFrom": "7_Sold Work_Dated 11_03_26 - 11_03_26.xlsx",
@@ -1098,6 +1098,11 @@
   }
  },
  "why": {
+  "Plumbing": "Demand avg $1,437 vs $800 (Derrick $3.3K WH) +$1.9K · Sold work added (Ethan $1.5K) +$1.5K · Demand conv 50% vs 72% −$1.1K",
+  "Sewer Service": "Calls avg $93 vs $242 −$298 · Calls conv 100% vs 60% +$194 · Calls ran 2 vs 1 (1 added) +$145",
+  "Sewer Install": "On plan."
+ },
+ "whyLong": {
   "Plumbing": "Plumbing beat projection by $1,919 ($11,480 vs $9,560). Ran 6 demand calls vs 5 planned (2 planned didn't run, 3 added during the day) +$576; converted 3 of 6 (50% vs 72%) -$1,056; average demand ticket $1,437 vs $800 +$1,912 — Derrick's $3,291 water heater. Ran 8 SPP calls vs 13 planned (5 planned didn't run) -$700; converted 1 of 8 (13% vs 40%) -$770; average SPP ticket $804 vs $350 +$454. $1,504 of sold work was added after the morning board (Ethan's $1,504).",
   "Sewer Service": "Sewer Service landed right on projection ($186 vs $145). Ran 2 demand calls vs 1 planned (1 added during the day); converted 2 of 2 (100% vs 60%) +$194; average demand ticket $93 vs $242 -$298.",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 1 scheduled."

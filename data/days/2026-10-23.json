@@ -1,6 +1,6 @@
 {
  "date": "2026-10-23",
- "generatedAt": "2026-11-06T17:38:01.101Z",
+ "generatedAt": "2026-11-06T17:59:53.864Z",
  "plan": null,
  "results": {
   "date": "2026-10-23",
@@ -34,6 +34,11 @@
   }
  },
  "why": {
+  "Plumbing": "No 8 AM board saved for this day.",
+  "Sewer Service": "No 8 AM board saved for this day.",
+  "Sewer Install": "No 8 AM board saved for this day."
+ },
+ "whyLong": {
   "Plumbing": "No morning board snapshot was saved for this day, so there's no projection to compare against. Actual: $8,181.",
   "Sewer Service": "No morning board snapshot was saved for this day, so there's no projection to compare against. Actual: $1,280.",
   "Sewer Install": "No morning board snapshot was saved for this day, so there's no projection to compare against. Actual: $0."

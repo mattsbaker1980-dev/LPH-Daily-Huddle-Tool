@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generatedAt": "2026-11-06T17:38:01.156Z",
+ "generatedAt": "2026-11-06T17:59:53.909Z",
  "plan": {
   "date": "2026-11-05",
   "capturedFrom": "9_Sold Work_Dated 11_05_26 - 11_05_26.xlsx",
@@ -965,6 +965,11 @@
   }
  },
  "why": {
+  "Plumbing": "Demand conv 43% vs 72% −$1.6K · Demand avg $1,309 vs $800 (Layne $2K faucet) +$1.5K · SPP ran 5 vs 12 (7 didn't run) −$980",
+  "Sewer Service": "Calls avg $93 vs $242 −$149 · Calls ran 2 vs 1 (1 added) +$145",
+  "Sewer Install": "On plan."
+ },
+ "whyLong": {
   "Plumbing": "Plumbing missed projection by $1,396 ($20,303 vs $21,700). Ran 7 demand calls vs 6 planned (1 closed as warranty/no-charge, 2 added during the day); converted 3 of 7 (43% vs 72%) -$1,632; average demand ticket $1,309 vs $800 +$1,526 — Layne's $2,037 faucet concern. Ran 5 SPP calls vs 12 planned (7 planned didn't run) -$980.",
   "Sewer Service": "Sewer Service missed projection by $52 ($93 vs $145). Ran 2 demand calls vs 1 planned (1 added during the day).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."

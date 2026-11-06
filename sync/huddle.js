@@ -378,6 +378,33 @@ function whySentence(dept, r, P) {
   return head + ' ' + parts.map((x) => cap(x) + '.').join(' ');
 }
 
+
+// ------------------------------------------------------------------ short one-line "why" (fits the Lovable box)
+const kmoney = (n) => { const a = Math.abs(n); return '$' + (a >= 1000 ? (Math.round(a / 100) / 10).toString().replace(/\.0$/, '') + 'K' : Math.round(a).toString()); };
+const kdelta = (n) => (n >= 0 ? '+' : '−') + kmoney(n);
+const SHORTJ = (t) => shortJob(t).replace('tankless water heater', 'tankless').replace('water heater', 'WH').replace('system check', 'sys ck').replace(/sewer camera.*/, 'camera').replace(/ concern$/, '').replace(/drain stoppage/, 'drain');
+function whyShort(dept, r) {
+  if (r.projection == null) return 'No 8 AM board saved for this day.';
+  const name = (k) => (k === 'spp' ? 'SPP' : dept === 'Plumbing' ? 'Demand' : 'Calls');
+  const phrase = (e) => {
+    const c = r.cats[e.cat] || {};
+    if (/_volume$/.test(e.key)) { const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went NC`); if (c.addedRan) x.push(`${c.addedRan} added`); return `${name(e.cat)} ran ${c.ran} vs ${c.planned}${x.length ? ' (' + x.join(', ') + ')' : ''}`; }
+    if (/_conversion$/.test(e.key)) return `${name(e.cat)} conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}%`;
+    if (/_ticket$/.test(e.key)) { const j = (e.jobs || []).slice(0, 2).map((x) => `${firstName(x.tech)} ${kmoney(x.revenue)} ${SHORTJ(x.type)}`); return `${name(e.cat)} avg ${money(c.avgTicket)} vs ${money(c.planAvg)}${e.amount > 0 && j.length ? ' (' + j.join(', ') + ')' : ''}`; }
+    if (/_fees$/.test(e.key)) return `Dispatch fees on unsold calls`;
+    if (e.key === 'sold_missed') return `Sold work not done (${(e.jobs || []).slice(0, 2).map((x) => `${firstName(x.tech)} ${kmoney(x.planned)}`).join(', ')})`;
+    if (e.key === 'sold_added') return `Sold work added (${(e.jobs || []).slice(0, 2).map((x) => `${firstName(x.tech)} ${kmoney(x.actual)}`).join(', ')})`;
+    if (e.key === 'sold_diff') return `Sold work billed ${e.amount >= 0 ? 'over' : 'under'} estimate`;
+    if (e.key === 'wcn') return `Warranty/NC revenue`;
+    if (e.key === 'lead_rev') return `Sewer estimate visits`;
+    return e.label;
+  };
+  const min = Math.max(100, Math.abs(r.projection) * 0.02);
+  const top = r.effects.filter((e) => Math.abs(e.amount) >= min).sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount)).slice(0, 3);
+  if (!top.length) return Math.abs(r.variance) < 50 ? 'On plan.' : 'Small misses across the board — no single driver.';
+  return top.map((e) => `${phrase(e)} ${kdelta(e.amount)}`).join(' · ');
+}
+
 function prevWorkday(dates, date) { const ds = dates.filter((d) => d < date && isWeekday(d)); return ds.length ? ds[ds.length - 1] : null; }
 
 function analyze(repo, since) {
@@ -391,7 +418,8 @@ function analyze(repo, since) {
     const P = boards.includes(date) ? plan(repo, date) : null;
     const B = actuals.includes(date) ? bridge(repo, date, P) : null;
     const day = { date, generatedAt: new Date().toISOString(), plan: P, results: B, why: {} };
-    if (B) for (const dept of DEPTS) day.why[dept] = whySentence(dept, B.depts[dept], P);
+    day.whyLong = {};
+    if (B) for (const dept of DEPTS) { day.why[dept] = whyShort(dept, B.depts[dept]); day.whyLong[dept] = whySentence(dept, B.depts[dept], P); }
     writeJSON(path.join(repo, 'data/days', date + '.json'), day);
     index.push({ date, hasPlan: !!P, hasResults: !!B,
       projection: P ? Object.fromEntries(DEPTS.map((d) => [d, P.depts[d].projection])) : null,
