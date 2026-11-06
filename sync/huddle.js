@@ -369,7 +369,7 @@ function whySentence(dept, r, P) {
       let s = `ran ${c.ran} ${name} calls vs ${c.planned} planned`;
       const extra = [];
       if (c.missed) extra.push(`${c.missed} planned didn't run`);
-      if (c.reclassed) extra.push(`${c.reclassed} closed as warranty/no-charge`);
+      if (c.reclassed) extra.push(`${c.reclassed} went to warranty/callback`);
       if (c.addedRan) extra.push(`${c.addedRan} added during the day`);
       if (extra.length) s += ` (${extra.join(', ')})`;
       if (sig(vol.amount)) s += ` ${signed(vol.amount)}`;
@@ -411,7 +411,7 @@ const kmoney = (n) => { const a = Math.abs(n); return '$' + (a >= 1000 ? (Math.r
 const kdelta = (n) => (n >= 0 ? '+' : '−') + kmoney(n);
 const SHORTJ = (t) => shortJob(t).replace('tankless water heater', 'tankless').replace('water heater', 'WH').replace('system check', 'sys ck').replace(/sewer camera.*/, 'camera').replace(/ concern$/, '').replace(/drain stoppage/, 'drain');
 function whyShort(dept, r) {
-  // Matt's format (11/6): "Demand: Conv 43% vs 72% - Avg $1,309 vs $800 - Ran 7 vs 6 scheduled (1 went NC, 2 added). SPP: ..."
+  // Matt's format (11/6): "Demand: Conv 43% vs 72% - Avg $1,309 vs $800 - Ran 7 vs 6 scheduled (1 went to warranty/callback, 2 added). SPP: ..."
   if (r.projection == null) return 'No 8 AM board saved for this day.';
   const parts = [];
   for (const k of ['demand', 'spp']) {
@@ -420,7 +420,7 @@ function whyShort(dept, r) {
     const bits = [];
     if (c.ran) bits.push(`Conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}%`);
     if (c.converted) bits.push(`Avg ${money(c.avgTicket)} vs ${money(c.planAvg)}`);
-    const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went NC`); if (c.addedRan) x.push(`${c.addedRan} added`);
+    const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went to warranty/callback`); if (c.addedRan) x.push(`${c.addedRan} added`);
     bits.push(`Ran ${c.ran} vs ${c.planned} scheduled${x.length ? ' (' + x.join(', ') + ')' : ''}`);
     parts.push(`${k === 'spp' ? 'SPP' : 'Demand'}: ${bits.join(' - ')}.`);
   }

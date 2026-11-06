@@ -1,6 +1,6 @@
 {
  "date": "2026-10-27",
- "generatedAt": "2026-11-06T18:45:47.108Z",
+ "generatedAt": "2026-11-06T19:48:08.293Z",
  "plan": {
   "date": "2026-10-27",
   "capturedFrom": "1_Sold Work_Dated 10_27_26 - 10_27_26.xlsx",
@@ -1166,12 +1166,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 83% vs 72% - Avg $721 vs $800 - Ran 6 vs 4 scheduled (1 went NC, 3 added). SPP: Conv 14% vs 40% - Avg $414 vs $350 - Ran 14 vs 19 scheduled (4 didn't run, 1 went NC). Sold work: $4,515 vs $882 scheduled.",
+  "Plumbing": "Demand: Conv 83% vs 72% - Avg $721 vs $800 - Ran 6 vs 4 scheduled (1 went to warranty/callback, 3 added). SPP: Conv 14% vs 40% - Avg $414 vs $350 - Ran 14 vs 19 scheduled (4 didn't run, 1 went to warranty/callback). Sold work: $4,515 vs $882 scheduled.",
   "Sewer Service": "Demand: Ran 0 vs 1 scheduled (1 didn't run).",
   "Sewer Install": "On plan."
  },
  "whyLong": {
-  "Plumbing": "Plumbing beat projection by $3,101 ($8,948 vs $5,846). Ran 6 demand calls vs 4 planned (1 closed as warranty/no-charge, 3 added during the day) +$1,152; converted 5 of 6 (83% vs 72%) +$544; average demand ticket $721 vs $800 -$395. Ran 14 SPP calls vs 19 planned (4 planned didn't run, 1 closed as warranty/no-charge) -$700; converted 2 of 14 (14% vs 40%) -$1,260. $3,683 of sold work was added after the morning board (Josh's $3,683).",
+  "Plumbing": "Plumbing beat projection by $3,101 ($8,948 vs $5,846). Ran 6 demand calls vs 4 planned (1 went to warranty/callback, 3 added during the day) +$1,152; converted 5 of 6 (83% vs 72%) +$544; average demand ticket $721 vs $800 -$395. Ran 14 SPP calls vs 19 planned (4 planned didn't run, 1 went to warranty/callback) -$700; converted 2 of 14 (14% vs 40%) -$1,260. $3,683 of sold work was added after the morning board (Josh's $3,683).",
   "Sewer Service": "Sewer Service missed projection by $145 ($2,560 vs $2,705). Ran 0 demand calls vs 1 planned (1 planned didn't run).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."
  }
