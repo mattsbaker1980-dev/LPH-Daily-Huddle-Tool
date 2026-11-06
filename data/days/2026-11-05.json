@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generatedAt": "2026-11-06T18:25:04.274Z",
+ "generatedAt": "2026-11-06T18:29:03.393Z",
  "plan": {
   "date": "2026-11-05",
   "capturedFrom": "9_Sold Work_Dated 11_05_26 - 11_05_26.xlsx",
@@ -971,8 +971,8 @@
   }
  },
  "why": {
-  "Plumbing": "Demand conv 43% vs 72% −$1.6K · Demand avg $1,309 vs $800 +$1.5K · SPP ran 5 vs 12 (7 didn't run) −$980 · Other −$311",
-  "Sewer Service": "Calls avg $93 vs $242 −$149 · Calls ran 2 vs 1 (1 added) +$145",
+  "Plumbing": "Demand: conv 43% vs 72% −$1.6K, avg $1,309 vs $800 +$1.5K, ran 7 vs 6 (1 went NC, 2 added) +$576, dispatch fees on unsold calls +$177 · SPP: ran 5 vs 12 (7 didn't run) −$980, conv 20% vs 40% −$350, avg $134 vs $350 −$216 · Sold work: billed under estimate −$498",
+  "Sewer Service": "Calls: avg $93 vs $242 −$149, ran 2 vs 1 (1 added) +$145, conv 50% vs 60% −$48",
   "Sewer Install": "On plan."
  },
  "whyLong": {

@@ -1,6 +1,6 @@
 {
  "date": "2026-10-27",
- "generatedAt": "2026-11-06T18:25:04.249Z",
+ "generatedAt": "2026-11-06T18:29:03.365Z",
  "plan": {
   "date": "2026-10-27",
   "capturedFrom": "1_Sold Work_Dated 10_27_26 - 10_27_26.xlsx",
@@ -1160,8 +1160,8 @@
   }
  },
  "why": {
-  "Plumbing": "Sold work added (1 job) +$3.7K · SPP conv 14% vs 40% −$1.3K · Demand ran 6 vs 4 (1 went NC, 3 added) +$1.2K · Other −$473",
-  "Sewer Service": "Calls ran 0 vs 1 (1 didn't run) −$145",
+  "Plumbing": "Sold work: 1 job added after 8 AM +$3.7K, billed under estimate −$50 · Demand: ran 6 vs 4 (1 went NC, 3 added) +$1.2K, conv 83% vs 72% +$544, avg $721 vs $800 −$395 · SPP: conv 14% vs 40% −$1.3K, ran 14 vs 19 (4 didn't run, 1 went NC) −$700, avg $414 vs $350 +$128",
+  "Sewer Service": "Calls: ran 0 vs 1 (1 didn't run) −$145",
   "Sewer Install": "On plan."
  },
  "whyLong": {

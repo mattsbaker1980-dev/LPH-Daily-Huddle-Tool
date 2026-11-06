@@ -387,26 +387,32 @@ const kdelta = (n) => (n >= 0 ? '+' : '−') + kmoney(n);
 const SHORTJ = (t) => shortJob(t).replace('tankless water heater', 'tankless').replace('water heater', 'WH').replace('system check', 'sys ck').replace(/sewer camera.*/, 'camera').replace(/ concern$/, '').replace(/drain stoppage/, 'drain');
 function whyShort(dept, r) {
   if (r.projection == null) return 'No 8 AM board saved for this day.';
-  const name = (k) => (k === 'spp' ? 'SPP' : dept === 'Plumbing' ? 'Demand' : 'Calls');
-  const phrase = (e) => {
+  if (!r.effects || !r.effects.length) return 'On plan.';
+  const name = (k) => (k === 'spp' ? 'SPP' : dept === 'Plumbing' ? 'Demand' : dept === 'Sewer Install' ? 'Sewer install' : 'Calls');
+  const MIN = 25; // every driver of $25+ is named; nothing is lumped into "other"
+  const bit = (e) => {
     const c = r.cats[e.cat] || {};
-    if (/_volume$/.test(e.key)) { const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went NC`); if (c.addedRan) x.push(`${c.addedRan} added`); return `${name(e.cat)} ran ${c.ran} vs ${c.planned}${x.length ? ' (' + x.join(', ') + ')' : ''}`; }
-    if (/_conversion$/.test(e.key)) return `${name(e.cat)} conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}%`;
-    if (/_ticket$/.test(e.key)) return `${name(e.cat)} avg ${money(c.avgTicket)} vs ${money(c.planAvg)}`;
-    if (/_fees$/.test(e.key)) return `Dispatch fees on unsold calls`;
-    if (e.key === 'sold_missed') return `Sold work not done (${(e.jobs || []).length} job${(e.jobs || []).length === 1 ? '' : 's'})`;
-    if (e.key === 'sold_added') return `Sold work added (${(e.jobs || []).length} job${(e.jobs || []).length === 1 ? '' : 's'})`;
-    if (e.key === 'sold_diff') return `Sold work billed ${e.amount >= 0 ? 'over' : 'under'} estimate`;
-    if (e.key === 'wcn') return `Warranty/NC revenue`;
-    if (e.key === 'lead_rev') return `Sewer estimate visits`;
-    return e.label;
+    if (/_volume$/.test(e.key)) { const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went NC`); if (c.addedRan) x.push(`${c.addedRan} added`); return `ran ${c.ran} vs ${c.planned}${x.length ? ' (' + x.join(', ') + ')' : ''} ${kdelta(e.amount)}`; }
+    if (/_conversion$/.test(e.key)) return `conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}% ${kdelta(e.amount)}`;
+    if (/_ticket$/.test(e.key)) return `avg ${money(c.avgTicket)} vs ${money(c.planAvg)} ${kdelta(e.amount)}`;
+    if (/_fees$/.test(e.key)) return `dispatch fees on unsold calls ${kdelta(e.amount)}`;
+    if (e.key === 'sold_missed') { const n = (e.jobs || []).length; return `${n} scheduled job${n === 1 ? '' : 's'} didn't finish ${kdelta(e.amount)}`; }
+    if (e.key === 'sold_added') { const n = (e.jobs || []).length; return `${n} job${n === 1 ? '' : 's'} added after 8 AM ${kdelta(e.amount)}`; }
+    if (e.key === 'sold_diff') return `billed ${e.amount >= 0 ? 'over' : 'under'} estimate ${kdelta(e.amount)}`;
+    if (e.key === 'wcn') return `revenue on warranty/NC calls ${kdelta(e.amount)}`;
+    if (e.key === 'lead_rev') return `estimate visits ${kdelta(e.amount)}`;
+    return `${e.label} ${kdelta(e.amount)}`;
   };
-  const min = Math.max(100, Math.abs(r.projection) * 0.02);
-  const top = r.effects.filter((e) => Math.abs(e.amount) >= min).sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount)).slice(0, 3);
-  if (!top.length) return Math.abs(r.variance) < 50 ? 'On plan.' : 'Small misses across the board — no single driver.';
-  const shown = top.reduce((a, e) => a + e.amount, 0);
-  const rest = r.variance - shown;
-  return top.map((e) => `${phrase(e)} ${kdelta(e.amount)}`).join(' · ') + (Math.abs(rest) >= 50 ? ` · Other ${kdelta(rest)}` : '');
+  const groups = {};
+  for (const e of r.effects) {
+    if (Math.abs(e.amount) < MIN) continue;
+    const g = e.cat === 'sold' ? 'Sold work' : e.cat === 'wcn' ? 'Warranty/NC' : e.cat === 'lead' ? 'Sewer leads' : name(e.cat);
+    (groups[g] = groups[g] || []).push(e);
+  }
+  const ordered = Object.entries(groups).map(([g, es]) => ({ g, es: es.sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount)), size: es.reduce((a, e) => a + Math.abs(e.amount), 0) }))
+    .sort((a, b) => b.size - a.size);
+  if (!ordered.length) return 'On plan.';
+  return ordered.map((x) => (x.g === 'Warranty/NC' ? x.es.map(bit).join(', ') : `${x.g}: ${x.es.map(bit).join(', ')}`)).join(' · ');
 }
 
 function prevWorkday(dates, date) { const ds = dates.filter((d) => d < date && isWeekday(d)); return ds.length ? ds[ds.length - 1] : null; }
