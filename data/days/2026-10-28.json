@@ -1,6 +1,6 @@
 {
  "date": "2026-10-28",
- "generatedAt": "2026-11-06T18:29:03.371Z",
+ "generatedAt": "2026-11-06T18:36:16.777Z",
  "plan": {
   "date": "2026-10-28",
   "capturedFrom": "2_Sold Work_Dated 10_28_26 - 10_28_26.xlsx",
@@ -1242,8 +1242,8 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: avg $2,547 vs $800 +$5.2K, ran 4 vs 5 (3 didn't run, 2 added) −$576, conv 75% vs 72% +$96 · SPP: ran 14 vs 18 (4 didn't run) −$560, conv 29% vs 40% −$560, avg $319 vs $350 −$125",
-  "Sewer Service": "Calls: ran 2 vs 0 (2 added) +$290, conv 100% vs 60% +$194, avg $149 vs $242 −$186",
+  "Plumbing": "Demand: Conv 75% vs 72% - Avg $2,547 vs $800 - Ran 4 vs 5 scheduled (3 didn't run, 2 added). SPP: Conv 29% vs 40% - Avg $319 vs $350 - Ran 14 vs 18 scheduled (4 didn't run).",
+  "Sewer Service": "Demand: Conv 100% vs 60% - Avg $149 vs $242 - Ran 2 vs 0 scheduled (2 added).",
   "Sewer Install": "On plan."
  },
  "whyLong": {

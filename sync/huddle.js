@@ -386,33 +386,24 @@ const kmoney = (n) => { const a = Math.abs(n); return '$' + (a >= 1000 ? (Math.r
 const kdelta = (n) => (n >= 0 ? '+' : '−') + kmoney(n);
 const SHORTJ = (t) => shortJob(t).replace('tankless water heater', 'tankless').replace('water heater', 'WH').replace('system check', 'sys ck').replace(/sewer camera.*/, 'camera').replace(/ concern$/, '').replace(/drain stoppage/, 'drain');
 function whyShort(dept, r) {
+  // Matt's format (11/6): "Demand: Conv 43% vs 72% - Avg $1,309 vs $800 - Ran 7 vs 6 scheduled (1 went NC, 2 added). SPP: ..."
   if (r.projection == null) return 'No 8 AM board saved for this day.';
-  if (!r.effects || !r.effects.length) return 'On plan.';
-  const name = (k) => (k === 'spp' ? 'SPP' : dept === 'Plumbing' ? 'Demand' : dept === 'Sewer Install' ? 'Sewer install' : 'Calls');
-  const MIN = 25; // every driver of $25+ is named; nothing is lumped into "other"
-  const bit = (e) => {
-    const c = r.cats[e.cat] || {};
-    if (/_volume$/.test(e.key)) { const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went NC`); if (c.addedRan) x.push(`${c.addedRan} added`); return `ran ${c.ran} vs ${c.planned}${x.length ? ' (' + x.join(', ') + ')' : ''} ${kdelta(e.amount)}`; }
-    if (/_conversion$/.test(e.key)) return `conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}% ${kdelta(e.amount)}`;
-    if (/_ticket$/.test(e.key)) return `avg ${money(c.avgTicket)} vs ${money(c.planAvg)} ${kdelta(e.amount)}`;
-    if (/_fees$/.test(e.key)) return `dispatch fees on unsold calls ${kdelta(e.amount)}`;
-    if (e.key === 'sold_missed') { const n = (e.jobs || []).length; return `${n} scheduled job${n === 1 ? '' : 's'} didn't finish ${kdelta(e.amount)}`; }
-    if (e.key === 'sold_added') { const n = (e.jobs || []).length; return `${n} job${n === 1 ? '' : 's'} added after 8 AM ${kdelta(e.amount)}`; }
-    if (e.key === 'sold_diff') return `billed ${e.amount >= 0 ? 'over' : 'under'} estimate ${kdelta(e.amount)}`;
-    if (e.key === 'wcn') return `revenue on warranty/NC calls ${kdelta(e.amount)}`;
-    if (e.key === 'lead_rev') return `estimate visits ${kdelta(e.amount)}`;
-    return `${e.label} ${kdelta(e.amount)}`;
-  };
-  const groups = {};
-  for (const e of r.effects) {
-    if (Math.abs(e.amount) < MIN) continue;
-    const g = e.cat === 'sold' ? 'Sold work' : e.cat === 'wcn' ? 'Warranty/NC' : e.cat === 'lead' ? 'Sewer leads' : name(e.cat);
-    (groups[g] = groups[g] || []).push(e);
+  const parts = [];
+  for (const k of ['demand', 'spp']) {
+    const c = r.cats[k]; if (!c || !c.planAvg) continue;
+    if (!c.ran && !c.planned) continue;
+    const bits = [];
+    if (c.ran) bits.push(`Conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}%`);
+    if (c.converted) bits.push(`Avg ${money(c.avgTicket)} vs ${money(c.planAvg)}`);
+    const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went NC`); if (c.addedRan) x.push(`${c.addedRan} added`);
+    bits.push(`Ran ${c.ran} vs ${c.planned} scheduled${x.length ? ' (' + x.join(', ') + ')' : ''}`);
+    parts.push(`${k === 'spp' ? 'SPP' : 'Demand'}: ${bits.join(' - ')}.`);
   }
-  const ordered = Object.entries(groups).map(([g, es]) => ({ g, es: es.sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount)), size: es.reduce((a, e) => a + Math.abs(e.amount), 0) }))
-    .sort((a, b) => b.size - a.size);
-  if (!ordered.length) return 'On plan.';
-  return ordered.map((x) => (x.g === 'Warranty/NC' ? x.es.map(bit).join(', ') : `${x.g}: ${x.es.map(bit).join(', ')}`)).join(' · ');
+  const sw = r.cats.sold;
+  if (sw && (sw.planned || sw.actual) && Math.abs(sw.actual - sw.planned) >= 500) parts.push(`Sold work: ${money(sw.actual)} vs ${money(sw.planned)} scheduled.`);
+  const ld = r.cats.lead;
+  if (dept === 'Sewer Install' && ld && (ld.ran || ld.planned)) parts.push(`Leads: Ran ${ld.ran} vs ${ld.planned} scheduled.`);
+  return parts.length ? parts.join(' ') : 'On plan.';
 }
 
 function prevWorkday(dates, date) { const ds = dates.filter((d) => d < date && isWeekday(d)); return ds.length ? ds[ds.length - 1] : null; }

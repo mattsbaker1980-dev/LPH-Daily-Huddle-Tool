@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generatedAt": "2026-11-06T18:29:03.390Z",
+ "generatedAt": "2026-11-06T18:36:16.795Z",
  "plan": {
   "date": "2026-11-04",
   "capturedFrom": "8_Sold Work_Dated 11_04_26 - 11_04_26.xlsx",
@@ -1163,9 +1163,9 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: avg $2,429 vs $800 +$11.4K, ran 10 vs 8 (1 didn't run, 1 went NC, 4 added) +$1.2K, conv 70% vs 72% −$160, dispatch fees on unsold calls +$49 · SPP: avg $2,684 vs $350 +$4.7K, ran 5 vs 12 (7 didn't run) −$980 · Sold work: billed under estimate −$50",
-  "Sewer Service": "Calls: avg $466 vs $242 +$448, ran 2 vs 0 (2 added) +$290, conv 100% vs 60% +$194",
-  "Sewer Install": "On plan."
+  "Plumbing": "Demand: Conv 70% vs 72% - Avg $2,429 vs $800 - Ran 10 vs 8 scheduled (1 didn't run, 1 went NC, 4 added). SPP: Conv 40% vs 40% - Avg $2,684 vs $350 - Ran 5 vs 12 scheduled (7 didn't run).",
+  "Sewer Service": "Demand: Conv 100% vs 60% - Avg $466 vs $242 - Ran 2 vs 0 scheduled (2 added).",
+  "Sewer Install": "Leads: Ran 1 vs 2 scheduled."
  },
  "whyLong": {
   "Plumbing": "Plumbing beat projection by $16,080 ($25,542 vs $9,461). Ran 10 demand calls vs 8 planned (1 planned didn't run, 1 closed as warranty/no-charge, 4 added during the day) +$1,152; average demand ticket $2,429 vs $800 +$11,401 — Ethan's $7,839 water heater, Derrick's $4,306 water heater, Robert's $3,637 water heater. Ran 5 SPP calls vs 12 planned (7 planned didn't run) -$980; average SPP ticket $2,684 vs $350 +$4,669 — Layne's $5,230 system check.",
