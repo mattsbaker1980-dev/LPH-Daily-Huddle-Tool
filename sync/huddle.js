@@ -130,7 +130,8 @@ function ingest(repo, files) {
       const p = path.join(repo, 'data/board', date + '.json');
       const prev = readJSON(p, null);
       // keep the FIRST (morning) snapshot as the plan; later copies are stored as "latest" for reference
-      if (prev && prev.capturedFrom === path.basename(f)) { console.log(`BOARD ${date} already saved`); continue; }
+      const base = path.basename(f).replace(/^\d+_/, '');
+      if (prev && String(prev.capturedFrom).replace(/^\d+_/, '') === base) { console.log(`BOARD ${date} already saved`); continue; }
       if (prev && prev.jobs) {
         prev.latest = { capturedFrom: path.basename(f), jobs };
         writeJSON(p, prev);
