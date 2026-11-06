@@ -1,0 +1,41 @@
+{
+ "date": "2026-10-23",
+ "generatedAt": "2026-11-06T16:16:21.842Z",
+ "plan": null,
+ "results": {
+  "date": "2026-10-23",
+  "source": "4_Daily Job Detail_Dated 10_23_26 - 10_29_26.xlsx",
+  "firstTotal": 9460.95,
+  "depts": {
+   "Plumbing": {
+    "actual": 8180.82,
+    "projection": null,
+    "jobsCompleted": 22,
+    "effects": [],
+    "cats": {},
+    "lists": {}
+   },
+   "Sewer Service": {
+    "actual": 1280.13,
+    "projection": null,
+    "jobsCompleted": 1,
+    "effects": [],
+    "cats": {},
+    "lists": {}
+   },
+   "Sewer Install": {
+    "actual": 0,
+    "projection": null,
+    "jobsCompleted": 0,
+    "effects": [],
+    "cats": {},
+    "lists": {}
+   }
+  }
+ },
+ "why": {
+  "Plumbing": "No morning board snapshot was saved for this day, so there's no projection to compare against. Actual: $8,181.",
+  "Sewer Service": "No morning board snapshot was saved for this day, so there's no projection to compare against. Actual: $1,280.",
+  "Sewer Install": "No morning board snapshot was saved for this day, so there's no projection to compare against. Actual: $0."
+ }
+}

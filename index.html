@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LPH Daily Huddle Tool</title>
+<style>
+  :root { --navy:#13158f; --ink:#1b1f3b; --mute:#5d6280; --line:#dfe3ee; --bg:#f2f6fc; --card:#fff; --good:#0f7a3d; --goodbg:#e2f6ea; --bad:#c62828; --badbg:#fde4e4; --warn:#a35d00; --warnbg:#fff1d6; --accent:#f58220; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; color:var(--ink); background:var(--bg); font-size:15px; }
+  header { background:var(--navy); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  header h1 { font-size:21px; margin:0; font-weight:700; letter-spacing:.2px; }
+  header .sub { font-size:12px; opacity:.8; }
+  header .grow { flex:1; }
+  header select { font-size:14px; padding:6px 10px; border-radius:6px; border:0; }
+  main { max-width:1180px; margin:0 auto; padding:20px 18px 60px; }
+  h2 { font-size:19px; margin:26px 0 10px; display:flex; align-items:baseline; gap:10px; }
+  h2 small { font-weight:400; color:var(--mute); font-size:13px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; border-top:4px solid var(--navy); }
+  .card h3 { margin:0 0 10px; font-size:16px; }
+  .fields { display:grid; grid-template-columns:1fr auto; gap:6px 14px; align-items:center; }
+  .fields .lab { color:var(--mute); font-size:13px; text-transform:uppercase; letter-spacing:.4px; }
+  .val { font-weight:700; font-size:18px; font-variant-numeric:tabular-nums; cursor:pointer; padding:2px 8px; border-radius:6px; text-align:right; }
+  .val:hover { background:#eef0ff; }
+  .val.copied { background:var(--goodbg); }
+  .proj { margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); display:flex; justify-content:space-between; color:var(--mute); font-size:13px; }
+  .proj b { color:var(--ink); }
+  .pill { display:inline-block; padding:2px 10px; border-radius:999px; font-weight:700; font-size:13px; }
+  .pill.good { background:var(--goodbg); color:var(--good); } .pill.bad { background:var(--badbg); color:var(--bad); } .pill.flat { background:#eceff5; color:var(--mute); }
+  .why { background:#f7f8fd; border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin:10px 0 6px; line-height:1.45; position:relative; }
+  .why button { position:absolute; top:6px; right:6px; }
+  .why p { margin:0; padding-right:58px; }
+  button { font:inherit; font-size:12px; border:1px solid var(--line); background:#fff; border-radius:6px; padding:3px 9px; cursor:pointer; }
+  button:hover { border-color:var(--navy); }
+  .check { font-size:12px; color:var(--good); margin-top:6px; } .check.no { color:var(--bad); }
+  details { margin-top:10px; } summary { cursor:pointer; color:var(--navy); font-size:13px; font-weight:600; }
+  table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  th, td { text-align:left; padding:5px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--mute); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.4px; }
+  td.n { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .pos { color:var(--good); } .neg { color:var(--bad); }
+  .tag { font-size:11px; padding:1px 6px; border-radius:4px; background:#eceff5; color:var(--mute); white-space:nowrap; }
+  .tag.dem { background:#dbe9ff; color:#174ea6; } .tag.spp { background:#efe0ff; color:#6a1b9a; } .tag.sold { background:#e2f6ea; color:var(--good); } .tag.wcn { background:var(--warnbg); color:var(--warn); } .tag.lead { background:#ffe8d6; color:#b34700; }
+  .muted { color:var(--mute); } .strike { text-decoration:line-through; color:var(--mute); }
+  .note { background:var(--warnbg); color:var(--warn); border-radius:8px; padding:8px 12px; font-size:13px; margin:10px 0; }
+  .empty { color:var(--mute); font-style:italic; }
+  footer { color:var(--mute); font-size:12px; margin-top:30px; }
+  .legend { font-size:12px; color:var(--mute); margin-top:6px; }
+</style>
+</head>
+<body>
+<header>
+  <div><h1>LPH Daily Huddle Tool</h1><div class="sub">Plumbing · Sewer Service · Sewer Install — from the 8 AM ServiceTitan reports</div></div>
+  <div class="grow"></div>
+  <label style="font-size:13px">Huddle day&nbsp;<select id="day"></select></label>
+</header>
+<main id="app"><p class="empty">Loading…</p></main>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const money = (n) => n == null ? '—' : (n < 0 ? '-' : '') + '$' + Math.abs(Math.round(n)).toLocaleString('en-US');
+const money2 = (n) => n == null ? '—' : (n < 0 ? '-' : '') + '$' + Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const signed = (n) => (n >= 0 ? '+' : '-') + '$' + Math.abs(Math.round(n)).toLocaleString('en-US');
+const fmtDate = (iso, long) => { if (!iso) return ''; const d = new Date(iso + 'T12:00:00'); return d.toLocaleDateString('en-US', long ? { weekday: 'long', month: 'short', day: 'numeric' } : { weekday: 'short', month: 'numeric', day: 'numeric' }); };
+const DEPTS = ['Plumbing', 'Sewer Service', 'Sewer Install'];
+const CLS = { demand: ['Demand', 'dem'], spp: ['SPP', 'spp'], sold: ['Sold work', 'sold'], wcn: ['Warr/CB/NC', 'wcn'], lead: ['Sewer lead', 'lead'] };
+const bust = () => '?v=' + Date.now();
+let INDEX = null;
+
+async function getJSON(p) { const r = await fetch(p + bust()); if (!r.ok) throw new Error(p + ' ' + r.status); return r.json(); }
+
+function copyable(text, label) { return `<span class="val" data-copy="${esc(text)}" title="Click to copy">${esc(label == null ? text : label)}</span>`; }
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-copy]'); if (!el) return;
+  navigator.clipboard.writeText(el.getAttribute('data-copy')).then(() => { el.classList.add('copied'); setTimeout(() => el.classList.remove('copied'), 900); });
+});
+function pill(v) { if (v == null) return ''; const c = Math.abs(v) < 50 ? 'flat' : v > 0 ? 'good' : 'bad'; return `<span class="pill ${c}">${signed(v)}</span>`; }
+function tag(c) { const t = CLS[c] || [c, '']; return `<span class="tag ${t[1]}">${t[0]}</span>`; }
+
+function commitmentCard(dept, p) {
+  if (!p) return `<div class="card"><h3>${dept}</h3><p class="empty">No board snapshot.</p></div>`;
+  const plain = (n) => String(Math.round(n * 100) / 100);
+  let f = '';
+  if (dept === 'Sewer Install') {
+    f += `<div class="lab">Scheduled install revenue (sold work)</div>${copyable(plain(p.soldTotal), money2(p.soldTotal))}`;
+    f += `<div class="lab">Scheduled installs</div>${copyable(p.soldJobs)}`;
+    f += `<div class="lab">Leads scheduled</div>${copyable(p.leads)}`;
+  } else {
+    f += `<div class="lab">Demand # calls</div>${copyable(p.demand)}`;
+    f += `<div class="lab">Warranty / callbacks / NC</div>${copyable(p.wcn)}`;
+    if (dept === 'Plumbing') f += `<div class="lab">SPP # calls</div>${copyable(p.spp)}`;
+    f += `<div class="lab">Previously sold work</div>${copyable(plain(p.soldTotal), money2(p.soldTotal))}`;
+  }
+  const ex = p.jobs.filter((j) => j.excluded);
+  const rows = p.jobs.slice().sort((a, b) => (!!a.excluded - !!b.excluded) || (a.cls || '').localeCompare(b.cls || '')).map((j) => `<tr class="${j.excluded ? 'strike' : ''}"><td>${tag(j.cls)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)} · ${esc(j.techs || 'no tech')}${j.appt ? ' · ' + esc(j.appt) : ''}</div></td><td class="n">${j.cls === 'sold' ? money2(j.subtotal) : ''}</td><td class="muted">${esc(j.excluded || '')}</td></tr>`).join('');
+  return `<div class="card"><h3>${dept}</h3><div class="fields">${f}</div>
+    <div class="proj"><span>Projected revenue</span><b>${money(p.projection)}</b></div>
+    ${ex.length ? `<div class="legend">${ex.length} job(s) on the report not counted (see list).</div>` : ''}
+    <details><summary>Jobs on the 8 AM board (${p.jobs.length})</summary><table><tr><th>Type</th><th>Job</th><th class="n">Sold $</th><th>Not counted because</th></tr>${rows}</table></details></div>`;
+}
+
+function resultsCard(dept, r, why, plan) {
+  if (!r) return `<div class="card"><h3>${dept}</h3><p class="empty">No completed-job data yet.</p></div>`;
+  const plain = String(Math.round(r.actual * 100) / 100);
+  let h = `<div class="card"><h3>${dept}</h3><div class="fields">
+    <div class="lab">Actual revenue</div>${copyable(plain, money2(r.actual))}
+    <div class="lab">Projection (8 AM board)</div><span class="val" style="cursor:default">${money(r.projection)}</span>
+    <div class="lab">Variance vs projection</div><span>${pill(r.variance)}</span></div>
+    <div class="why"><button data-copy="${esc(why)}">Copy</button><p>${esc(why)}</p></div>`;
+  if (r.check) h += `<div class="check ${r.check.ok ? '' : 'no'}">${r.check.ok ? '✓' : '⚠'} ${r.jobsCompleted} completed job(s) totaling ${money2(r.actual)} — ${r.check.ok ? 'every dollar of the variance is explained below' : 'unexplained ' + money2(r.unexplained)}</div>`;
+  if (r.effects && r.effects.length) {
+    const eff = r.effects.filter((e) => Math.abs(e.amount) >= 0.5).sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount));
+    h += `<details open><summary>What moved the number</summary><table><tr><th>Driver</th><th>Detail</th><th class="n">Effect</th></tr>
+      ${eff.map((e) => `<tr><td>${esc(e.label)}</td><td class="muted">${esc(e.detail || '')}${e.jobs && e.jobs.length && e.key.endsWith('_ticket') ? '<br>' + e.jobs.map((j) => esc(j.tech + ' · ' + j.type + ' · ' + money(j.revenue))).join('<br>') : ''}</td><td class="n ${e.amount >= 0 ? 'pos' : 'neg'}">${signed(e.amount)}</td></tr>`).join('')}
+      <tr><td><b>Total</b></td><td class="muted">projection ${money(r.projection)} → actual ${money(r.actual)}</td><td class="n"><b>${signed(r.variance)}</b></td></tr></table></details>`;
+  }
+  const c = r.cats || {};
+  const callRows = ['demand', 'spp'].filter((k) => c[k]).map((k) => { const x = c[k]; return `<tr><td>${tag(k)}</td><td class="n">${x.planned}</td><td class="n">${x.ran}</td><td class="n">${x.converted} (${x.convRate == null ? '—' : Math.round(x.convRate * 100) + '%'})</td><td class="n">${x.avgTicket == null ? '—' : money(x.avgTicket)}</td><td class="n">${money(x.revenue)}</td></tr>`; }).join('');
+  if (callRows) h += `<details><summary>Calls: plan vs actual</summary><table><tr><th></th><th class="n">Planned</th><th class="n">Ran</th><th class="n">Converted</th><th class="n">Avg ticket</th><th class="n">Revenue</th></tr>${callRows}</table><div class="legend">Plan: Demand ${Math.round((c.demand || {}).planConv * 100)}% × ${money((c.demand || {}).planAvg)}${c.spp && c.spp.planAvg ? `, SPP ${Math.round(c.spp.planConv * 100)}% × ${money(c.spp.planAvg)}` : ''}. Warranty / recall / no-charge calls are left out of conversion.</div></details>`;
+  const L = r.lists || {};
+  if ((L.missed && L.missed.length) || (L.added && L.added.length)) {
+    const where = (l) => !l ? 'not completed or rescheduled yet' : l.startsWith('board:') ? 'moved to ' + fmtDate(l.slice(6)) : 'completed ' + fmtDate(l);
+    h += `<details><summary>Board changes: ${L.missed.length} planned job(s) didn't complete, ${L.added.length} added</summary><table><tr><th></th><th>Job</th><th>What happened</th><th class="n">Revenue</th></tr>
+      ${L.missed.map((j) => `<tr><td>${tag(j.cls)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)} · ${esc(j.techs)}</div></td><td class="neg">Didn't complete — ${esc(where(j.later))}</td><td class="n">${j.cls === 'sold' ? money2(j.subtotal) : ''}</td></tr>`).join('')}
+      ${L.added.map((j) => `<tr><td>${tag(j.cls)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)} · ${esc(j.tech)}</div></td><td class="pos">Added after 8 AM${j.plannedAs && j.plannedAs.startsWith('excluded') ? ' (' + esc(j.plannedAs.slice(10)) + ' at 8 AM)' : ''}</td><td class="n">${money2(j.revenue)}</td></tr>`).join('')}</table></details>`;
+  }
+  return h + '</div>';
+}
+
+async function render(date) {
+  const app = $('#app');
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  // the huddle on day D = commitment for D + results for the previous working day
+  const days = INDEX.days.map((d) => d.date).sort();
+  const prev = days.filter((d) => d < date && [1, 2, 3, 4, 5].includes(new Date(d + 'T12:00:00').getDay())).pop();
+  const [today, yest] = await Promise.all([getJSON(`data/days/${date}.json`).catch(() => null), prev ? getJSON(`data/days/${prev}.json`).catch(() => null) : null]);
+  let h = '';
+  h += `<h2>Yesterday's Results <small>${prev ? fmtDate(prev, true) : ''} — enter Actual + the "why"</small></h2>`;
+  if (yest && yest.results) {
+    h += `<div class="grid">${DEPTS.map((d) => resultsCard(d, yest.results.depts[d], yest.why[d], yest.plan && yest.plan.depts[d])).join('')}</div>`;
+    h += `<div class="legend">Completed jobs from ServiceTitan's Daily Job Detail (${esc(yest.results.source)}). Revenue = Jobs Total Revenue, which matches the ServiceTitan dashboard.</div>`;
+  } else h += `<p class="empty">No completed-job data for the previous working day yet — it arrives in the 8 AM Daily Job Report.</p>`;
+  h += `<h2>Today's Commitment <small>${fmtDate(date, true)} — from the ${today && today.plan ? '8 AM' : ''} board</small></h2>`;
+  if (today && today.plan) h += `<div class="grid">${DEPTS.map((d) => commitmentCard(d, today.plan.depts[d])).join('')}</div><div class="legend">Click any number to copy it. Board = ServiceTitan "Todays Sold Jobs" report (${esc(today.plan.capturedFrom)}). Not counted: canceled, on hold, no tech / Parking Lot, 5 PM placeholders, and multi-day sold work after day 1.</div>`;
+  else h += `<p class="empty">No board snapshot for this day.</p>`;
+  h += `<footer>Updated ${new Date(INDEX.updatedAt).toLocaleString('en-US')}. Rates: Plumbing Demand 72% × $800, SPP 40% × $350; Sewer Service 60% × $242.</footer>`;
+  app.innerHTML = h;
+}
+
+(async () => {
+  try {
+    INDEX = await getJSON('data/index.json');
+    const sel = $('#day');
+    const dates = INDEX.days.filter((d) => d.hasPlan).map((d) => d.date).sort().reverse();
+    sel.innerHTML = dates.map((d) => `<option value="${d}">${fmtDate(d, true)}${d === INDEX.today ? ' (latest)' : ''}</option>`).join('');
+    const want = location.hash.slice(1);
+    sel.value = dates.includes(want) ? want : INDEX.today || dates[0];
+    sel.onchange = () => { location.hash = sel.value; render(sel.value); };
+    render(sel.value);
+  } catch (e) { $('#app').innerHTML = `<p class="note">Could not load data: ${esc(e.message)}</p>`; }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "_note": "Fixed planning rates from the Daily Huddle Google Sheet. Edit here if they ever change.",
+  "departments": {
+    "Plumbing": {
+      "businessUnits": ["Plumbing Demand", "Plumbing System Check", "Plumbing COD System Ck"],
+      "rates": { "demand": { "conv": 0.72, "avg": 800 }, "spp": { "conv": 0.40, "avg": 350 } }
+    },
+    "Sewer Service": {
+      "businessUnits": ["Sewer Service"],
+      "rates": { "demand": { "conv": 0.60, "avg": 242 }, "spp": { "conv": 0, "avg": 0 } }
+    },
+    "Sewer Install": {
+      "businessUnits": ["Sewer Installs", "Sewer Install"],
+      "rates": null
+    }
+  },
+  "placeholderTechs": ["Parking Lot"],
+  "placeholderApptTime": "17:00",
+  "bigTicketMultiple": 2.5
+}

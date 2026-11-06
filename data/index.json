@@ -1,0 +1,264 @@
+{
+ "updatedAt": "2026-11-06T16:16:21.896Z",
+ "today": "2026-11-06",
+ "yesterday": "2026-11-05",
+ "days": [
+  {
+   "date": "2026-11-06",
+   "hasPlan": true,
+   "hasResults": false,
+   "projection": {
+    "Plumbing": 10249.3,
+    "Sewer Service": 145.2,
+    "Sewer Install": 0
+   },
+   "actual": null,
+   "checks": null
+  },
+  {
+   "date": "2026-11-05",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 21699.8,
+    "Sewer Service": 145.2,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 20303.41,
+    "Sewer Service": 93,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-11-04",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 9461.33,
+    "Sewer Service": 0,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 25541.7,
+    "Sewer Service": 932.43,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 9560.34,
+    "Sewer Service": 145.2,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 11479.73,
+    "Sewer Service": 186,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-11-02",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 12942.9,
+    "Sewer Service": 0,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 11010.36,
+    "Sewer Service": 0,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-10-30",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 13248.44,
+    "Sewer Service": 0,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 11907.19,
+    "Sewer Service": 93,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-10-29",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 13506.6,
+    "Sewer Service": 290.4,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 11648.5,
+    "Sewer Service": 801.98,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-10-28",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 16698.21,
+    "Sewer Service": 0,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 20213.68,
+    "Sewer Service": 298,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-10-27",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 5846.38,
+    "Sewer Service": 2705.46,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 8947.6,
+    "Sewer Service": 2560.26,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-10-26",
+   "hasPlan": true,
+   "hasResults": true,
+   "projection": {
+    "Plumbing": 7774.57,
+    "Sewer Service": 290.4,
+    "Sewer Install": 0
+   },
+   "actual": {
+    "Plumbing": 3174.26,
+    "Sewer Service": 434,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "hasPlan": false,
+   "hasResults": true,
+   "projection": null,
+   "actual": {
+    "Plumbing": 8180.82,
+    "Sewer Service": 1280.13,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": null,
+    "Sewer Service": null,
+    "Sewer Install": null
+   }
+  }
+ ],
+ "config": {
+  "_note": "Fixed planning rates from the Daily Huddle Google Sheet. Edit here if they ever change.",
+  "departments": {
+   "Plumbing": {
+    "businessUnits": [
+     "Plumbing Demand",
+     "Plumbing System Check",
+     "Plumbing COD System Ck"
+    ],
+    "rates": {
+     "demand": {
+      "conv": 0.72,
+      "avg": 800
+     },
+     "spp": {
+      "conv": 0.4,
+      "avg": 350
+     }
+    }
+   },
+   "Sewer Service": {
+    "businessUnits": [
+     "Sewer Service"
+    ],
+    "rates": {
+     "demand": {
+      "conv": 0.6,
+      "avg": 242
+     },
+     "spp": {
+      "conv": 0,
+      "avg": 0
+     }
+    }
+   },
+   "Sewer Install": {
+    "businessUnits": [
+     "Sewer Installs",
+     "Sewer Install"
+    ],
+    "rates": null
+   }
+  },
+  "placeholderTechs": [
+   "Parking Lot"
+  ],
+  "placeholderApptTime": "17:00",
+  "bigTicketMultiple": 2.5
+ }
+}

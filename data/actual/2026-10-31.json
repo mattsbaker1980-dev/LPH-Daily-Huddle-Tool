@@ -1,0 +1,27 @@
+{
+ "date": "2026-10-31",
+ "source": "11_Daily Job Detail_Dated 10_30_26 - 11_05_26.xlsx",
+ "savedAt": "2026-11-06T16:13:11.443Z",
+ "total": 49,
+ "firstTotal": 49,
+ "jobs": [
+  {
+   "job": "437517480",
+   "type": "Leak - Plumbing - Water Lines",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "tech": "Layne B.",
+   "techs": "Layne B.",
+   "opp": true,
+   "converted": false,
+   "warranty": false,
+   "recall": false,
+   "revenue": 49,
+   "soldBy": "",
+   "estimates": 1,
+   "estSales": 0,
+   "scheduled": "2026-10-31",
+   "isLead": false
+  }
+ ]
+}
