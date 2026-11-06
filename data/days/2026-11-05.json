@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generatedAt": "2026-11-06T18:36:16.798Z",
+ "generatedAt": "2026-11-06T18:43:46.160Z",
  "plan": {
   "date": "2026-11-05",
   "capturedFrom": "9_Sold Work_Dated 11_05_26 - 11_05_26.xlsx",
@@ -829,6 +829,8 @@
      ]
     },
     "variance": -1396.39,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 19,
@@ -922,6 +924,16 @@
      ]
     },
     "variance": -52.2,
+    "waived": [
+     {
+      "job": "437530121",
+      "tech": "Nick E.",
+      "type": "Sewer Camera Video Inspection - Svc Request",
+      "fee": 149,
+      "reason": "Waived dispatched fee for the miscommunication."
+     }
+    ],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 2,
@@ -960,6 +972,8 @@
      "added": []
     },
     "variance": 0,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 0,
@@ -972,7 +986,7 @@
  },
  "why": {
   "Plumbing": "Demand: Conv 43% vs 72% - Avg $1,309 vs $800 - Ran 7 vs 6 scheduled (1 went NC, 2 added). SPP: Conv 20% vs 40% - Avg $134 vs $350 - Ran 5 vs 12 scheduled (7 didn't run).",
-  "Sewer Service": "Demand: Conv 50% vs 60% - Avg $93 vs $242 - Ran 2 vs 1 scheduled (1 added).",
+  "Sewer Service": "Demand: Conv 50% vs 60% - Avg $93 vs $242 - Ran 2 vs 1 scheduled (1 added). 1 dispatch fee not charged ($149 – Waived dispatched fee for the miscommunication).",
   "Sewer Install": "On plan."
  },
  "whyLong": {

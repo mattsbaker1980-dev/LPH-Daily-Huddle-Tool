@@ -1,6 +1,6 @@
 {
  "date": "2026-10-26",
- "generatedAt": "2026-11-06T18:36:16.766Z",
+ "generatedAt": "2026-11-06T18:43:46.119Z",
  "plan": {
   "date": "2026-10-26",
   "capturedFrom": "0_Sold Work_Dated 10_26_26 - 10_26_26.xlsx",
@@ -945,6 +945,8 @@
      ]
     },
     "variance": -4600.31,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 29,
@@ -1066,6 +1068,8 @@
      ]
     },
     "variance": 143.6,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 4,
@@ -1104,6 +1108,8 @@
      "added": []
     },
     "variance": 0,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 0,

@@ -229,6 +229,29 @@ function actualFor(repo, date) {
   return a;
 }
 
+
+// ------------------------------------------------------------------ job notes (from the Job Review site's saved data)
+// data/jr/<YYYY-MM>.json = LPH-Materials-Invoice data/review/<YYYY-MM>.json (booking notes + tech write-ups)
+const _notes = {};
+function jobNotes(repo, date, job) {
+  const m = date.slice(0, 7);
+  if (!(m in _notes)) { const d = readJSON(path.join(repo, 'data/jr', m + '.json'), null); _notes[m] = d && d.jobs ? d.jobs : null; }
+  const jobs = _notes[m]; if (!jobs) return null;
+  const j = jobs[job] || Object.values(jobs).find((x) => x.jobNumber === job);
+  if (!j) return null;
+  return { booking: str((j.materials || {}).bookingNotes), writeUp: (j.invoices || []).map((i) => str(i.summary)).filter(Boolean).join(' ') };
+}
+function waivedFee(repo, date, j) {
+  if (j.revenue > 0 || j.warranty || j.recall) return null;
+  const n = jobNotes(repo, date, j.job); if (!n) return null;
+  const m = n.booking.match(/Disp(?:atch)?\.?\s*Ch(?:ar)?g(?:e)?\s*:?\s*\$?\s*(\d+(?:\.\d+)?)/i);
+  if (!m) return null;
+  const fee = parseFloat(m[1]); if (!(fee > 0 && fee <= 1000)) return null;
+  const sentences = n.writeUp.split(/(?<=[.!?])\s+/);
+  const reason = sentences.find((x) => /waiv|no charge|n\/c|courtesy|didn.?t charge|not charg|free of charge|no fee/i.test(x)) || null;
+  return { job: j.job, tech: j.tech, type: j.type, fee, reason: reason ? reason.trim().slice(0, 140) : null };
+}
+
 // Where did each planned job go? (completed on the day / later / never)
 function findLater(repo, date, job) {
   for (const d of listDates(path.join(repo, 'data/actual'))) {
@@ -319,6 +342,8 @@ function bridge(repo, date, P) {
     res.cats.wcn = { planned: p.wcn, ran: w.length, revenue: r2(wRev) };
     if (wRev) push({ key: 'wcn', cat: 'wcn', label: 'Revenue on warranty / callback / no-opportunity calls', amount: wRev, detail: `${w.filter((j) => j.revenue).length} job(s)` });
 
+    res.waived = done.map((j) => waivedFee(repo, date, j)).filter(Boolean);
+    res.notesLoaded = !!jobNotes(repo, date, '__probe__') || _notes[date.slice(0, 7)] != null;
     res.unexplained = r2(res.variance - explained);
     res.check = { jobsAccounted: done.length, sumOfJobs: actualTotal, explained: r2(explained), ok: Math.abs(res.unexplained) < 1 };
     out[dept] = res;
@@ -401,6 +426,9 @@ function whyShort(dept, r) {
   }
   const sw = r.cats.sold;
   if (sw && (sw.planned || sw.actual) && Math.abs(sw.actual - sw.planned) >= 500) parts.push(`Sold work: ${money(sw.actual)} vs ${money(sw.planned)} scheduled.`);
+  const wv = r.waived || [];
+  if (wv.length === 1) parts.push(`1 dispatch fee not charged (${money(wv[0].fee)}${wv[0].reason ? ' – ' + wv[0].reason.replace(/\.$/, '') : ' – no reason in notes'}).`);
+  else if (wv.length > 1) { const nr = wv.filter((w) => !w.reason).length; parts.push(`${wv.length} dispatch fees not charged (${money(wv.reduce((a, w) => a + w.fee, 0))}${nr ? `, ${nr} with no reason in notes` : ''}).`); }
   const ld = r.cats.lead;
   if (dept === 'Sewer Install' && ld && (ld.ran || ld.planned)) parts.push(`Leads: Ran ${ld.ran} vs ${ld.planned} scheduled.`);
   return parts.length ? parts.join(' ') : 'On plan.';

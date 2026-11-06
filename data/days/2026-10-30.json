@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generatedAt": "2026-11-06T18:36:16.783Z",
+ "generatedAt": "2026-11-06T18:43:46.140Z",
  "plan": {
   "date": "2026-10-30",
   "capturedFrom": "5_Sold Work_Dated 10_30_26 - 10_30_26.xlsx",
@@ -831,6 +831,23 @@
      ]
     },
     "variance": -1341.25,
+    "waived": [
+     {
+      "job": "437368626",
+      "tech": "Layne B.",
+      "type": "Water Heater Concern - Tank - Age 7+",
+      "fee": 49,
+      "reason": null
+     },
+     {
+      "job": "437209520",
+      "tech": "Ethan J.",
+      "type": "Leak - Plumbing - Water Lines",
+      "fee": 49,
+      "reason": null
+     }
+    ],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 21,
@@ -924,6 +941,8 @@
      ]
     },
     "variance": 93,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 1,
@@ -981,6 +1000,8 @@
      "added": []
     },
     "variance": 0,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 0,
@@ -992,7 +1013,7 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 100% vs 72% - Avg $347 vs $800 - Ran 6 vs 4 scheduled (1 went NC, 3 added). SPP: Conv 0% vs 40% - Ran 5 vs 8 scheduled (2 didn't run, 1 went NC).",
+  "Plumbing": "Demand: Conv 100% vs 72% - Avg $347 vs $800 - Ran 6 vs 4 scheduled (1 went NC, 3 added). SPP: Conv 0% vs 40% - Ran 5 vs 8 scheduled (2 didn't run, 1 went NC). 2 dispatch fees not charged ($98, 2 with no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 0 scheduled (1 added).",
   "Sewer Install": "Leads: Ran 0 vs 1 scheduled."
  },

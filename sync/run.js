@@ -52,6 +52,16 @@ const blobSha = (buf) => require('crypto').createHash('sha1').update(Buffer.conc
       fs.writeFileSync(dest, Buffer.from(b.content, 'base64'));
     }));
     console.log(`PULLED ${want.length} data file(s) since ${since}`);
+    // job notes from the Job Review site (public repo) for waived-fee checks
+    const months = [...new Set([isoDaysAgo(0).slice(0, 7), isoDaysAgo(LOOKBACK_DAYS).slice(0, 7), isoDaysAgo(20).slice(0, 7)])];
+    fs.mkdirSync(path.join(WORK, 'data/jr'), { recursive: true });
+    for (const m of months) {
+      try {
+        const r = await fetch(`https://raw.githubusercontent.com/mattsbaker1980-dev/LPH-Materials-Invoice/main/data/review/${m}.json?cb=${Date.now()}`);
+        if (r.ok) { fs.writeFileSync(path.join(WORK, 'data/jr', m + '.json'), Buffer.from(await r.arrayBuffer())); console.log(`NOTES ${m} loaded from Job Review`); }
+        else console.log(`NOTE Job Review notes for ${m} not available (${r.status})`);
+      } catch (e) { console.log(`NOTE Job Review notes for ${m} not loaded: ${e.message}`); }
+    }
 
     // 2. extract attachments
     const raws = process.argv.slice(2);
@@ -75,6 +85,7 @@ const blobSha = (buf) => require('crypto').createHash('sha1').update(Buffer.conc
     const entries = [];
     for (const abs of changed) {
       const rel = path.relative(WORK, abs).split(path.sep).join('/');
+      if (rel.startsWith('data/jr/')) continue;
       const buf = fs.readFileSync(abs);
       if (remote[rel] === blobSha(buf)) continue;
       const blob = await gh('POST', '/git/blobs', { content: buf.toString('base64'), encoding: 'base64' });

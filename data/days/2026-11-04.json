@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generatedAt": "2026-11-06T18:36:16.795Z",
+ "generatedAt": "2026-11-06T18:43:46.158Z",
  "plan": {
   "date": "2026-11-04",
   "capturedFrom": "8_Sold Work_Dated 11_04_26 - 11_04_26.xlsx",
@@ -993,6 +993,16 @@
      ]
     },
     "variance": 16080.37,
+    "waived": [
+     {
+      "job": "438313801",
+      "tech": "Tylor H.",
+      "type": "Leak - Plumbing - Water Lines",
+      "fee": 79,
+      "reason": null
+     }
+    ],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 22,
@@ -1114,6 +1124,8 @@
      ]
     },
     "variance": 932.43,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 2,
@@ -1152,6 +1164,8 @@
      "added": []
     },
     "variance": 0,
+    "waived": [],
+    "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 2,
@@ -1163,7 +1177,7 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 70% vs 72% - Avg $2,429 vs $800 - Ran 10 vs 8 scheduled (1 didn't run, 1 went NC, 4 added). SPP: Conv 40% vs 40% - Avg $2,684 vs $350 - Ran 5 vs 12 scheduled (7 didn't run).",
+  "Plumbing": "Demand: Conv 70% vs 72% - Avg $2,429 vs $800 - Ran 10 vs 8 scheduled (1 didn't run, 1 went NC, 4 added). SPP: Conv 40% vs 40% - Avg $2,684 vs $350 - Ran 5 vs 12 scheduled (7 didn't run). 1 dispatch fee not charged ($79 – no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $466 vs $242 - Ran 2 vs 0 scheduled (2 added).",
   "Sewer Install": "Leads: Ran 1 vs 2 scheduled."
  },
