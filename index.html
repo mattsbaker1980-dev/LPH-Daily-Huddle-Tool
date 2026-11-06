@@ -45,6 +45,11 @@
   .muted { color:var(--mute); } .strike { text-decoration:line-through; color:var(--mute); }
   .note { background:var(--warnbg); color:var(--warn); border-radius:8px; padding:8px 12px; font-size:13px; margin:10px 0; }
   .empty { color:var(--mute); font-style:italic; }
+  .grid.wide { grid-template-columns:repeat(auto-fit,minmax(520px,1fr)); }
+  .ct { margin-top:4px; width:100%; } .ct td.n { white-space:nowrap; } .ct td, .ct th { border-bottom:1px solid var(--line); padding:6px 4px; } .ct .lab { color:var(--mute); font-size:12px; text-transform:uppercase; letter-spacing:.4px; }
+  .cv { font-weight:700; font-size:16px; font-variant-numeric:tabular-nums; margin-right:6px; }
+  .cbtn { font-size:11px; padding:1px 7px; }
+  .cbtn.copied, [data-copy].copied { background:var(--goodbg); border-color:var(--good); }
   footer { color:var(--mute); font-size:12px; margin-top:30px; }
   .legend { font-size:12px; color:var(--mute); margin-top:6px; }
 </style>
@@ -78,23 +83,26 @@ document.addEventListener('click', (e) => {
 function pill(v) { if (v == null) return ''; const c = Math.abs(v) < 50 ? 'flat' : v > 0 ? 'good' : 'bad'; return `<span class="pill ${c}">${signed(v)}</span>`; }
 function tag(c) { const t = CLS[c] || [c, '']; return `<span class="tag ${t[1]}">${t[0]}</span>`; }
 
+function cb(text, label) { return `<span class="cv">${esc(label == null ? text : label)}</span><button class="cbtn" data-copy="${esc(text)}">Copy</button>`; }
 function commitmentCard(dept, p) {
   if (!p) return `<div class="card"><h3>${dept}</h3><p class="empty">No board snapshot.</p></div>`;
   const plain = (n) => String(Math.round(n * 100) / 100);
+  const rates = (INDEX.config.departments[dept] || {}).rates;
   let f = '';
   if (dept === 'Sewer Install') {
-    f += `<div class="lab">Scheduled install revenue (sold work)</div>${copyable(plain(p.soldTotal), money2(p.soldTotal))}`;
-    f += `<div class="lab">Scheduled installs</div>${copyable(p.soldJobs)}`;
-    f += `<div class="lab">Leads scheduled</div>${copyable(p.leads)}`;
+    f += `<table class="ct"><tr><td class="lab">Scheduled install revenue</td><td class="n">${cb(plain(p.soldTotal), money2(p.soldTotal))}</td></tr>
+      <tr><td class="lab">Scheduled installs</td><td class="n">${cb(p.soldJobs)}</td></tr>
+      <tr><td class="lab">Leads scheduled</td><td class="n">${cb(p.leads)}</td></tr></table>`;
   } else {
-    f += `<div class="lab">Demand # calls</div>${copyable(p.demand)}`;
-    f += `<div class="lab">Warranty / callbacks / NC</div>${copyable(p.wcn)}`;
-    if (dept === 'Plumbing') f += `<div class="lab">SPP # calls</div>${copyable(p.spp)}`;
-    f += `<div class="lab">Previously sold work</div>${copyable(plain(p.soldTotal), money2(p.soldTotal))}`;
+    const row = (label, calls, w, rt) => `<tr><td><b>${label}</b></td><td class="n">${cb(calls)}</td><td class="n">${cb(w)}</td><td class="n">${cb(Math.round(rt.conv * 100), Math.round(rt.conv * 100) + '%')}</td><td class="n">${cb(rt.avg, '$' + rt.avg)}</td></tr>`;
+    f += `<table class="ct"><tr><th>Type</th><th class="n"># Calls</th><th class="n">Warr/CB/NC</th><th class="n">Conversion</th><th class="n">Avg sale</th></tr>
+      ${row('Demand', p.demand, p.wcnDemand == null ? p.wcn : p.wcnDemand, rates.demand)}
+      ${dept === 'Plumbing' ? row('SPP', p.spp, p.wcnSpp || 0, rates.spp) : ''}</table>
+      <table class="ct"><tr><td class="lab">Previously sold work</td><td class="n">${cb(plain(p.soldTotal), money2(p.soldTotal))}</td></tr></table>`;
   }
   const ex = p.jobs.filter((j) => j.excluded);
   const rows = p.jobs.slice().sort((a, b) => (!!a.excluded - !!b.excluded) || (a.cls || '').localeCompare(b.cls || '')).map((j) => `<tr class="${j.excluded ? 'strike' : ''}"><td>${tag(j.cls)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)} · ${esc(j.techs || 'no tech')}${j.appt ? ' · ' + esc(j.appt) : ''}</div></td><td class="n">${j.cls === 'sold' ? money2(j.subtotal) : ''}</td><td class="muted">${esc(j.excluded || '')}</td></tr>`).join('');
-  return `<div class="card"><h3>${dept}</h3><div class="fields">${f}</div>
+  return `<div class="card"><h3>${dept}</h3>${f}
     <div class="proj"><span>Projected revenue</span><b>${money(p.projection)}</b></div>
     ${ex.length ? `<div class="legend">${ex.length} job(s) on the report not counted (see list).</div>` : ''}
     <details><summary>Jobs on the 8 AM board (${p.jobs.length})</summary><table><tr><th>Type</th><th>Job</th><th class="n">Sold $</th><th>Not counted because</th></tr>${rows}</table></details></div>`;
@@ -104,7 +112,7 @@ function resultsCard(dept, r, why, plan, whyLong) {
   if (!r) return `<div class="card"><h3>${dept}</h3><p class="empty">No completed-job data yet.</p></div>`;
   const plain = String(Math.round(r.actual * 100) / 100);
   let h = `<div class="card"><h3>${dept}</h3><div class="fields">
-    <div class="lab">Actual revenue</div>${copyable(plain, money2(r.actual))}
+    <div class="lab">Actual revenue</div><span style="text-align:right">${cb(plain, money2(r.actual))}</span>
     <div class="lab">Projection (8 AM board)</div><span class="val" style="cursor:default">${money(r.projection)}</span>
     <div class="lab">Variance vs projection</div><span>${pill(r.variance)}</span></div>
     <div class="why"><button data-copy="${esc(why)}">Copy</button><p>${esc(why)}</p></div>${whyLong ? `<details><summary>Full explanation</summary><p class="muted" style="font-size:13px;line-height:1.45">${esc(whyLong)}</p></details>` : ''}`;
@@ -142,7 +150,7 @@ async function render(date) {
     h += `<div class="legend">Completed jobs from ServiceTitan's Daily Job Detail (${esc(yest.results.source)}). Revenue = Jobs Total Revenue, which matches the ServiceTitan dashboard.</div>`;
   } else h += `<p class="empty">No completed-job data for the previous working day yet — it arrives in the 8 AM Daily Job Report.</p>`;
   h += `<h2>Today's Commitment <small>${fmtDate(date, true)} — from the ${today && today.plan ? '8 AM' : ''} board</small></h2>`;
-  if (today && today.plan) h += `<div class="grid">${DEPTS.map((d) => commitmentCard(d, today.plan.depts[d])).join('')}</div><div class="legend">Click any number to copy it. Board = ServiceTitan "Todays Sold Jobs" report (${esc(today.plan.capturedFrom)}). Not counted: canceled, on hold, no tech / Parking Lot, 5 PM placeholders, and multi-day sold work after day 1.</div>`;
+  if (today && today.plan) h += `<div class="grid wide">${DEPTS.map((d) => commitmentCard(d, today.plan.depts[d])).join('')}</div><div class="legend">Use the Copy buttons to paste each value into Lovable. Board = ServiceTitan "Todays Sold Jobs" report (${esc(today.plan.capturedFrom)}). Not counted: canceled, on hold, no tech / Parking Lot, 5 PM placeholders, and multi-day sold work after day 1.</div>`;
   else h += `<p class="empty">No board snapshot for this day.</p>`;
   h += `<footer>Updated ${new Date(INDEX.updatedAt).toLocaleString('en-US')}. Rates: Plumbing Demand 72% × $800, SPP 40% × $350; Sewer Service 60% × $242.</footer>`;
   app.innerHTML = h;

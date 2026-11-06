@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generatedAt": "2026-11-06T17:59:53.896Z",
+ "generatedAt": "2026-11-06T18:13:15.491Z",
  "plan": {
   "date": "2026-10-30",
   "capturedFrom": "5_Sold Work_Dated 10_30_26 - 10_30_26.xlsx",
@@ -419,6 +419,8 @@
     "demand": 4,
     "spp": 8,
     "wcn": 2,
+    "wcnDemand": 2,
+    "wcnSpp": 0,
     "soldJobs": 3,
     "soldTotal": 9824.44,
     "leads": 0,
@@ -431,6 +433,8 @@
     "demand": 0,
     "spp": 0,
     "wcn": 0,
+    "wcnDemand": 0,
+    "wcnSpp": 0,
     "soldJobs": 0,
     "soldTotal": 0,
     "leads": 0,
@@ -461,6 +465,8 @@
     "demand": 0,
     "spp": 0,
     "wcn": 0,
+    "wcnDemand": 0,
+    "wcnSpp": 0,
     "soldJobs": 0,
     "soldTotal": 0,
     "leads": 1,
@@ -986,8 +992,8 @@
   }
  },
  "why": {
-  "Plumbing": "Demand avg $347 vs $800 −$2.7K · Demand conv 100% vs 72% +$1.3K · Demand ran 6 vs 4 (1 went NC, 3 added) +$1.2K",
-  "Sewer Service": "Calls avg $93 vs $242 −$149 · Calls ran 1 vs 0 (1 added) +$145",
+  "Plumbing": "Demand avg $347 vs $800 −$2.7K · Demand conv 100% vs 72% +$1.3K · Demand ran 6 vs 4 (1 went NC, 3 added) +$1.2K · Other −$1.1K",
+  "Sewer Service": "Calls avg $93 vs $242 −$149 · Calls ran 1 vs 0 (1 added) +$145 · Other +$97",
   "Sewer Install": "On plan."
  },
  "whyLong": {

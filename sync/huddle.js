@@ -211,7 +211,9 @@ function plan(repo, date) {
     const sold = live.filter((j) => j.cls === 'sold');
     const soldTotal = r2(sold.reduce((s, j) => s + j.subtotal, 0));
     const rates = CFG.departments[dept].rates;
-    const out = { jobs, demand: cnt('demand'), spp: cnt('spp'), wcn: cnt('wcn'), soldJobs: sold.length, soldTotal, leads: cnt('lead') };
+    const wcnJobs = live.filter((j) => j.cls === 'wcn');
+    const isSppish = (j) => dept === 'Plumbing' && (/SYS CK/i.test(j.tags) || /system c/i.test(j.bu));
+    const out = { jobs, demand: cnt('demand'), spp: cnt('spp'), wcn: wcnJobs.length, wcnDemand: wcnJobs.filter((j) => !isSppish(j)).length, wcnSpp: wcnJobs.filter(isSppish).length, soldJobs: sold.length, soldTotal, leads: cnt('lead') };
     if (rates) {
       out.demandRev = r2(out.demand * rates.demand.conv * rates.demand.avg);
       out.sppRev = r2(out.spp * rates.spp.conv * rates.spp.avg);
@@ -402,7 +404,9 @@ function whyShort(dept, r) {
   const min = Math.max(100, Math.abs(r.projection) * 0.02);
   const top = r.effects.filter((e) => Math.abs(e.amount) >= min).sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount)).slice(0, 3);
   if (!top.length) return Math.abs(r.variance) < 50 ? 'On plan.' : 'Small misses across the board — no single driver.';
-  return top.map((e) => `${phrase(e)} ${kdelta(e.amount)}`).join(' · ');
+  const shown = top.reduce((a, e) => a + e.amount, 0);
+  const rest = r.variance - shown;
+  return top.map((e) => `${phrase(e)} ${kdelta(e.amount)}`).join(' · ') + (Math.abs(rest) >= 50 ? ` · Other ${kdelta(rest)}` : '');
 }
 
 function prevWorkday(dates, date) { const ds = dates.filter((d) => d < date && isWeekday(d)); return ds.length ? ds[ds.length - 1] : null; }

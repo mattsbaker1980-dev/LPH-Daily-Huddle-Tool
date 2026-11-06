@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "generatedAt": "2026-11-06T17:59:53.894Z",
+ "generatedAt": "2026-11-06T18:13:15.488Z",
  "plan": {
   "date": "2026-10-29",
   "capturedFrom": "3_Sold Work_Dated 10_29_26 - 10_29_26.xlsx",
@@ -436,6 +436,8 @@
     "demand": 3,
     "spp": 9,
     "wcn": 2,
+    "wcnDemand": 1,
+    "wcnSpp": 1,
     "soldJobs": 5,
     "soldTotal": 10518.6,
     "leads": 0,
@@ -483,6 +485,8 @@
     "demand": 2,
     "spp": 0,
     "wcn": 0,
+    "wcnDemand": 0,
+    "wcnSpp": 0,
     "soldJobs": 0,
     "soldTotal": 0,
     "leads": 0,
@@ -495,6 +499,8 @@
     "demand": 0,
     "spp": 0,
     "wcn": 0,
+    "wcnDemand": 0,
+    "wcnSpp": 0,
     "soldJobs": 0,
     "soldTotal": 0,
     "leads": 0,
@@ -978,7 +984,7 @@
   }
  },
  "why": {
-  "Plumbing": "Warranty/NC revenue +$1.7K · Demand conv 0% vs 72% −$1.2K · SPP conv 0% vs 40% −$700",
+  "Plumbing": "Warranty/NC revenue +$1.7K · Demand conv 0% vs 72% −$1.2K · SPP conv 0% vs 40% −$700 · Other −$1.7K",
   "Sewer Service": "Calls avg $401 vs $242 (Ethan $709 drain) +$318 · Calls conv 100% vs 60% +$194",
   "Sewer Install": "On plan."
  },

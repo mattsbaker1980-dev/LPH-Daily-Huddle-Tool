@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generatedAt": "2026-11-06T17:59:53.906Z",
+ "generatedAt": "2026-11-06T18:13:15.502Z",
  "plan": {
   "date": "2026-11-04",
   "capturedFrom": "8_Sold Work_Dated 11_04_26 - 11_04_26.xlsx",
@@ -487,6 +487,8 @@
     "demand": 8,
     "spp": 12,
     "wcn": 2,
+    "wcnDemand": 2,
+    "wcnSpp": 0,
     "soldJobs": 2,
     "soldTotal": 3173.33,
     "leads": 0,
@@ -499,6 +501,8 @@
     "demand": 0,
     "spp": 0,
     "wcn": 0,
+    "wcnDemand": 0,
+    "wcnSpp": 0,
     "soldJobs": 0,
     "soldTotal": 0,
     "leads": 0,
@@ -546,6 +550,8 @@
     "demand": 0,
     "spp": 0,
     "wcn": 0,
+    "wcnDemand": 0,
+    "wcnSpp": 0,
     "soldJobs": 0,
     "soldTotal": 0,
     "leads": 2,
@@ -1157,7 +1163,7 @@
   }
  },
  "why": {
-  "Plumbing": "Demand avg $2,429 vs $800 (Ethan $7.8K WH, Derrick $4.3K WH) +$11.4K · SPP avg $2,684 vs $350 (Layne $5.2K sys ck) +$4.7K · Demand ran 10 vs 8 (1 didn't run, 1 went NC, 4 added) +$1.2K",
+  "Plumbing": "Demand avg $2,429 vs $800 (Ethan $7.8K WH, Derrick $4.3K WH) +$11.4K · SPP avg $2,684 vs $350 (Layne $5.2K sys ck) +$4.7K · Demand ran 10 vs 8 (1 didn't run, 1 went NC, 4 added) +$1.2K · Other −$1.1K",
   "Sewer Service": "Calls avg $466 vs $242 (Nick $839 camera) +$448 · Calls ran 2 vs 0 (2 added) +$290 · Calls conv 100% vs 60% +$194",
   "Sewer Install": "On plan."
  },
