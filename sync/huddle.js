@@ -392,10 +392,10 @@ function whyShort(dept, r) {
     const c = r.cats[e.cat] || {};
     if (/_volume$/.test(e.key)) { const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went NC`); if (c.addedRan) x.push(`${c.addedRan} added`); return `${name(e.cat)} ran ${c.ran} vs ${c.planned}${x.length ? ' (' + x.join(', ') + ')' : ''}`; }
     if (/_conversion$/.test(e.key)) return `${name(e.cat)} conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}%`;
-    if (/_ticket$/.test(e.key)) { const j = (e.jobs || []).slice(0, 2).map((x) => `${firstName(x.tech)} ${kmoney(x.revenue)} ${SHORTJ(x.type)}`); return `${name(e.cat)} avg ${money(c.avgTicket)} vs ${money(c.planAvg)}${e.amount > 0 && j.length ? ' (' + j.join(', ') + ')' : ''}`; }
+    if (/_ticket$/.test(e.key)) return `${name(e.cat)} avg ${money(c.avgTicket)} vs ${money(c.planAvg)}`;
     if (/_fees$/.test(e.key)) return `Dispatch fees on unsold calls`;
-    if (e.key === 'sold_missed') return `Sold work not done (${(e.jobs || []).slice(0, 2).map((x) => `${firstName(x.tech)} ${kmoney(x.planned)}`).join(', ')})`;
-    if (e.key === 'sold_added') return `Sold work added (${(e.jobs || []).slice(0, 2).map((x) => `${firstName(x.tech)} ${kmoney(x.actual)}`).join(', ')})`;
+    if (e.key === 'sold_missed') return `Sold work not done (${(e.jobs || []).length} job${(e.jobs || []).length === 1 ? '' : 's'})`;
+    if (e.key === 'sold_added') return `Sold work added (${(e.jobs || []).length} job${(e.jobs || []).length === 1 ? '' : 's'})`;
     if (e.key === 'sold_diff') return `Sold work billed ${e.amount >= 0 ? 'over' : 'under'} estimate`;
     if (e.key === 'wcn') return `Warranty/NC revenue`;
     if (e.key === 'lead_rev') return `Sewer estimate visits`;

@@ -120,8 +120,12 @@ function resultsCard(dept, r, why, plan, whyLong) {
   if (r.effects && r.effects.length) {
     const eff = r.effects.filter((e) => Math.abs(e.amount) >= 0.5).sort((a, b) => Math.abs(b.amount) - Math.abs(a.amount));
     h += `<details open><summary>What moved the number</summary><table><tr><th>Driver</th><th>Detail</th><th class="n">Effect</th></tr>
-      ${eff.map((e) => `<tr><td>${esc(e.label)}</td><td class="muted">${esc(e.detail || '')}${e.jobs && e.jobs.length && e.key.endsWith('_ticket') ? '<br>' + e.jobs.map((j) => esc(j.tech + ' · ' + j.type + ' · ' + money(j.revenue))).join('<br>') : ''}</td><td class="n ${e.amount >= 0 ? 'pos' : 'neg'}">${signed(e.amount)}</td></tr>`).join('')}
-      <tr><td><b>Total</b></td><td class="muted">projection ${money(r.projection)} → actual ${money(r.actual)}</td><td class="n"><b>${signed(r.variance)}</b></td></tr></table></details>`;
+      ${eff.map((e) => `<tr><td>${esc(e.label)}</td><td class="muted">${esc(e.detail || '')}</td><td class="n ${e.amount >= 0 ? 'pos' : 'neg'}">${signed(e.amount)}</td></tr>`).join('')}
+      <tr><td><b>Total</b></td><td class="muted">projection ${money(r.projection)} → actual ${money(r.actual)}</td><td class="n"><b>${signed(r.variance)}</b></td></tr></table>`;
+    const big = r.effects.filter((e) => /_ticket$/.test(e.key)).flatMap((e) => (e.jobs || []).map((j) => ({ ...j, cat: e.cat }))).sort((a, b) => b.revenue - a.revenue);
+    const c0 = r.cats || {};
+    h += big.length ? `<div style="margin-top:10px;font-weight:600;font-size:13px">Big jobs (well above the planned average sale)</div><table><tr><th></th><th>Tech</th><th>Job</th><th class="n">Revenue</th></tr>${big.map((j) => `<tr><td>${tag(j.cat)}</td><td>${esc(j.tech)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)}</div></td><td class="n">${money2(j.revenue)}</td></tr>`).join('')}</table><div class="legend">Listed when a converted call is at least ${INDEX.config.bigTicketMultiple}× the planned average (Demand ${money((c0.demand || {}).planAvg * INDEX.config.bigTicketMultiple)}+${c0.spp && c0.spp.planAvg ? ', SPP ' + money(c0.spp.planAvg * INDEX.config.bigTicketMultiple) + '+' : ''}).</div>` : '';
+    h += `</details>`;
   }
   const c = r.cats || {};
   const callRows = ['demand', 'spp'].filter((k) => c[k]).map((k) => { const x = c[k]; return `<tr><td>${tag(k)}</td><td class="n">${x.planned}</td><td class="n">${x.ran}</td><td class="n">${x.converted} (${x.convRate == null ? '—' : Math.round(x.convRate * 100) + '%'})</td><td class="n">${x.avgTicket == null ? '—' : money(x.avgTicket)}</td><td class="n">${money(x.revenue)}</td></tr>`; }).join('');

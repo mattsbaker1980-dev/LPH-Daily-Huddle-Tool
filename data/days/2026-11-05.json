@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generatedAt": "2026-11-06T18:13:15.506Z",
+ "generatedAt": "2026-11-06T18:25:04.274Z",
  "plan": {
   "date": "2026-11-05",
   "capturedFrom": "9_Sold Work_Dated 11_05_26 - 11_05_26.xlsx",
@@ -971,7 +971,7 @@
   }
  },
  "why": {
-  "Plumbing": "Demand conv 43% vs 72% −$1.6K · Demand avg $1,309 vs $800 (Layne $2K faucet) +$1.5K · SPP ran 5 vs 12 (7 didn't run) −$980 · Other −$311",
+  "Plumbing": "Demand conv 43% vs 72% −$1.6K · Demand avg $1,309 vs $800 +$1.5K · SPP ran 5 vs 12 (7 didn't run) −$980 · Other −$311",
   "Sewer Service": "Calls avg $93 vs $242 −$149 · Calls ran 2 vs 1 (1 added) +$145",
   "Sewer Install": "On plan."
  },

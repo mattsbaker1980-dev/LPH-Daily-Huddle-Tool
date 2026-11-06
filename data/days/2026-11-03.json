@@ -1,6 +1,6 @@
 {
  "date": "2026-11-03",
- "generatedAt": "2026-11-06T18:13:15.499Z",
+ "generatedAt": "2026-11-06T18:25:04.268Z",
  "plan": {
   "date": "2026-11-03",
   "capturedFrom": "7_Sold Work_Dated 11_03_26 - 11_03_26.xlsx",
@@ -1104,7 +1104,7 @@
   }
  },
  "why": {
-  "Plumbing": "Demand avg $1,437 vs $800 (Derrick $3.3K WH) +$1.9K · Sold work added (Ethan $1.5K) +$1.5K · Demand conv 50% vs 72% −$1.1K · Other −$440",
+  "Plumbing": "Demand avg $1,437 vs $800 +$1.9K · Sold work added (1 job) +$1.5K · Demand conv 50% vs 72% −$1.1K · Other −$440",
   "Sewer Service": "Calls avg $93 vs $242 −$298 · Calls conv 100% vs 60% +$194 · Calls ran 2 vs 1 (1 added) +$145",
   "Sewer Install": "On plan."
  },
