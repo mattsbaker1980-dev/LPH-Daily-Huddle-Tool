@@ -248,7 +248,7 @@ function waivedFee(repo, date, j) {
   if (!m) return null;
   const fee = parseFloat(m[1]); if (!(fee > 0 && fee <= 1000)) return null;
   const sentences = n.writeUp.split(/(?<=[.!?])\s+/);
-  const reason = sentences.find((x) => /waiv|no charge|n\/c|courtesy|didn.?t charge|not charg|free of charge|no fee/i.test(x)) || null;
+  const reason = sentences.find((x) => (/\bwaiv(e|ed|ing)\b/i.test(x) && /fee|charge|dispatch|diagnos|trip/i.test(x)) || /no charge|n\/c\b|didn.?t charge|not charg|free of charge|no fee|no dispatch/i.test(x)) || null;
   return { job: j.job, tech: j.tech, type: j.type, fee, reason: reason ? reason.trim().slice(0, 140) : null };
 }
 

@@ -64,7 +64,15 @@ const blobSha = (buf) => require('crypto').createHash('sha1').update(Buffer.conc
     }
 
     // 2. extract attachments
-    const raws = process.argv.slice(2);
+    // normalize the Gmail tool's saved files: plain {raw}, or [{type:'text', text:'{...raw...}'}]
+    const raws = process.argv.slice(2).map((f, i) => {
+      try {
+        let j = JSON.parse(fs.readFileSync(f, 'utf8'));
+        if (Array.isArray(j) && j[0] && typeof j[0].text === 'string') j = JSON.parse(j[0].text);
+        if (j && j.raw) { const out = path.join(WORK, `raw_${i}.json`); fs.writeFileSync(out, JSON.stringify({ id: j.id, raw: j.raw })); return out; }
+      } catch (e) { /* leave as-is */ }
+      return f;
+    });
     if (raws.length) {
       const out = execFileSync('node', [path.join(__dirname, 'gmail_extract.js'), path.join(WORK, 'xlsx'), ...raws], { encoding: 'utf8' });
       process.stdout.write(out);
