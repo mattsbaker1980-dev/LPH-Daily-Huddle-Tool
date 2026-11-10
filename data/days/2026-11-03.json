@@ -1,6 +1,6 @@
 {
  "date": "2026-11-03",
- "generatedAt": "2026-11-09T13:46:42.781Z",
+ "generatedAt": "2026-11-10T13:38:09.519Z",
  "plan": {
   "date": "2026-11-03",
   "capturedFrom": "7_Sold Work_Dated 11_03_26 - 11_03_26.xlsx",
@@ -528,7 +528,7 @@
  },
  "results": {
   "date": "2026-11-03",
-  "source": "0_Daily Job Detail_Dated 11_02_26 - 11_08_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_03_26 - 11_09_26.xlsx",
   "firstTotal": 11665.73,
   "depts": {
    "Plumbing": {
@@ -569,15 +569,15 @@
       "key": "spp_volume",
       "cat": "spp",
       "label": "SPP calls run vs plan",
-      "amount": -700,
-      "detail": "8 run vs 13 planned"
+      "amount": -840,
+      "detail": "7 run vs 13 planned"
      },
      {
       "key": "spp_conversion",
       "cat": "spp",
       "label": "SPP conversion",
-      "amount": -770,
-      "detail": "1 of 8 converted (13% vs 40% plan)"
+      "amount": -630,
+      "detail": "1 of 7 converted (14% vs 40% plan)"
      },
      {
       "key": "spp_ticket",
@@ -622,18 +622,18 @@
      },
      "spp": {
       "planned": 13,
-      "ran": 8,
+      "ran": 7,
       "converted": 1,
-      "convRate": 0.125,
+      "convRate": 0.14285714285714285,
       "planConv": 0.4,
       "avgTicket": 803.53,
       "planAvg": 350,
       "revenue": 803.53,
       "planRev": 1820,
-      "plannedRan": 8,
+      "plannedRan": 7,
       "addedRan": 0,
       "missed": 5,
-      "reclassed": 0
+      "reclassed": 1
      },
      "sold": {
       "planned": 4860.34,
@@ -678,7 +678,7 @@
      },
      "wcn": {
       "planned": 2,
-      "ran": 5,
+      "ran": 6,
       "revenue": 0
      }
     },
@@ -876,7 +876,7 @@
        "plannedAs": null
       },
       {
-       "job": "438116536",
+       "job": "438056306",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
@@ -918,7 +918,7 @@
        "plannedAs": null
       },
       {
-       "job": "438056306",
+       "job": "438116536",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
@@ -973,7 +973,7 @@
     }
    },
    "Sewer Service": {
-    "actual": 186,
+    "actual": 200,
     "projection": 145.2,
     "jobsCompleted": 2,
     "effects": [
@@ -995,8 +995,8 @@
       "key": "demand_ticket",
       "cat": "demand",
       "label": "Demand average ticket",
-      "amount": -298,
-      "detail": "$93 avg vs $242 plan",
+      "amount": -284,
+      "detail": "$100 avg vs $242 plan",
       "jobs": []
      }
     ],
@@ -1007,9 +1007,9 @@
       "converted": 2,
       "convRate": 1,
       "planConv": 0.6,
-      "avgTicket": 93,
+      "avgTicket": 100,
       "planAvg": 242,
-      "revenue": 186,
+      "revenue": 200,
       "planRev": 145.2,
       "plannedRan": 1,
       "addedRan": 1,
@@ -1044,7 +1044,7 @@
        "converted": true,
        "warranty": false,
        "recall": false,
-       "revenue": 93,
+       "revenue": 100,
        "soldBy": "",
        "estimates": 1,
        "estSales": 93,
@@ -1056,14 +1056,14 @@
       }
      ]
     },
-    "variance": 40.8,
+    "variance": 54.8,
     "waived": [],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 2,
-     "sumOfJobs": 186,
-     "explained": 40.8,
+     "sumOfJobs": 200,
+     "explained": 54.8,
      "ok": true
     }
    },
@@ -1110,13 +1110,13 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 50% vs 72% - Avg $1,437 vs $800 - Ran 6 vs 5 scheduled (2 didn't run, 3 added). SPP: Conv 13% vs 40% - Avg $804 vs $350 - Ran 8 vs 13 scheduled (5 didn't run). Sold work: $6,364 vs $4,860 scheduled.",
-  "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 2 vs 1 scheduled (1 added).",
+  "Plumbing": "Demand: Conv 50% vs 72% - Avg $1,437 vs $800 - Ran 6 vs 5 scheduled (2 didn't run, 3 added). SPP: Conv 14% vs 40% - Avg $804 vs $350 - Ran 7 vs 13 scheduled (5 didn't run, 1 went to warranty/callback). Sold work: $6,364 vs $4,860 scheduled.",
+  "Sewer Service": "Demand: Conv 100% vs 60% - Avg $100 vs $242 - Ran 2 vs 1 scheduled (1 added).",
   "Sewer Install": "Leads: Ran 1 vs 1 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing beat projection by $1,919 ($11,480 vs $9,560). Ran 6 demand calls vs 5 planned (2 planned didn't run, 3 added during the day) +$576; converted 3 of 6 (50% vs 72%) -$1,056; average demand ticket $1,437 vs $800 +$1,912 — Derrick's $3,291 water heater. Ran 8 SPP calls vs 13 planned (5 planned didn't run) -$700; converted 1 of 8 (13% vs 40%) -$770; average SPP ticket $804 vs $350 +$454. $1,504 of sold work was added after the morning board (Ethan's $1,504).",
-  "Sewer Service": "Sewer Service landed right on projection ($186 vs $145). Ran 2 demand calls vs 1 planned (1 added during the day); converted 2 of 2 (100% vs 60%) +$194; average demand ticket $93 vs $242 -$298.",
+  "Plumbing": "Plumbing beat projection by $1,919 ($11,480 vs $9,560). Ran 6 demand calls vs 5 planned (2 planned didn't run, 3 added during the day) +$576; converted 3 of 6 (50% vs 72%) -$1,056; average demand ticket $1,437 vs $800 +$1,912 — Derrick's $3,291 water heater. Ran 7 SPP calls vs 13 planned (5 planned didn't run, 1 went to warranty/callback) -$840; converted 1 of 7 (14% vs 40%) -$630; average SPP ticket $804 vs $350 +$454. $1,504 of sold work was added after the morning board (Ethan's $1,504).",
+  "Sewer Service": "Sewer Service beat projection by $55 ($200 vs $145). Ran 2 demand calls vs 1 planned (1 added during the day); converted 2 of 2 (100% vs 60%) +$194; average demand ticket $100 vs $242 -$284.",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 1 scheduled."
  }
 }
