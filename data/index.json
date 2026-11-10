@@ -1,8 +1,20 @@
 {
- "updatedAt": "2026-11-10T13:38:09.533Z",
- "today": "2026-11-09",
- "yesterday": "2026-11-06",
+ "updatedAt": "2026-11-10T13:46:51.785Z",
+ "today": "2026-11-10",
+ "yesterday": "2026-11-09",
  "days": [
+  {
+   "date": "2026-11-10",
+   "hasPlan": true,
+   "hasResults": false,
+   "projection": {
+    "Plumbing": 28592.62,
+    "Sewer Service": 145.2,
+    "Sewer Install": 0
+   },
+   "actual": null,
+   "checks": null
+  },
   {
    "date": "2026-11-09",
    "hasPlan": true,
