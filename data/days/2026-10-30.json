@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generatedAt": "2026-11-10T19:23:21.594Z",
+ "generatedAt": "2026-11-10T19:41:32.750Z",
  "plan": {
   "date": "2026-10-30",
   "capturedFrom": "5_Sold Work_Dated 10_30_26 - 10_30_26.xlsx",
@@ -574,8 +574,8 @@
       "planRev": 1120,
       "plannedRan": 5,
       "addedRan": 0,
-      "missed": 1,
-      "rescheduled": 1,
+      "missed": 0,
+      "rescheduled": 2,
       "reclassed": 1
      },
      "sold": {
@@ -1016,12 +1016,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 100% vs 72% - Avg $347 vs $800 - Ran 6 vs 4 scheduled (1 went to warranty/callback, 3 added). SPP: Conv 0% vs 40% - Ran 5 vs 8 scheduled (1 rescheduled, 1 didn't run, 1 went to warranty/callback). 2 dispatch fees not charged ($98, 2 with no reason in notes).",
+  "Plumbing": "Demand: Conv 100% vs 72% - Avg $347 vs $800 - Ran 6 vs 4 scheduled (1 went to warranty/callback, 3 added). SPP: Conv 0% vs 40% - Ran 5 vs 8 scheduled (2 rescheduled, 1 went to warranty/callback). 2 dispatch fees not charged ($98, 2 with no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 0 scheduled (1 added).",
   "Sewer Install": "Leads: Ran 0 vs 1 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $1,341 ($11,907 vs $13,248). Ran 6 demand calls vs 4 planned (1 went to warranty/callback, 3 added during the day) +$1,152; converted 6 of 6 (100% vs 72%) +$1,344; average demand ticket $347 vs $800 -$2,717. Ran 5 SPP calls vs 8 planned (1 rescheduled, 1 planned didn't run, 1 went to warranty/callback) -$420; converted 0 of 5 (0% vs 40%) -$700.",
+  "Plumbing": "Plumbing missed projection by $1,341 ($11,907 vs $13,248). Ran 6 demand calls vs 4 planned (1 went to warranty/callback, 3 added during the day) +$1,152; converted 6 of 6 (100% vs 72%) +$1,344; average demand ticket $347 vs $800 -$2,717. Ran 5 SPP calls vs 8 planned (2 rescheduled, 1 went to warranty/callback) -$420; converted 0 of 5 (0% vs 40%) -$700.",
   "Sewer Service": "Sewer Service beat projection by $93 ($93 vs $0). Ran 1 demand calls vs 0 planned (1 added during the day).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 1 scheduled."
  }

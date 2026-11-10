@@ -1,6 +1,6 @@
 {
  "date": "2026-11-04",
- "generatedAt": "2026-11-10T19:23:21.632Z",
+ "generatedAt": "2026-11-10T19:41:32.807Z",
  "plan": {
   "date": "2026-11-04",
   "capturedFrom": "8_Sold Work_Dated 11_04_26 - 11_04_26.xlsx",
@@ -683,8 +683,8 @@
       "planRev": 1680,
       "plannedRan": 5,
       "addedRan": 0,
-      "missed": 7,
-      "rescheduled": 0,
+      "missed": 0,
+      "rescheduled": 7,
       "reclassed": 0
      },
      "sold": {
@@ -1180,12 +1180,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 70% vs 72% - Avg $2,429 vs $800 - Ran 10 vs 8 scheduled (1 didn't run, 1 went to warranty/callback, 4 added). SPP: Conv 40% vs 40% - Avg $2,684 vs $350 - Ran 5 vs 12 scheduled (7 didn't run). 1 dispatch fee not charged ($79 – no reason in notes).",
+  "Plumbing": "Demand: Conv 70% vs 72% - Avg $2,429 vs $800 - Ran 10 vs 8 scheduled (1 didn't run, 1 went to warranty/callback, 4 added). SPP: Conv 40% vs 40% - Avg $2,684 vs $350 - Ran 5 vs 12 scheduled (7 rescheduled). 1 dispatch fee not charged ($79 – no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $466 vs $242 - Ran 2 vs 0 scheduled (2 added).",
   "Sewer Install": "Leads: Ran 1 vs 2 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing beat projection by $16,080 ($25,542 vs $9,461). Ran 10 demand calls vs 8 planned (1 planned didn't run, 1 went to warranty/callback, 4 added during the day) +$1,152; average demand ticket $2,429 vs $800 +$11,401 — Ethan's $7,839 water heater, Derrick's $4,306 water heater, Robert's $3,637 water heater. Ran 5 SPP calls vs 12 planned (7 planned didn't run) -$980; average SPP ticket $2,684 vs $350 +$4,669 — Layne's $5,230 system check.",
+  "Plumbing": "Plumbing beat projection by $16,080 ($25,542 vs $9,461). Ran 10 demand calls vs 8 planned (1 planned didn't run, 1 went to warranty/callback, 4 added during the day) +$1,152; average demand ticket $2,429 vs $800 +$11,401 — Ethan's $7,839 water heater, Derrick's $4,306 water heater, Robert's $3,637 water heater. Ran 5 SPP calls vs 12 planned (7 rescheduled) -$980; average SPP ticket $2,684 vs $350 +$4,669 — Layne's $5,230 system check.",
   "Sewer Service": "Sewer Service beat projection by $932 ($932 vs $0). Ran 2 demand calls vs 0 planned (2 added during the day) +$290; converted 2 of 2 (100% vs 60%) +$194; average demand ticket $466 vs $242 +$448 — Nick's $839 sewer camera video inspection.",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 2 scheduled."
  }

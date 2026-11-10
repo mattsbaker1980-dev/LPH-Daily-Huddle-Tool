@@ -1,6 +1,6 @@
 {
  "date": "2026-11-09",
- "generatedAt": "2026-11-10T19:23:21.640Z",
+ "generatedAt": "2026-11-10T19:41:32.816Z",
  "plan": {
   "date": "2026-11-09",
   "capturedFrom": "0_Sold Work_Dated 11_09_26 - 11_09_26.xlsx",
@@ -885,8 +885,8 @@
       "planRev": 1260,
       "plannedRan": 2,
       "addedRan": 0,
-      "missed": 5,
-      "rescheduled": 1,
+      "missed": 0,
+      "rescheduled": 6,
       "reclassed": 1
      },
      "sold": {
@@ -1491,12 +1491,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 75% vs 72% - Avg $540 vs $800 - Ran 16 vs 13 scheduled (1 didn't run, 1 went to warranty/callback, 5 added). SPP: Conv 100% vs 40% - Avg $390 vs $350 - Ran 2 vs 9 scheduled (1 rescheduled, 5 didn't run, 1 went to warranty/callback). Sold work: $6,697 vs $6,034 scheduled.",
+  "Plumbing": "Demand: Conv 75% vs 72% - Avg $540 vs $800 - Ran 16 vs 13 scheduled (1 didn't run, 1 went to warranty/callback, 5 added). SPP: Conv 100% vs 40% - Avg $390 vs $350 - Ran 2 vs 9 scheduled (6 rescheduled, 1 went to warranty/callback). Sold work: $6,697 vs $6,034 scheduled.",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 1 scheduled (1 went to warranty/callback, 1 added).",
   "Sewer Install": "1 dispatch fee not charged ($49 – no reason in notes). Leads: Ran 1 vs 2 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $596 ($14,186 vs $14,782). Ran 16 demand calls vs 13 planned (1 planned didn't run, 1 went to warranty/callback, 5 added during the day) +$1,728; average demand ticket $540 vs $800 -$3,117. Ran 2 SPP calls vs 9 planned (1 rescheduled, 5 planned didn't run, 1 went to warranty/callback) -$980. $663 of sold work was added after the morning board (Derrick's $663).",
+  "Plumbing": "Plumbing missed projection by $596 ($14,186 vs $14,782). Ran 16 demand calls vs 13 planned (1 planned didn't run, 1 went to warranty/callback, 5 added during the day) +$1,728; average demand ticket $540 vs $800 -$3,117. Ran 2 SPP calls vs 9 planned (6 rescheduled, 1 went to warranty/callback) -$980. $663 of sold work was added after the morning board (Derrick's $663).",
   "Sewer Service": "Sewer Service missed projection by $52 ($93 vs $145).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 2 scheduled."
  }

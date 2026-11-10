@@ -1,6 +1,6 @@
 {
  "date": "2026-10-28",
- "generatedAt": "2026-11-10T19:23:21.585Z",
+ "generatedAt": "2026-11-10T19:41:32.741Z",
  "plan": {
   "date": "2026-10-28",
   "capturedFrom": "2_Sold Work_Dated 10_28_26 - 10_28_26.xlsx",
@@ -758,8 +758,8 @@
       "planRev": 2520,
       "plannedRan": 14,
       "addedRan": 0,
-      "missed": 1,
-      "rescheduled": 3,
+      "missed": 0,
+      "rescheduled": 4,
       "reclassed": 0
      },
      "sold": {
@@ -1273,12 +1273,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 75% vs 72% - Avg $2,547 vs $800 - Ran 4 vs 5 scheduled (3 didn't run, 2 added). SPP: Conv 29% vs 40% - Avg $319 vs $350 - Ran 14 vs 18 scheduled (3 rescheduled, 1 didn't run). 3 dispatch fees not charged ($177, 3 with no reason in notes).",
+  "Plumbing": "Demand: Conv 75% vs 72% - Avg $2,547 vs $800 - Ran 4 vs 5 scheduled (3 didn't run, 2 added). SPP: Conv 29% vs 40% - Avg $319 vs $350 - Ran 14 vs 18 scheduled (4 rescheduled). 3 dispatch fees not charged ($177, 3 with no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $149 vs $242 - Ran 2 vs 0 scheduled (2 added).",
   "Sewer Install": "On plan."
  },
  "whyLong": {
-  "Plumbing": "Plumbing beat projection by $3,515 ($20,214 vs $16,698). Ran 4 demand calls vs 5 planned (3 planned didn't run, 2 added during the day) -$576; average demand ticket $2,547 vs $800 +$5,240 — Ethan's $3,938 water heater, Layne's $3,117 water heater. Ran 14 SPP calls vs 18 planned (3 rescheduled, 1 planned didn't run) -$560; converted 4 of 14 (29% vs 40%) -$560.",
+  "Plumbing": "Plumbing beat projection by $3,515 ($20,214 vs $16,698). Ran 4 demand calls vs 5 planned (3 planned didn't run, 2 added during the day) -$576; average demand ticket $2,547 vs $800 +$5,240 — Ethan's $3,938 water heater, Layne's $3,117 water heater. Ran 14 SPP calls vs 18 planned (4 rescheduled) -$560; converted 4 of 14 (29% vs 40%) -$560.",
   "Sewer Service": "Sewer Service beat projection by $298 ($298 vs $0). Ran 2 demand calls vs 0 planned (2 added during the day) +$290; converted 2 of 2 (100% vs 60%) +$194; average demand ticket $149 vs $242 -$186.",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."
  }

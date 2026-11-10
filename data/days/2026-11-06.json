@@ -1,6 +1,6 @@
 {
  "date": "2026-11-06",
- "generatedAt": "2026-11-10T19:23:21.638Z",
+ "generatedAt": "2026-11-10T19:41:32.814Z",
  "plan": {
   "date": "2026-11-06",
   "capturedFrom": "10_Sold Work_Dated 11_06_26 - 11_06_26.xlsx",
@@ -624,8 +624,8 @@
       "planRev": 840,
       "plannedRan": 2,
       "addedRan": 0,
-      "missed": 4,
-      "rescheduled": 0,
+      "missed": 0,
+      "rescheduled": 4,
       "reclassed": 0
      },
      "sold": {
@@ -1059,12 +1059,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 80% vs 72% - Avg $1,430 vs $800 - Ran 10 vs 10 scheduled (1 didn't run, 1 went to warranty/callback, 2 added). SPP: Conv 0% vs 40% - Ran 2 vs 6 scheduled (4 didn't run). 1 dispatch fee not charged ($79 – no reason in notes).",
+  "Plumbing": "Demand: Conv 80% vs 72% - Avg $1,430 vs $800 - Ran 10 vs 10 scheduled (1 didn't run, 1 went to warranty/callback, 2 added). SPP: Conv 0% vs 40% - Ran 2 vs 6 scheduled (4 rescheduled). 1 dispatch fee not charged ($79 – no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 1 scheduled (1 went to warranty/callback, 1 added). 1 dispatch fee not charged ($93 – no reason in notes).",
   "Sewer Install": "Leads: Ran 0 vs 1 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing beat projection by $5,326 ($15,575 vs $10,249). Converted 8 of 10 (80% vs 72%) +$640; average demand ticket $1,430 vs $800 +$5,039 — Robert's $9,069 water heater. Ran 2 SPP calls vs 6 planned (4 planned didn't run) -$560. Scheduled sold work billed +$486 vs the estimate.",
+  "Plumbing": "Plumbing beat projection by $5,326 ($15,575 vs $10,249). Converted 8 of 10 (80% vs 72%) +$640; average demand ticket $1,430 vs $800 +$5,039 — Robert's $9,069 water heater. Ran 2 SPP calls vs 6 planned (4 rescheduled) -$560. Scheduled sold work billed +$486 vs the estimate.",
   "Sewer Service": "Sewer Service missed projection by $52 ($93 vs $145).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 1 scheduled."
  }
