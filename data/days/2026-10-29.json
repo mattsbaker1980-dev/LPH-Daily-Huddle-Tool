@@ -1,6 +1,6 @@
 {
  "date": "2026-10-29",
- "generatedAt": "2026-11-10T13:46:51.748Z",
+ "generatedAt": "2026-11-10T19:23:21.590Z",
  "plan": {
   "date": "2026-10-29",
   "capturedFrom": "3_Sold Work_Dated 10_29_26 - 10_29_26.xlsx",
@@ -598,6 +598,7 @@
       "plannedRan": 2,
       "addedRan": 0,
       "missed": 0,
+      "rescheduled": 0,
       "reclassed": 1
      },
      "spp": {
@@ -612,7 +613,8 @@
       "planRev": 1260,
       "plannedRan": 5,
       "addedRan": 0,
-      "missed": 3,
+      "missed": 0,
+      "rescheduled": 3,
       "reclassed": 1
      },
      "sold": {
@@ -916,6 +918,7 @@
       "plannedRan": 2,
       "addedRan": 0,
       "missed": 0,
+      "rescheduled": 0,
       "reclassed": 0
      },
      "sold": {
@@ -990,12 +993,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 0% vs 72% - Ran 2 vs 3 scheduled (1 went to warranty/callback). SPP: Conv 0% vs 40% - Ran 5 vs 9 scheduled (3 didn't run, 1 went to warranty/callback). Sold work: $9,870 vs $10,519 scheduled.",
+  "Plumbing": "Demand: Conv 0% vs 72% - Ran 2 vs 3 scheduled (1 went to warranty/callback). SPP: Conv 0% vs 40% - Ran 5 vs 9 scheduled (3 rescheduled, 1 went to warranty/callback). Sold work: $9,870 vs $10,519 scheduled.",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $401 vs $242 - Ran 2 vs 2 scheduled.",
   "Sewer Install": "On plan."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $1,858 ($11,649 vs $13,507). Ran 2 demand calls vs 3 planned (1 went to warranty/callback) -$576; converted 0 of 2 (0% vs 72%) -$1,152. Ran 5 SPP calls vs 9 planned (3 planned didn't run, 1 went to warranty/callback) -$560; converted 0 of 5 (0% vs 40%) -$700. Scheduled sold work billed -$648 vs the estimate. $1,699 came from warranty/callback/no-charge calls.",
+  "Plumbing": "Plumbing missed projection by $1,858 ($11,649 vs $13,507). Ran 2 demand calls vs 3 planned (1 went to warranty/callback) -$576; converted 0 of 2 (0% vs 72%) -$1,152. Ran 5 SPP calls vs 9 planned (3 rescheduled, 1 went to warranty/callback) -$560; converted 0 of 5 (0% vs 40%) -$700. Scheduled sold work billed -$648 vs the estimate. $1,699 came from warranty/callback/no-charge calls.",
   "Sewer Service": "Sewer Service beat projection by $512 ($802 vs $290). Converted 2 of 2 (100% vs 60%) +$194; average demand ticket $401 vs $242 +$318 — Ethan's $709 drain stoppage.",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."
  }

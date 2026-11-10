@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generatedAt": "2026-11-10T13:46:51.776Z",
+ "generatedAt": "2026-11-10T19:23:21.635Z",
  "plan": {
   "date": "2026-11-05",
   "capturedFrom": "9_Sold Work_Dated 11_05_26 - 11_05_26.xlsx",
@@ -564,6 +564,7 @@
       "plannedRan": 5,
       "addedRan": 2,
       "missed": 0,
+      "rescheduled": 0,
       "reclassed": 1
      },
      "spp": {
@@ -578,7 +579,8 @@
       "planRev": 1680,
       "plannedRan": 5,
       "addedRan": 0,
-      "missed": 7,
+      "missed": 5,
+      "rescheduled": 2,
       "reclassed": 0
      },
      "sold": {
@@ -881,6 +883,7 @@
       "plannedRan": 1,
       "addedRan": 1,
       "missed": 0,
+      "rescheduled": 0,
       "reclassed": 0
      },
      "sold": {
@@ -985,12 +988,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 43% vs 72% - Avg $1,309 vs $800 - Ran 7 vs 6 scheduled (1 went to warranty/callback, 2 added). SPP: Conv 20% vs 40% - Avg $134 vs $350 - Ran 5 vs 12 scheduled (7 didn't run). Sold work: $14,645 vs $16,564 scheduled.",
+  "Plumbing": "Demand: Conv 43% vs 72% - Avg $1,309 vs $800 - Ran 7 vs 6 scheduled (1 went to warranty/callback, 2 added). SPP: Conv 20% vs 40% - Avg $134 vs $350 - Ran 5 vs 12 scheduled (2 rescheduled, 5 didn't run). Sold work: $14,645 vs $16,564 scheduled.",
   "Sewer Service": "Demand: Conv 50% vs 60% - Avg $93 vs $242 - Ran 2 vs 1 scheduled (1 added). 1 dispatch fee not charged ($149 – Waived dispatched fee for the miscommunication).",
   "Sewer Install": "On plan."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $2,817 ($18,882 vs $21,700). Ran 7 demand calls vs 6 planned (1 went to warranty/callback, 2 added during the day); converted 3 of 7 (43% vs 72%) -$1,632; average demand ticket $1,309 vs $800 +$1,526 — Layne's $2,037 faucet concern. Ran 5 SPP calls vs 12 planned (7 planned didn't run) -$980. Scheduled sold work billed -$1,919 vs the estimate.",
+  "Plumbing": "Plumbing missed projection by $2,817 ($18,882 vs $21,700). Ran 7 demand calls vs 6 planned (1 went to warranty/callback, 2 added during the day); converted 3 of 7 (43% vs 72%) -$1,632; average demand ticket $1,309 vs $800 +$1,526 — Layne's $2,037 faucet concern. Ran 5 SPP calls vs 12 planned (2 rescheduled, 5 planned didn't run) -$980. Scheduled sold work billed -$1,919 vs the estimate.",
   "Sewer Service": "Sewer Service missed projection by $52 ($93 vs $145). Ran 2 demand calls vs 1 planned (1 added during the day).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."
  }

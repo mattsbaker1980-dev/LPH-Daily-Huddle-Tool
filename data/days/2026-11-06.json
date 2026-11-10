@@ -1,6 +1,6 @@
 {
  "date": "2026-11-06",
- "generatedAt": "2026-11-10T13:46:51.780Z",
+ "generatedAt": "2026-11-10T19:23:21.638Z",
  "plan": {
   "date": "2026-11-06",
   "capturedFrom": "10_Sold Work_Dated 11_06_26 - 11_06_26.xlsx",
@@ -609,6 +609,7 @@
       "plannedRan": 8,
       "addedRan": 2,
       "missed": 1,
+      "rescheduled": 0,
       "reclassed": 1
      },
      "spp": {
@@ -624,6 +625,7 @@
       "plannedRan": 2,
       "addedRan": 0,
       "missed": 4,
+      "rescheduled": 0,
       "reclassed": 0
      },
      "sold": {
@@ -914,6 +916,7 @@
       "plannedRan": 0,
       "addedRan": 1,
       "missed": 0,
+      "rescheduled": 0,
       "reclassed": 1
      },
      "sold": {
