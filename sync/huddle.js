@@ -312,7 +312,8 @@ function bridge(repo, date, P) {
       const big = conv.filter((j) => j.revenue >= rt.avg * CFG.bigTicketMultiple).sort((a, b) => b.revenue - a.revenue);
       res.cats[k] = { planned: Np, ran: Na, converted: Ca, convRate: Na ? Ca / Na : null, planConv: rt.conv, avgTicket: Ca ? Rconv / Ca : null, planAvg: rt.avg, revenue: r2(Rconv + Rnon), planRev: p[k + 'Rev'],
         plannedRan: runs.filter((j) => j.planned).length, addedRan: runs.filter((j) => !j.planned).length,
-        missed: missed.filter((j) => j.cls === k).length,
+        missed: missed.filter((j) => j.cls === k && !j.later).length,
+        rescheduled: missed.filter((j) => j.cls === k && j.later).length,
         reclassed: done.filter((j) => j.planned && j.plannedAs === k && j.cls !== k).length };
       push({ key: k + '_volume', cat: k, label: `${k === 'spp' ? 'SPP' : 'Demand'} calls run vs plan`, amount: (Na - Np) * rt.conv * rt.avg, detail: `${Na} run vs ${Np} planned` });
       push({ key: k + '_conversion', cat: k, label: `${k === 'spp' ? 'SPP' : 'Demand'} conversion`, amount: (Ca - Na * rt.conv) * rt.avg, detail: `${Ca} of ${Na} converted (${Na ? pct(Ca / Na) : '—'} vs ${pct(rt.conv)} plan)` });
@@ -368,6 +369,7 @@ function whySentence(dept, r, P) {
     if (vol && (sig(vol.amount) || c.ran !== c.planned)) {
       let s = `ran ${c.ran} ${name} calls vs ${c.planned} planned`;
       const extra = [];
+      if (c.rescheduled) extra.push(`${c.rescheduled} rescheduled`);
       if (c.missed) extra.push(`${c.missed} planned didn't run`);
       if (c.reclassed) extra.push(`${c.reclassed} went to warranty/callback`);
       if (c.addedRan) extra.push(`${c.addedRan} added during the day`);
@@ -420,7 +422,7 @@ function whyShort(dept, r) {
     const bits = [];
     if (c.ran) bits.push(`Conv ${Math.round(c.convRate * 100)}% vs ${Math.round(c.planConv * 100)}%`);
     if (c.converted) bits.push(`Avg ${money(c.avgTicket)} vs ${money(c.planAvg)}`);
-    const x = []; if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went to warranty/callback`); if (c.addedRan) x.push(`${c.addedRan} added`);
+    const x = []; if (c.rescheduled) x.push(`${c.rescheduled} rescheduled`); if (c.missed) x.push(`${c.missed} didn't run`); if (c.reclassed) x.push(`${c.reclassed} went to warranty/callback`); if (c.addedRan) x.push(`${c.addedRan} added`);
     bits.push(`Ran ${c.ran} vs ${c.planned} scheduled${x.length ? ' (' + x.join(', ') + ')' : ''}`);
     parts.push(`${k === 'spp' ? 'SPP' : 'Demand'}: ${bits.join(' - ')}.`);
   }
