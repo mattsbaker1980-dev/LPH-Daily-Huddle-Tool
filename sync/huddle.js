@@ -312,8 +312,9 @@ function bridge(repo, date, P) {
       const big = conv.filter((j) => j.revenue >= rt.avg * CFG.bigTicketMultiple).sort((a, b) => b.revenue - a.revenue);
       res.cats[k] = { planned: Np, ran: Na, converted: Ca, convRate: Na ? Ca / Na : null, planConv: rt.conv, avgTicket: Ca ? Rconv / Ca : null, planAvg: rt.avg, revenue: r2(Rconv + Rnon), planRev: p[k + 'Rev'],
         plannedRan: runs.filter((j) => j.planned).length, addedRan: runs.filter((j) => !j.planned).length,
-        missed: missed.filter((j) => j.cls === k && !j.later).length,
-        rescheduled: missed.filter((j) => j.cls === k && j.later).length,
+        // Matt 11/10: system checks that drop off are being rescheduled (heavy demand work) — count every SPP drop-off as rescheduled
+        missed: missed.filter((j) => j.cls === k && !j.later && k !== 'spp').length,
+        rescheduled: missed.filter((j) => j.cls === k && (j.later || k === 'spp')).length,
         reclassed: done.filter((j) => j.planned && j.plannedAs === k && j.cls !== k).length };
       push({ key: k + '_volume', cat: k, label: `${k === 'spp' ? 'SPP' : 'Demand'} calls run vs plan`, amount: (Na - Np) * rt.conv * rt.avg, detail: `${Na} run vs ${Np} planned` });
       push({ key: k + '_conversion', cat: k, label: `${k === 'spp' ? 'SPP' : 'Demand'} conversion`, amount: (Ca - Na * rt.conv) * rt.avg, detail: `${Ca} of ${Na} converted (${Na ? pct(Ca / Na) : '—'} vs ${pct(rt.conv)} plan)` });

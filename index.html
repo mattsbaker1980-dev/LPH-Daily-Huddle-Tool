@@ -135,7 +135,7 @@ function resultsCard(dept, r, why, plan, whyLong) {
   if ((L.missed && L.missed.length) || (L.added && L.added.length)) {
     const where = (l) => !l ? 'not completed or rescheduled yet' : l.startsWith('board:') ? 'moved to ' + fmtDate(l.slice(6)) : 'completed ' + fmtDate(l);
     h += `<details><summary>Board changes: ${L.missed.length} planned job(s) didn't complete, ${L.added.length} added</summary><table><tr><th></th><th>Job</th><th>What happened</th><th class="n">Revenue</th></tr>
-      ${L.missed.map((j) => `<tr><td>${tag(j.cls)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)} · ${esc(j.techs)}</div></td><td class="neg">${j.later ? 'Rescheduled — ' + esc(where(j.later)) : "Didn't run — not completed or rescheduled yet"}</td><td class="n">${j.cls === 'sold' ? money2(j.subtotal) : ''}</td></tr>`).join('')}
+      ${L.missed.map((j) => `<tr><td>${tag(j.cls)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)} · ${esc(j.techs)}</div></td><td class="neg">${j.later ? 'Rescheduled — ' + esc(where(j.later)) : j.cls === 'spp' ? 'Rescheduled' : "Didn't run — not completed or rescheduled yet"}</td><td class="n">${j.cls === 'sold' ? money2(j.subtotal) : ''}</td></tr>`).join('')}
       ${L.added.map((j) => `<tr><td>${tag(j.cls)}</td><td>${esc(j.type)}<div class="muted">#${esc(j.job)} · ${esc(j.tech)}</div></td><td class="pos">Added after 8 AM${j.plannedAs && j.plannedAs.startsWith('excluded') ? ' (' + esc(j.plannedAs.slice(10)) + ' at 8 AM)' : ''}</td><td class="n">${money2(j.revenue)}</td></tr>`).join('')}</table></details>`;
   }
   return h + '</div>';
