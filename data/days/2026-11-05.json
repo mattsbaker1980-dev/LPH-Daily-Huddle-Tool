@@ -1,6 +1,6 @@
 {
  "date": "2026-11-05",
- "generatedAt": "2026-11-10T19:41:32.810Z",
+ "generatedAt": "2026-11-12T13:23:54.730Z",
  "plan": {
   "date": "2026-11-05",
   "capturedFrom": "9_Sold Work_Dated 11_05_26 - 11_05_26.xlsx",
@@ -476,7 +476,7 @@
  },
  "results": {
   "date": "2026-11-05",
-  "source": "0_Daily Job Detail_Dated 11_03_26 - 11_09_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_05_26 - 11_11_26.xlsx",
   "firstTotal": 20396.41,
   "depts": {
    "Plumbing": {
@@ -745,27 +745,6 @@
      ],
      "added": [
       {
-       "job": "438724744",
-       "type": "Leak - Plumbing - Water Lines",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Ethan J.",
-       "techs": "Ethan J.",
-       "opp": true,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-05",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "438740653",
        "type": "Drain Stoppage - Interior Line",
        "bu": "Plumbing Demand",
@@ -783,6 +762,27 @@
        "scheduled": "2026-11-05",
        "isLead": false,
        "cls": "wcn",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "438724744",
+       "type": "Leak - Plumbing - Water Lines",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Ethan J.",
+       "techs": "Ethan J.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-05",
+       "isLead": false,
+       "cls": "demand",
        "planned": false,
        "plannedAs": null
       },

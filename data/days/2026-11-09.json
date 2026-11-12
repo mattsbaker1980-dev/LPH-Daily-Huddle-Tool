@@ -1,6 +1,6 @@
 {
  "date": "2026-11-09",
- "generatedAt": "2026-11-10T19:41:32.816Z",
+ "generatedAt": "2026-11-12T13:23:54.738Z",
  "plan": {
   "date": "2026-11-09",
   "capturedFrom": "0_Sold Work_Dated 11_09_26 - 11_09_26.xlsx",
@@ -766,7 +766,7 @@
  },
  "results": {
   "date": "2026-11-09",
-  "source": "0_Daily Job Detail_Dated 11_03_26 - 11_09_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_05_26 - 11_11_26.xlsx",
   "firstTotal": 14278.65,
   "depts": {
    "Plumbing": {
@@ -778,15 +778,15 @@
       "key": "demand_volume",
       "cat": "demand",
       "label": "Demand calls run vs plan",
-      "amount": 1728,
-      "detail": "16 run vs 13 planned"
+      "amount": 2304,
+      "detail": "17 run vs 13 planned"
      },
      {
       "key": "demand_conversion",
       "cat": "demand",
       "label": "Demand conversion",
-      "amount": 384,
-      "detail": "12 of 16 converted (75% vs 72% plan)"
+      "amount": -192,
+      "detail": "12 of 17 converted (71% vs 72% plan)"
      },
      {
       "key": "demand_ticket",
@@ -807,8 +807,8 @@
       "key": "demand_fees",
       "cat": "demand",
       "label": "Fees on unconverted demand calls",
-      "amount": 177,
-      "detail": "3 call(s) with a dispatch/diagnostic fee"
+      "amount": 226,
+      "detail": "4 call(s) with a dispatch/diagnostic fee"
      },
      {
       "key": "spp_volume",
@@ -847,31 +847,24 @@
         "plannedAs": "excluded: 5 PM placeholder"
        }
       ]
-     },
-     {
-      "key": "wcn",
-      "cat": "wcn",
-      "label": "Revenue on warranty / callback / no-opportunity calls",
-      "amount": 49,
-      "detail": "1 job(s)"
      }
     ],
     "cats": {
      "demand": {
       "planned": 13,
-      "ran": 16,
+      "ran": 17,
       "converted": 12,
-      "convRate": 0.75,
+      "convRate": 0.7058823529411765,
       "planConv": 0.72,
       "avgTicket": 540.275,
       "planAvg": 800,
-      "revenue": 6660.3,
+      "revenue": 6709.3,
       "planRev": 7488,
-      "plannedRan": 11,
+      "plannedRan": 12,
       "addedRan": 5,
       "missed": 1,
       "rescheduled": 0,
-      "reclassed": 1
+      "reclassed": 0
      },
      "spp": {
       "planned": 9,
@@ -912,7 +905,7 @@
        },
        {
         "job": "436431968",
-        "tech": "Bill P.",
+        "tech": "Nick E.",
         "type": "Sold Work - Plumbing",
         "planned": 2284.1,
         "actual": 2284.1,
@@ -932,8 +925,8 @@
      },
      "wcn": {
       "planned": 4,
-      "ran": 8,
-      "revenue": 49
+      "ran": 7,
+      "revenue": 0
      }
     },
     "lists": {
@@ -1044,7 +1037,7 @@
        "appt": "12:29",
        "cls": "spp",
        "excluded": null,
-       "later": "board:2026-11-10"
+       "later": "2026-11-10"
       },
       {
        "job": "439101880",
@@ -1080,7 +1073,7 @@
        "appt": "11:00",
        "cls": "wcn",
        "excluded": null,
-       "later": "board:2026-11-10"
+       "later": "2026-11-10"
       },
       {
        "job": "439224616",
@@ -1120,27 +1113,6 @@
        "scheduled": "2026-11-09",
        "isLead": false,
        "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
-       "job": "439330176",
-       "type": "Leak - Plumbing - Water Lines",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Robert R.",
-       "techs": "Robert R.",
-       "opp": false,
-       "converted": false,
-       "warranty": true,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-09",
-       "isLead": false,
-       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       },
@@ -1225,6 +1197,27 @@
        "scheduled": "2026-11-09",
        "isLead": false,
        "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "439330176",
+       "type": "Leak - Plumbing - Water Lines",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Robert R.",
+       "techs": "Robert R.",
+       "opp": false,
+       "converted": false,
+       "warranty": true,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-09",
+       "isLead": false,
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       },
@@ -1464,7 +1457,7 @@
        "appt": "17:00",
        "cls": "lead",
        "excluded": null,
-       "later": null
+       "later": "2026-11-11"
       }
      ],
      "added": []
@@ -1491,12 +1484,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 75% vs 72% - Avg $540 vs $800 - Ran 16 vs 13 scheduled (1 didn't run, 1 went to warranty/callback, 5 added). SPP: Conv 100% vs 40% - Avg $390 vs $350 - Ran 2 vs 9 scheduled (6 rescheduled, 1 went to warranty/callback). Sold work: $6,697 vs $6,034 scheduled.",
+  "Plumbing": "Demand: Conv 71% vs 72% - Avg $540 vs $800 - Ran 17 vs 13 scheduled (1 didn't run, 5 added). SPP: Conv 100% vs 40% - Avg $390 vs $350 - Ran 2 vs 9 scheduled (6 rescheduled, 1 went to warranty/callback). Sold work: $6,697 vs $6,034 scheduled.",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 1 scheduled (1 went to warranty/callback, 1 added).",
   "Sewer Install": "1 dispatch fee not charged ($49 – no reason in notes). Leads: Ran 1 vs 2 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $596 ($14,186 vs $14,782). Ran 16 demand calls vs 13 planned (1 planned didn't run, 1 went to warranty/callback, 5 added during the day) +$1,728; average demand ticket $540 vs $800 -$3,117. Ran 2 SPP calls vs 9 planned (6 rescheduled, 1 went to warranty/callback) -$980. $663 of sold work was added after the morning board (Derrick's $663).",
+  "Plumbing": "Plumbing missed projection by $596 ($14,186 vs $14,782). Ran 17 demand calls vs 13 planned (1 planned didn't run, 5 added during the day) +$2,304; average demand ticket $540 vs $800 -$3,117. Ran 2 SPP calls vs 9 planned (6 rescheduled, 1 went to warranty/callback) -$980. $663 of sold work was added after the morning board (Derrick's $663).",
   "Sewer Service": "Sewer Service missed projection by $52 ($93 vs $145).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 2 scheduled."
  }

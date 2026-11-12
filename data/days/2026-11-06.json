@@ -1,6 +1,6 @@
 {
  "date": "2026-11-06",
- "generatedAt": "2026-11-10T19:41:32.814Z",
+ "generatedAt": "2026-11-12T13:23:54.734Z",
  "plan": {
   "date": "2026-11-06",
   "capturedFrom": "10_Sold Work_Dated 11_06_26 - 11_06_26.xlsx",
@@ -528,7 +528,7 @@
  },
  "results": {
   "date": "2026-11-06",
-  "source": "0_Daily Job Detail_Dated 11_03_26 - 11_09_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_05_26 - 11_11_26.xlsx",
   "firstTotal": 15667.97,
   "depts": {
    "Plumbing": {
