@@ -1,6 +1,6 @@
 {
  "date": "2026-11-12",
- "generatedAt": "2026-11-12T15:08:25.037Z",
+ "generatedAt": "2026-11-13T15:32:07.746Z",
  "plan": {
   "date": "2026-11-12",
   "capturedFrom": "1_Sold Work_Dated 11_12_26 - 11_12_26.xlsx",
@@ -560,7 +560,490 @@
    }
   }
  },
- "results": null,
- "why": {},
- "whyLong": {}
+ "results": {
+  "date": "2026-11-12",
+  "source": "0_Daily Job Detail_Dated 11_06_26 - 11_12_26.xlsx",
+  "firstTotal": 4820,
+  "depts": {
+   "Plumbing": {
+    "actual": 4727,
+    "projection": 7116.71,
+    "jobsCompleted": 19,
+    "effects": [
+     {
+      "key": "demand_volume",
+      "cat": "demand",
+      "label": "Demand calls run vs plan",
+      "amount": 0,
+      "detail": "9 run vs 9 planned"
+     },
+     {
+      "key": "demand_conversion",
+      "cat": "demand",
+      "label": "Demand conversion",
+      "amount": -384,
+      "detail": "6 of 9 converted (67% vs 72% plan)"
+     },
+     {
+      "key": "demand_ticket",
+      "cat": "demand",
+      "label": "Demand average ticket",
+      "amount": -542.12,
+      "detail": "$710 avg vs $800 plan",
+      "jobs": [
+       {
+        "job": "439877321",
+        "tech": "Derrick B.",
+        "type": "Faucet Concern",
+        "revenue": 2051.54
+       }
+      ]
+     },
+     {
+      "key": "spp_volume",
+      "cat": "spp",
+      "label": "SPP calls run vs plan",
+      "amount": -560,
+      "detail": "6 run vs 10 planned"
+     },
+     {
+      "key": "spp_conversion",
+      "cat": "spp",
+      "label": "SPP conversion",
+      "amount": -840,
+      "detail": "0 of 6 converted (0% vs 40% plan)"
+     },
+     {
+      "key": "spp_ticket",
+      "cat": "spp",
+      "label": "SPP average ticket",
+      "amount": 0,
+      "detail": "— avg vs $350 plan",
+      "jobs": []
+     },
+     {
+      "key": "sold_diff",
+      "cat": "sold",
+      "label": "Planned sold work billed differently than scheduled",
+      "amount": -63.59,
+      "detail": "Layne $469 vs $533"
+     }
+    ],
+    "cats": {
+     "demand": {
+      "planned": 9,
+      "ran": 9,
+      "converted": 6,
+      "convRate": 0.6666666666666666,
+      "planConv": 0.72,
+      "avgTicket": 709.6466666666666,
+      "planAvg": 800,
+      "revenue": 4257.88,
+      "planRev": 5184,
+      "plannedRan": 7,
+      "addedRan": 2,
+      "missed": 1,
+      "rescheduled": 1,
+      "reclassed": 0
+     },
+     "spp": {
+      "planned": 10,
+      "ran": 6,
+      "converted": 0,
+      "convRate": 0,
+      "planConv": 0.4,
+      "avgTicket": null,
+      "planAvg": 350,
+      "revenue": 0,
+      "planRev": 1400,
+      "plannedRan": 5,
+      "addedRan": 1,
+      "missed": 0,
+      "rescheduled": 5,
+      "reclassed": 0
+     },
+     "sold": {
+      "planned": 532.71,
+      "plannedJobs": 2,
+      "actual": 469.12,
+      "done": [
+       {
+        "job": "437426091",
+        "tech": "Bill P.",
+        "type": "Sold Work - Plumbing",
+        "planned": 0,
+        "actual": 0,
+        "diff": 0
+       },
+       {
+        "job": "439245852",
+        "tech": "Layne B.",
+        "type": "Sold Work - Plumbing",
+        "planned": 532.71,
+        "actual": 469.12,
+        "diff": -63.59
+       }
+      ],
+      "missed": [],
+      "added": []
+     },
+     "wcn": {
+      "planned": 1,
+      "ran": 2,
+      "revenue": 0
+     }
+    },
+    "lists": {
+     "missed": [
+      {
+       "job": "439032438",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Layne B.",
+       "tags": "Member, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "14:10",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "438616235",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Nick E.",
+       "tags": "Member, Responsive to Text, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "14:00",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "440126920",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Tylor H.",
+       "tags": "Member, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "14:30",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "331831766",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Layne B.",
+       "tags": "Member, RCH 1X LPH, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "09:00",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "347782620",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "In Progress",
+       "techs": "Nick E., Robert R.",
+       "tags": "Member, REQ CC ON FILE, Responsive to Text, SYS CK, Tenant Property",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "12:00",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "438736703",
+       "type": "Estimate - Plumbing - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "status": "In Progress",
+       "techs": "Layne B., Derrick B.",
+       "tags": "EST, Potential Member",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "07:30",
+       "cls": "demand",
+       "excluded": null,
+       "later": "board:2026-11-13"
+      },
+      {
+       "job": "439127877",
+       "type": "Estimate - Plumbing - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Tylor H.",
+       "tags": "EST, Member, Prefers 730 Appts",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "13:00",
+       "cls": "demand",
+       "excluded": null,
+       "later": null
+      }
+     ],
+     "added": [
+      {
+       "job": "436936298",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "tech": "Robert R.",
+       "techs": "Robert R.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 0,
+       "scheduled": "2026-11-12",
+       "isLead": false,
+       "cls": "spp",
+       "planned": false,
+       "plannedAs": "excluded: On hold"
+      },
+      {
+       "job": "440212776",
+       "type": "Toilet Concern",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Tylor H.",
+       "techs": "Tylor H.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 888.9,
+       "soldBy": "",
+       "estimates": 2,
+       "estSales": 888.9,
+       "scheduled": "2026-11-12",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440272824",
+       "type": "Appliance Hook-Up - Gas",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 125.46,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 125.46,
+       "scheduled": "2026-11-12",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440271147",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Layne B.",
+       "techs": "Layne B.",
+       "opp": false,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-12",
+       "isLead": false,
+       "cls": "wcn",
+       "planned": false,
+       "plannedAs": null
+      }
+     ]
+    },
+    "variance": -2389.71,
+    "waived": [],
+    "notesLoaded": true,
+    "unexplained": 0,
+    "check": {
+     "jobsAccounted": 19,
+     "sumOfJobs": 4727,
+     "explained": -2389.71,
+     "ok": true
+    }
+   },
+   "Sewer Service": {
+    "actual": 93,
+    "projection": 145.2,
+    "jobsCompleted": 1,
+    "effects": [
+     {
+      "key": "demand_volume",
+      "cat": "demand",
+      "label": "Demand calls run vs plan",
+      "amount": 0,
+      "detail": "1 run vs 1 planned"
+     },
+     {
+      "key": "demand_conversion",
+      "cat": "demand",
+      "label": "Demand conversion",
+      "amount": 96.8,
+      "detail": "1 of 1 converted (100% vs 60% plan)"
+     },
+     {
+      "key": "demand_ticket",
+      "cat": "demand",
+      "label": "Demand average ticket",
+      "amount": -149,
+      "detail": "$93 avg vs $242 plan",
+      "jobs": []
+     }
+    ],
+    "cats": {
+     "demand": {
+      "planned": 1,
+      "ran": 1,
+      "converted": 1,
+      "convRate": 1,
+      "planConv": 0.6,
+      "avgTicket": 93,
+      "planAvg": 242,
+      "revenue": 93,
+      "planRev": 145.2,
+      "plannedRan": 1,
+      "addedRan": 0,
+      "missed": 0,
+      "rescheduled": 0,
+      "reclassed": 0
+     },
+     "sold": {
+      "planned": 0,
+      "plannedJobs": 0,
+      "actual": 0,
+      "done": [],
+      "missed": [],
+      "added": []
+     },
+     "wcn": {
+      "planned": 0,
+      "ran": 0,
+      "revenue": 0
+     }
+    },
+    "lists": {
+     "missed": [],
+     "added": []
+    },
+    "variance": -52.2,
+    "waived": [],
+    "notesLoaded": true,
+    "unexplained": 0,
+    "check": {
+     "jobsAccounted": 1,
+     "sumOfJobs": 93,
+     "explained": -52.2,
+     "ok": true
+    }
+   },
+   "Sewer Install": {
+    "actual": 0,
+    "projection": 0,
+    "jobsCompleted": 1,
+    "effects": [],
+    "cats": {
+     "lead": {
+      "planned": 1,
+      "ran": 1,
+      "revenue": 0
+     },
+     "sold": {
+      "planned": 0,
+      "plannedJobs": 0,
+      "actual": 0,
+      "done": [],
+      "missed": [],
+      "added": []
+     },
+     "wcn": {
+      "planned": 0,
+      "ran": 0,
+      "revenue": 0
+     }
+    },
+    "lists": {
+     "missed": [],
+     "added": []
+    },
+    "variance": 0,
+    "waived": [],
+    "notesLoaded": true,
+    "unexplained": 0,
+    "check": {
+     "jobsAccounted": 1,
+     "sumOfJobs": 0,
+     "explained": 0,
+     "ok": true
+    }
+   }
+  }
+ },
+ "why": {
+  "Plumbing": "Demand: Conv 67% vs 72% - Avg $710 vs $800 - Ran 9 vs 9 scheduled (1 rescheduled, 1 didn't run, 2 added). SPP: Conv 0% vs 40% - Ran 6 vs 10 scheduled (5 rescheduled, 1 added).",
+  "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 1 scheduled.",
+  "Sewer Install": "Leads: Ran 1 vs 1 scheduled."
+ },
+ "whyLong": {
+  "Plumbing": "Plumbing missed projection by $2,390 ($4,727 vs $7,117). Converted 6 of 9 (67% vs 72%) -$384; average demand ticket $710 vs $800 -$542. Ran 6 SPP calls vs 10 planned (5 rescheduled, 1 added during the day) -$560; converted 0 of 6 (0% vs 40%) -$840.",
+  "Sewer Service": "Sewer Service missed projection by $52 ($93 vs $145).",
+  "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 1 scheduled."
+ }
 }

@@ -1,6 +1,6 @@
 {
  "date": "2026-11-10",
- "generatedAt": "2026-11-12T15:08:25.027Z",
+ "generatedAt": "2026-11-13T15:32:07.736Z",
  "plan": {
   "date": "2026-11-10",
   "capturedFrom": "0_Sold Work_Dated 11_10_26 - 11_10_26.xlsx",
@@ -714,7 +714,7 @@
  },
  "results": {
   "date": "2026-11-10",
-  "source": "0_Daily Job Detail_Dated 11_05_26 - 11_11_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_06_26 - 11_12_26.xlsx",
   "firstTotal": 24595.45,
   "depts": {
    "Plumbing": {
@@ -788,7 +788,7 @@
       "converted": 8,
       "convRate": 0.7272727272727273,
       "planConv": 0.72,
-      "avgTicket": 332.61125,
+      "avgTicket": 332.61125000000004,
       "planAvg": 800,
       "revenue": 2788.89,
       "planRev": 5184,
@@ -1024,27 +1024,6 @@
        "plannedAs": null
       },
       {
-       "job": "439617831",
-       "type": "Non-Repair - Plumbing",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Derrick B.",
-       "techs": "Derrick B.",
-       "opp": false,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-10",
-       "isLead": false,
-       "cls": "wcn",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "439568181",
        "type": "Water Heater Concern - Tank - Age 0-6",
        "bu": "Plumbing Demand",
@@ -1062,6 +1041,27 @@
        "scheduled": "2026-11-10",
        "isLead": false,
        "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "439617831",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Derrick B.",
+       "techs": "Derrick B.",
+       "opp": false,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-10",
+       "isLead": false,
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       }

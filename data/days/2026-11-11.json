@@ -1,6 +1,6 @@
 {
  "date": "2026-11-11",
- "generatedAt": "2026-11-12T15:08:25.036Z",
+ "generatedAt": "2026-11-13T15:32:07.740Z",
  "plan": {
   "date": "2026-11-11",
   "capturedFrom": "0_Sold Work_Dated 11_11_26 - 11_11_26.xlsx",
@@ -613,11 +613,11 @@
  },
  "results": {
   "date": "2026-11-11",
-  "source": "0_Daily Job Detail_Dated 11_05_26 - 11_11_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_06_26 - 11_12_26.xlsx",
   "firstTotal": 12977.91,
   "depts": {
    "Plumbing": {
-    "actual": 3098.91,
+    "actual": 3099.91,
     "projection": 5556,
     "jobsCompleted": 25,
     "effects": [
@@ -632,23 +632,23 @@
       "key": "demand_conversion",
       "cat": "demand",
       "label": "Demand conversion",
-      "amount": -2208,
-      "detail": "3 of 8 converted (38% vs 72% plan)"
+      "amount": -1408,
+      "detail": "4 of 8 converted (50% vs 72% plan)"
      },
      {
       "key": "demand_ticket",
       "cat": "demand",
       "label": "Demand average ticket",
-      "amount": -606.07,
-      "detail": "$598 avg vs $800 plan",
+      "amount": -1326.07,
+      "detail": "$468 avg vs $800 plan",
       "jobs": []
      },
      {
       "key": "demand_fees",
       "cat": "demand",
       "label": "Fees on unconverted demand calls",
-      "amount": 286,
-      "detail": "4 call(s) with a dispatch/diagnostic fee"
+      "amount": 207,
+      "detail": "3 call(s) with a dispatch/diagnostic fee"
      },
      {
       "key": "spp_volume",
@@ -693,12 +693,12 @@
      "demand": {
       "planned": 6,
       "ran": 8,
-      "converted": 3,
-      "convRate": 0.375,
+      "converted": 4,
+      "convRate": 0.5,
       "planConv": 0.72,
-      "avgTicket": 597.9766666666666,
+      "avgTicket": 468.48249999999996,
       "planAvg": 800,
-      "revenue": 2079.93,
+      "revenue": 2080.93,
       "planRev": 3456,
       "plannedRan": 4,
       "addedRan": 4,
@@ -771,7 +771,7 @@
        "appt": "12:23",
        "cls": "spp",
        "excluded": null,
-       "later": "board:2026-11-12"
+       "later": "2026-11-12"
       },
       {
        "job": "336019286",
@@ -858,16 +858,37 @@
        "tech": "Robert R.",
        "techs": "Robert R.",
        "opp": true,
-       "converted": false,
+       "converted": true,
        "warranty": false,
        "recall": false,
-       "revenue": 79,
+       "revenue": 80,
        "soldBy": "",
        "estimates": 1,
        "estSales": 0,
        "scheduled": "2026-11-11",
        "isLead": false,
        "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "439875370",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Robert R.",
+       "techs": "Robert R.",
+       "opp": false,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-11",
+       "isLead": false,
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       },
@@ -891,27 +912,6 @@
        "cls": "sold",
        "planned": false,
        "plannedAs": "excluded: 5 PM placeholder"
-      },
-      {
-       "job": "439875370",
-       "type": "Non-Repair - Plumbing",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Robert R.",
-       "techs": "Robert R.",
-       "opp": false,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-11",
-       "isLead": false,
-       "cls": "wcn",
-       "planned": false,
-       "plannedAs": null
       },
       {
        "job": "439792333",
@@ -957,35 +957,35 @@
       }
      ]
     },
-    "variance": -2457.09,
+    "variance": -2456.09,
     "waived": [],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 25,
-     "sumOfJobs": 3098.91,
-     "explained": -2457.09,
+     "sumOfJobs": 3099.91,
+     "explained": -2456.09,
      "ok": true
     }
    },
    "Sewer Service": {
     "actual": 319,
     "projection": 9370.4,
-    "jobsCompleted": 2,
+    "jobsCompleted": 1,
     "effects": [
      {
       "key": "demand_volume",
       "cat": "demand",
       "label": "Demand calls run vs plan",
-      "amount": 0,
-      "detail": "2 run vs 2 planned"
+      "amount": -145.2,
+      "detail": "1 run vs 2 planned"
      },
      {
       "key": "demand_conversion",
       "cat": "demand",
       "label": "Demand conversion",
-      "amount": -48.4,
-      "detail": "1 of 2 converted (50% vs 60% plan)"
+      "amount": 96.8,
+      "detail": "1 of 1 converted (100% vs 60% plan)"
      },
      {
       "key": "demand_ticket",
@@ -1015,17 +1015,17 @@
     "cats": {
      "demand": {
       "planned": 2,
-      "ran": 2,
+      "ran": 1,
       "converted": 1,
-      "convRate": 0.5,
+      "convRate": 1,
       "planConv": 0.6,
       "avgTicket": 319,
       "planAvg": 242,
       "revenue": 319,
       "planRev": 290.4,
-      "plannedRan": 2,
+      "plannedRan": 1,
       "addedRan": 0,
-      "missed": 0,
+      "missed": 1,
       "rescheduled": 0,
       "reclassed": 0
      },
@@ -1054,6 +1054,24 @@
     "lists": {
      "missed": [
       {
+       "job": "439270581",
+       "type": "Sewer Camera Video Inspection - Svc Request",
+       "bu": "Sewer Service",
+       "dept": "Sewer Service",
+       "status": "Scheduled",
+       "techs": "Nick E.",
+       "tags": "DEM, Member, SI LEAD, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "09:30",
+       "cls": "demand",
+       "excluded": null,
+       "later": null
+      },
+      {
        "job": "439283148",
        "type": "Sold Work - Sewer Service",
        "bu": "Sewer Service",
@@ -1079,7 +1097,7 @@
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
-     "jobsAccounted": 2,
+     "jobsAccounted": 1,
      "sumOfJobs": 319,
      "explained": -9051.4,
      "ok": true
@@ -1088,18 +1106,18 @@
    "Sewer Install": {
     "actual": 9560,
     "projection": 0,
-    "jobsCompleted": 2,
+    "jobsCompleted": 3,
     "effects": [
      {
       "key": "sold_added",
       "cat": "sold",
       "label": "Sold work completed that was not on the morning board",
       "amount": 9560,
-      "detail": "Josh $9,560",
+      "detail": "Nick $9,560",
       "jobs": [
        {
         "job": "439283148",
-        "tech": "Josh R.",
+        "tech": "Nick E.",
         "type": "Sold Work - Sewer Line Replacement - Full",
         "actual": 9560,
         "plannedAs": null
@@ -1110,7 +1128,7 @@
     "cats": {
      "lead": {
       "planned": 1,
-      "ran": 1,
+      "ran": 2,
       "revenue": 0
      },
      "sold": {
@@ -1122,7 +1140,7 @@
       "added": [
        {
         "job": "439283148",
-        "tech": "Josh R.",
+        "tech": "Nick E.",
         "type": "Sold Work - Sewer Line Replacement - Full",
         "actual": 9560,
         "plannedAs": null
@@ -1139,11 +1157,32 @@
      "missed": [],
      "added": [
       {
+       "job": "439270581",
+       "type": "Sewer Camera Video Inspection - Svc Request",
+       "bu": "Sewer Installs",
+       "dept": "Sewer Install",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-11",
+       "isLead": true,
+       "cls": "lead",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
        "job": "439283148",
        "type": "Sold Work - Sewer Line Replacement - Full",
        "bu": "Sewer Installs",
        "dept": "Sewer Install",
-       "tech": "Josh R.",
+       "tech": "Nick E.",
        "techs": "Reese G., Josh R., Nick E., Cayden M., Kevin J.",
        "opp": false,
        "converted": false,
@@ -1174,7 +1213,7 @@
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
-     "jobsAccounted": 2,
+     "jobsAccounted": 3,
      "sumOfJobs": 9560,
      "explained": 9560,
      "ok": true
@@ -1183,13 +1222,13 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 38% vs 72% - Avg $598 vs $800 - Ran 8 vs 6 scheduled (1 rescheduled, 1 didn't run, 4 added). SPP: Conv 23% vs 40% - Avg $340 vs $350 - Ran 13 vs 15 scheduled (2 rescheduled).",
-  "Sewer Service": "Demand: Conv 50% vs 60% - Avg $319 vs $242 - Ran 2 vs 2 scheduled. Sold work: $0 vs $9,080 scheduled.",
-  "Sewer Install": "Sold work: $9,560 vs $0 scheduled. 1 dispatch fee not charged ($93 – no reason in notes). Leads: Ran 1 vs 1 scheduled."
+  "Plumbing": "Demand: Conv 50% vs 72% - Avg $468 vs $800 - Ran 8 vs 6 scheduled (1 rescheduled, 1 didn't run, 4 added). SPP: Conv 23% vs 40% - Avg $340 vs $350 - Ran 13 vs 15 scheduled (2 rescheduled).",
+  "Sewer Service": "Demand: Conv 100% vs 60% - Avg $319 vs $242 - Ran 1 vs 2 scheduled (1 didn't run). Sold work: $0 vs $9,080 scheduled.",
+  "Sewer Install": "Sold work: $9,560 vs $0 scheduled. 1 dispatch fee not charged ($93 – no reason in notes). Leads: Ran 2 vs 1 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $2,457 ($3,099 vs $5,556). Ran 8 demand calls vs 6 planned (1 rescheduled, 1 planned didn't run, 4 added during the day) +$1,152; converted 3 of 8 (38% vs 72%) -$2,208; average demand ticket $598 vs $800 -$606. Ran 13 SPP calls vs 15 planned (2 rescheduled) -$280; converted 3 of 13 (23% vs 40%) -$770. $286 in dispatch fees on unconverted calls.",
-  "Sewer Service": "Sewer Service missed projection by $9,051 ($319 vs $9,370). $9,080 of scheduled sold work didn't finish (Reese's $9,080 sold work).",
-  "Sewer Install": "Sewer Install beat projection by $9,560 ($9,560 vs $0). $9,560 of sold work was added after the morning board (Josh's $9,560). 1 sewer estimate visit(s) ran vs 1 scheduled."
+  "Plumbing": "Plumbing missed projection by $2,456 ($3,100 vs $5,556). Ran 8 demand calls vs 6 planned (1 rescheduled, 1 planned didn't run, 4 added during the day) +$1,152; converted 4 of 8 (50% vs 72%) -$1,408; average demand ticket $468 vs $800 -$1,326. Ran 13 SPP calls vs 15 planned (2 rescheduled) -$280; converted 3 of 13 (23% vs 40%) -$770. $207 in dispatch fees on unconverted calls.",
+  "Sewer Service": "Sewer Service missed projection by $9,051 ($319 vs $9,370). Ran 1 demand calls vs 2 planned (1 planned didn't run). $9,080 of scheduled sold work didn't finish (Reese's $9,080 sold work).",
+  "Sewer Install": "Sewer Install beat projection by $9,560 ($9,560 vs $0). $9,560 of sold work was added after the morning board (Nick's $9,560). 2 sewer estimate visit(s) ran vs 1 scheduled."
  }
 }

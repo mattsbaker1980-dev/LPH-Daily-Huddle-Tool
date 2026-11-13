@@ -1,6 +1,6 @@
 {
  "date": "2026-10-30",
- "generatedAt": "2026-11-12T15:08:24.969Z",
+ "generatedAt": "2026-11-13T15:32:07.693Z",
  "plan": {
   "date": "2026-10-30",
   "capturedFrom": "5_Sold Work_Dated 10_30_26 - 10_30_26.xlsx",
@@ -661,7 +661,7 @@
        "appt": "13:58",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-13"
       },
       {
        "job": "437222952",
@@ -997,7 +997,7 @@
        "appt": "17:00",
        "cls": "lead",
        "excluded": null,
-       "later": "board:2026-11-12"
+       "later": "2026-11-12"
       }
      ],
      "added": []
