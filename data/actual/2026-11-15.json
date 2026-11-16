@@ -1,0 +1,27 @@
+{
+ "date": "2026-11-15",
+ "source": "0_Daily Job Detail_Dated 11_09_26 - 11_15_26.xlsx",
+ "savedAt": "2026-11-16T13:47:51.883Z",
+ "total": 49,
+ "firstTotal": 49,
+ "jobs": [
+  {
+   "job": "440637485",
+   "type": "Leak - Plumbing - Water Lines",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "tech": "Nick E.",
+   "techs": "Nick E.",
+   "opp": true,
+   "converted": false,
+   "warranty": false,
+   "recall": false,
+   "revenue": 49,
+   "soldBy": "",
+   "estimates": 0,
+   "estSales": 0,
+   "scheduled": "2026-11-15",
+   "isLead": false
+  }
+ ]
+}

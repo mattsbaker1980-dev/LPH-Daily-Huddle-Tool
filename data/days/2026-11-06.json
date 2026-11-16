@@ -1,6 +1,6 @@
 {
  "date": "2026-11-06",
- "generatedAt": "2026-11-13T15:32:07.730Z",
+ "generatedAt": "2026-11-16T13:47:52.087Z",
  "plan": {
   "date": "2026-11-06",
   "capturedFrom": "10_Sold Work_Dated 11_06_26 - 11_06_26.xlsx",
@@ -608,8 +608,8 @@
       "planRev": 5760,
       "plannedRan": 8,
       "addedRan": 2,
-      "missed": 1,
-      "rescheduled": 0,
+      "missed": 0,
+      "rescheduled": 1,
       "reclassed": 1
      },
      "spp": {
@@ -765,7 +765,7 @@
        "appt": "11:00",
        "cls": "demand",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-16"
       }
      ],
      "added": [
@@ -1059,7 +1059,7 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 80% vs 72% - Avg $1,430 vs $800 - Ran 10 vs 10 scheduled (1 didn't run, 1 went to warranty/callback, 2 added). SPP: Conv 0% vs 40% - Ran 2 vs 6 scheduled (4 rescheduled). 1 dispatch fee not charged ($79 – no reason in notes).",
+  "Plumbing": "Demand: Conv 80% vs 72% - Avg $1,430 vs $800 - Ran 10 vs 10 scheduled (1 rescheduled, 1 went to warranty/callback, 2 added). SPP: Conv 0% vs 40% - Ran 2 vs 6 scheduled (4 rescheduled). 1 dispatch fee not charged ($79 – no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 1 scheduled (1 went to warranty/callback, 1 added). 1 dispatch fee not charged ($93 – no reason in notes).",
   "Sewer Install": "Leads: Ran 0 vs 1 scheduled."
  },

@@ -1,6 +1,6 @@
 {
  "date": "2026-11-12",
- "generatedAt": "2026-11-13T15:32:07.746Z",
+ "generatedAt": "2026-11-16T13:47:52.108Z",
  "plan": {
   "date": "2026-11-12",
   "capturedFrom": "1_Sold Work_Dated 11_12_26 - 11_12_26.xlsx",
@@ -562,7 +562,7 @@
  },
  "results": {
   "date": "2026-11-12",
-  "source": "0_Daily Job Detail_Dated 11_06_26 - 11_12_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_09_26 - 11_15_26.xlsx",
   "firstTotal": 4820,
   "depts": {
    "Plumbing": {
@@ -574,15 +574,15 @@
       "key": "demand_volume",
       "cat": "demand",
       "label": "Demand calls run vs plan",
-      "amount": 0,
-      "detail": "9 run vs 9 planned"
+      "amount": -576,
+      "detail": "8 run vs 9 planned"
      },
      {
       "key": "demand_conversion",
       "cat": "demand",
       "label": "Demand conversion",
-      "amount": -384,
-      "detail": "6 of 9 converted (67% vs 72% plan)"
+      "amount": 192,
+      "detail": "6 of 8 converted (75% vs 72% plan)"
      },
      {
       "key": "demand_ticket",
@@ -632,19 +632,19 @@
     "cats": {
      "demand": {
       "planned": 9,
-      "ran": 9,
+      "ran": 8,
       "converted": 6,
-      "convRate": 0.6666666666666666,
+      "convRate": 0.75,
       "planConv": 0.72,
       "avgTicket": 709.6466666666666,
       "planAvg": 800,
       "revenue": 4257.88,
       "planRev": 5184,
-      "plannedRan": 7,
+      "plannedRan": 6,
       "addedRan": 2,
       "missed": 1,
       "rescheduled": 1,
-      "reclassed": 0
+      "reclassed": 1
      },
      "spp": {
       "planned": 10,
@@ -689,7 +689,7 @@
      },
      "wcn": {
       "planned": 1,
-      "ran": 2,
+      "ran": 3,
       "revenue": 0
      }
     },
@@ -845,23 +845,23 @@
        "plannedAs": "excluded: On hold"
       },
       {
-       "job": "440212776",
-       "type": "Toilet Concern",
+       "job": "440271147",
+       "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Tylor H.",
-       "techs": "Tylor H.",
-       "opp": true,
-       "converted": true,
+       "tech": "Layne B.",
+       "techs": "Layne B.",
+       "opp": false,
+       "converted": false,
        "warranty": false,
        "recall": false,
-       "revenue": 888.9,
+       "revenue": 0,
        "soldBy": "",
-       "estimates": 2,
-       "estSales": 888.9,
+       "estimates": 0,
+       "estSales": 0,
        "scheduled": "2026-11-12",
        "isLead": false,
-       "cls": "demand",
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       },
@@ -887,30 +887,38 @@
        "plannedAs": null
       },
       {
-       "job": "440271147",
-       "type": "Non-Repair - Plumbing",
+       "job": "440212776",
+       "type": "Toilet Concern",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Layne B.",
-       "techs": "Layne B.",
-       "opp": false,
-       "converted": false,
+       "tech": "Tylor H.",
+       "techs": "Tylor H.",
+       "opp": true,
+       "converted": true,
        "warranty": false,
        "recall": false,
-       "revenue": 0,
+       "revenue": 888.9,
        "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
+       "estimates": 2,
+       "estSales": 888.9,
        "scheduled": "2026-11-12",
        "isLead": false,
-       "cls": "wcn",
+       "cls": "demand",
        "planned": false,
        "plannedAs": null
       }
      ]
     },
     "variance": -2389.71,
-    "waived": [],
+    "waived": [
+     {
+      "job": "439568320",
+      "tech": "Nick E.",
+      "type": "Appliance Hook-Up - Water",
+      "fee": 49,
+      "reason": null
+     }
+    ],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
@@ -1037,12 +1045,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 67% vs 72% - Avg $710 vs $800 - Ran 9 vs 9 scheduled (1 rescheduled, 1 didn't run, 2 added). SPP: Conv 0% vs 40% - Ran 6 vs 10 scheduled (5 rescheduled, 1 added).",
+  "Plumbing": "Demand: Conv 75% vs 72% - Avg $710 vs $800 - Ran 8 vs 9 scheduled (1 rescheduled, 1 didn't run, 1 went to warranty/callback, 2 added). SPP: Conv 0% vs 40% - Ran 6 vs 10 scheduled (5 rescheduled, 1 added). 1 dispatch fee not charged ($49 – no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 1 scheduled.",
   "Sewer Install": "Leads: Ran 1 vs 1 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $2,390 ($4,727 vs $7,117). Converted 6 of 9 (67% vs 72%) -$384; average demand ticket $710 vs $800 -$542. Ran 6 SPP calls vs 10 planned (5 rescheduled, 1 added during the day) -$560; converted 0 of 6 (0% vs 40%) -$840.",
+  "Plumbing": "Plumbing missed projection by $2,390 ($4,727 vs $7,117). Ran 8 demand calls vs 9 planned (1 rescheduled, 1 planned didn't run, 1 went to warranty/callback, 2 added during the day) -$576; average demand ticket $710 vs $800 -$542. Ran 6 SPP calls vs 10 planned (5 rescheduled, 1 added during the day) -$560; converted 0 of 6 (0% vs 40%) -$840.",
   "Sewer Service": "Sewer Service missed projection by $52 ($93 vs $145).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 1 scheduled."
  }

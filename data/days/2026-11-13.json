@@ -1,6 +1,6 @@
 {
  "date": "2026-11-13",
- "generatedAt": "2026-11-13T15:32:07.749Z",
+ "generatedAt": "2026-11-16T13:47:52.115Z",
  "plan": {
   "date": "2026-11-13",
   "capturedFrom": "1_Sold Work_Dated 11_13_26 - 11_13_26.xlsx",
@@ -610,7 +610,535 @@
    }
   }
  },
- "results": null,
- "why": {},
- "whyLong": {}
+ "results": {
+  "date": "2026-11-13",
+  "source": "0_Daily Job Detail_Dated 11_09_26 - 11_15_26.xlsx",
+  "firstTotal": 8790.96,
+  "depts": {
+   "Plumbing": {
+    "actual": 8790.96,
+    "projection": 6813.98,
+    "jobsCompleted": 24,
+    "effects": [
+     {
+      "key": "demand_volume",
+      "cat": "demand",
+      "label": "Demand calls run vs plan",
+      "amount": 576,
+      "detail": "9 run vs 8 planned"
+     },
+     {
+      "key": "demand_conversion",
+      "cat": "demand",
+      "label": "Demand conversion",
+      "amount": 416,
+      "detail": "7 of 9 converted (78% vs 72% plan)"
+     },
+     {
+      "key": "demand_ticket",
+      "cat": "demand",
+      "label": "Demand average ticket",
+      "amount": 1868.33,
+      "detail": "$1,067 avg vs $800 plan",
+      "jobs": [
+       {
+        "job": "440452002",
+        "tech": "Layne B.",
+        "type": "Estimate - Tank Water Heater - Functional",
+        "revenue": 4705.07
+       }
+      ]
+     },
+     {
+      "key": "demand_fees",
+      "cat": "demand",
+      "label": "Fees on unconverted demand calls",
+      "amount": 79,
+      "detail": "1 call(s) with a dispatch/diagnostic fee"
+     },
+     {
+      "key": "spp_volume",
+      "cat": "spp",
+      "label": "SPP calls run vs plan",
+      "amount": -700,
+      "detail": "6 run vs 11 planned"
+     },
+     {
+      "key": "spp_conversion",
+      "cat": "spp",
+      "label": "SPP conversion",
+      "amount": -140,
+      "detail": "2 of 6 converted (33% vs 40% plan)"
+     },
+     {
+      "key": "spp_ticket",
+      "cat": "spp",
+      "label": "SPP average ticket",
+      "amount": -97.35,
+      "detail": "$301 avg vs $350 plan",
+      "jobs": []
+     },
+     {
+      "key": "sold_diff",
+      "cat": "sold",
+      "label": "Planned sold work billed differently than scheduled",
+      "amount": -25,
+      "detail": "Nick $264 vs $289"
+     }
+    ],
+    "cats": {
+     "demand": {
+      "planned": 8,
+      "ran": 9,
+      "converted": 7,
+      "convRate": 0.7777777777777778,
+      "planConv": 0.72,
+      "avgTicket": 1066.9042857142856,
+      "planAvg": 800,
+      "revenue": 7547.33,
+      "planRev": 4608,
+      "plannedRan": 5,
+      "addedRan": 4,
+      "missed": 0,
+      "rescheduled": 1,
+      "reclassed": 2
+     },
+     "spp": {
+      "planned": 11,
+      "ran": 6,
+      "converted": 2,
+      "convRate": 0.3333333333333333,
+      "planConv": 0.4,
+      "avgTicket": 301.325,
+      "planAvg": 350,
+      "revenue": 602.65,
+      "planRev": 1540,
+      "plannedRan": 6,
+      "addedRan": 0,
+      "missed": 0,
+      "rescheduled": 5,
+      "reclassed": 0
+     },
+     "sold": {
+      "planned": 665.98,
+      "plannedJobs": 4,
+      "actual": 640.98,
+      "done": [
+       {
+        "job": "437887871",
+        "tech": "Derrick B.",
+        "type": "Sold Work - Plumbing",
+        "planned": 227.38,
+        "actual": 227.38,
+        "diff": 0
+       },
+       {
+        "job": "439610433",
+        "tech": "Bill P.",
+        "type": "Sold Work - Plumbing",
+        "planned": 0,
+        "actual": 0,
+        "diff": 0
+       },
+       {
+        "job": "439567570",
+        "tech": "Nick E.",
+        "type": "Sold Work - Plumbing",
+        "planned": 288.6,
+        "actual": 263.6,
+        "diff": -25
+       },
+       {
+        "job": "439555213",
+        "tech": "Ethan J.",
+        "type": "Warranty Repair - Plumbing",
+        "planned": 150,
+        "actual": 150,
+        "diff": 0
+       }
+      ],
+      "missed": [],
+      "added": []
+     },
+     "wcn": {
+      "planned": 2,
+      "ran": 5,
+      "revenue": 0
+     }
+    },
+    "lists": {
+     "missed": [
+      {
+       "job": "438057340",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Ethan J.",
+       "tags": "Member, Responsive to Text, SYS CK, WH Opp",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "10:58",
+       "cls": "spp",
+       "excluded": null,
+       "later": "board:2026-11-16"
+      },
+      {
+       "job": "438090588",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Ethan J.",
+       "tags": "Member, REQ CC ON FILE, SYS CK, Tenant Property",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "12:28",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "344857662",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Nick E.",
+       "tags": "Member, Responsive to Text, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "15:30",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "346618023",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Tylor H.",
+       "tags": "Member, RCH 1X LPH, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "14:30",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "437261176",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing System Check",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Ethan J.",
+       "tags": "Member, Responsive to Text, SYS CK",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "13:58",
+       "cls": "spp",
+       "excluded": null,
+       "later": null
+      },
+      {
+       "job": "438736703",
+       "type": "Estimate - Plumbing - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "status": "In Progress",
+       "techs": "Layne B., Derrick B.",
+       "tags": "EST, Potential Member",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "07:30",
+       "cls": "demand",
+       "excluded": null,
+       "later": "board:2026-11-14"
+      }
+     ],
+     "added": [
+      {
+       "job": "440452182",
+       "type": "Leak - Plumbing - Waste/Drain Lines",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Robert R.",
+       "techs": "Robert R.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 416.27,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 433.87,
+       "scheduled": "2026-11-13",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440496460",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": false,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-13",
+       "isLead": false,
+       "cls": "wcn",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440536007",
+       "type": "Water Heater Concern - Tank - Age 0-6",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Derrick B.",
+       "techs": "Derrick B.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 79,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-13",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440455720",
+       "type": "Drain Stoppage - Interior Line",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 416.95,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-13",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440452002",
+       "type": "Estimate - Tank Water Heater - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Layne B.",
+       "techs": "Layne B.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 4705.07,
+       "soldBy": "",
+       "estimates": 3,
+       "estSales": 4705.07,
+       "scheduled": "2026-11-13",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      }
+     ]
+    },
+    "variance": 1976.98,
+    "waived": [],
+    "notesLoaded": true,
+    "unexplained": 0,
+    "check": {
+     "jobsAccounted": 24,
+     "sumOfJobs": 8790.96,
+     "explained": 1976.98,
+     "ok": true
+    }
+   },
+   "Sewer Service": {
+    "actual": 0,
+    "projection": 0,
+    "jobsCompleted": 0,
+    "effects": [
+     {
+      "key": "demand_volume",
+      "cat": "demand",
+      "label": "Demand calls run vs plan",
+      "amount": 0,
+      "detail": "0 run vs 0 planned"
+     },
+     {
+      "key": "demand_conversion",
+      "cat": "demand",
+      "label": "Demand conversion",
+      "amount": 0,
+      "detail": "0 of 0 converted (— vs 60% plan)"
+     },
+     {
+      "key": "demand_ticket",
+      "cat": "demand",
+      "label": "Demand average ticket",
+      "amount": 0,
+      "detail": "— avg vs $242 plan",
+      "jobs": []
+     }
+    ],
+    "cats": {
+     "demand": {
+      "planned": 0,
+      "ran": 0,
+      "converted": 0,
+      "convRate": null,
+      "planConv": 0.6,
+      "avgTicket": null,
+      "planAvg": 242,
+      "revenue": 0,
+      "planRev": 0,
+      "plannedRan": 0,
+      "addedRan": 0,
+      "missed": 0,
+      "rescheduled": 0,
+      "reclassed": 0
+     },
+     "sold": {
+      "planned": 0,
+      "plannedJobs": 0,
+      "actual": 0,
+      "done": [],
+      "missed": [],
+      "added": []
+     },
+     "wcn": {
+      "planned": 0,
+      "ran": 0,
+      "revenue": 0
+     }
+    },
+    "lists": {
+     "missed": [],
+     "added": []
+    },
+    "variance": 0,
+    "waived": [],
+    "notesLoaded": true,
+    "unexplained": 0,
+    "check": {
+     "jobsAccounted": 0,
+     "sumOfJobs": 0,
+     "explained": 0,
+     "ok": true
+    }
+   },
+   "Sewer Install": {
+    "actual": 0,
+    "projection": 0,
+    "jobsCompleted": 0,
+    "effects": [],
+    "cats": {
+     "lead": {
+      "planned": 1,
+      "ran": 0,
+      "revenue": 0
+     },
+     "sold": {
+      "planned": 0,
+      "plannedJobs": 0,
+      "actual": 0,
+      "done": [],
+      "missed": [],
+      "added": []
+     },
+     "wcn": {
+      "planned": 0,
+      "ran": 0,
+      "revenue": 0
+     }
+    },
+    "lists": {
+     "missed": [
+      {
+       "job": "440202973",
+       "type": "Sewer Camera Video Inspection - Tech Lead",
+       "bu": "Sewer Installs",
+       "dept": "Sewer Install",
+       "status": "Scheduled",
+       "techs": "Kevin J.",
+       "tags": "DEM, EMERG, Potential Member, SI LEAD, TGL OPP",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "12:00",
+       "cls": "lead",
+       "excluded": null,
+       "later": null
+      }
+     ],
+     "added": []
+    },
+    "variance": 0,
+    "waived": [],
+    "notesLoaded": true,
+    "unexplained": 0,
+    "check": {
+     "jobsAccounted": 0,
+     "sumOfJobs": 0,
+     "explained": 0,
+     "ok": true
+    }
+   }
+  }
+ },
+ "why": {
+  "Plumbing": "Demand: Conv 78% vs 72% - Avg $1,067 vs $800 - Ran 9 vs 8 scheduled (1 rescheduled, 2 went to warranty/callback, 4 added). SPP: Conv 33% vs 40% - Avg $301 vs $350 - Ran 6 vs 11 scheduled (5 rescheduled).",
+  "Sewer Service": "On plan.",
+  "Sewer Install": "Leads: Ran 0 vs 1 scheduled."
+ },
+ "whyLong": {
+  "Plumbing": "Plumbing beat projection by $1,977 ($8,791 vs $6,814). Ran 9 demand calls vs 8 planned (1 rescheduled, 2 went to warranty/callback, 4 added during the day) +$576; converted 7 of 9 (78% vs 72%) +$416; average demand ticket $1,067 vs $800 +$1,868 — Layne's $4,705 water heater. Ran 6 SPP calls vs 11 planned (5 rescheduled) -$700.",
+  "Sewer Service": "Sewer Service landed right on projection ($0 vs $0).",
+  "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 1 scheduled."
+ }
 }

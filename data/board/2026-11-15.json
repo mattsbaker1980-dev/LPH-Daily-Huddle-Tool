@@ -1,0 +1,41 @@
+{
+ "date": "2026-11-15",
+ "capturedFrom": "2_Sold Work_Dated 11_15_26 - 11_15_26.xlsx",
+ "savedAt": "2026-11-16T13:47:51.892Z",
+ "jobs": [
+  {
+   "job": "438736703",
+   "type": "Estimate - Plumbing - Functional",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "status": "In Progress",
+   "techs": "Layne B., Derrick B.",
+   "tags": "EST, Potential Member",
+   "opp": true,
+   "subtotal": 0,
+   "total": 0,
+   "soldBy": "",
+   "soldOn": "",
+   "appt": "07:30",
+   "cls": "demand",
+   "excluded": null
+  },
+  {
+   "job": "440637485",
+   "type": "Leak - Plumbing - Water Lines",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "status": "Scheduled",
+   "techs": "Nick E.",
+   "tags": "DEM, EMERG, Member",
+   "opp": true,
+   "subtotal": 0,
+   "total": 0,
+   "soldBy": "",
+   "soldOn": "",
+   "appt": "09:00",
+   "cls": "demand",
+   "excluded": null
+  }
+ ]
+}
