@@ -1,6 +1,6 @@
 {
  "date": "2026-11-13",
- "generatedAt": "2026-11-16T13:58:16.390Z",
+ "generatedAt": "2026-11-17T13:25:31.801Z",
  "plan": {
   "date": "2026-11-13",
   "capturedFrom": "1_Sold Work_Dated 11_13_26 - 11_13_26.xlsx",
@@ -612,7 +612,7 @@
  },
  "results": {
   "date": "2026-11-13",
-  "source": "0_Daily Job Detail_Dated 11_09_26 - 11_15_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_10_26 - 11_16_26.xlsx",
   "firstTotal": 8790.96,
   "depts": {
    "Plumbing": {
@@ -784,7 +784,7 @@
        "appt": "10:58",
        "cls": "spp",
        "excluded": null,
-       "later": "board:2026-11-16"
+       "later": "2026-11-16"
       },
       {
        "job": "438090588",
@@ -802,7 +802,7 @@
        "appt": "12:28",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-17"
       },
       {
        "job": "344857662",
@@ -900,27 +900,6 @@
        "plannedAs": null
       },
       {
-       "job": "440496460",
-       "type": "Non-Repair - Plumbing",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Nick E.",
-       "techs": "Nick E.",
-       "opp": false,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-13",
-       "isLead": false,
-       "cls": "wcn",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "440536007",
        "type": "Water Heater Concern - Tank - Age 0-6",
        "bu": "Plumbing Demand",
@@ -935,6 +914,27 @@
        "soldBy": "",
        "estimates": 0,
        "estSales": 0,
+       "scheduled": "2026-11-13",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440452002",
+       "type": "Estimate - Tank Water Heater - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Layne B.",
+       "techs": "Layne B.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 4705.07,
+       "soldBy": "",
+       "estimates": 3,
+       "estSales": 4705.07,
        "scheduled": "2026-11-13",
        "isLead": false,
        "cls": "demand",
@@ -963,23 +963,23 @@
        "plannedAs": null
       },
       {
-       "job": "440452002",
-       "type": "Estimate - Tank Water Heater - Functional",
+       "job": "440496460",
+       "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Layne B.",
-       "techs": "Layne B.",
-       "opp": true,
-       "converted": true,
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": false,
+       "converted": false,
        "warranty": false,
        "recall": false,
-       "revenue": 4705.07,
+       "revenue": 0,
        "soldBy": "",
-       "estimates": 3,
-       "estSales": 4705.07,
+       "estimates": 0,
+       "estSales": 0,
        "scheduled": "2026-11-13",
        "isLead": false,
-       "cls": "demand",
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       }
