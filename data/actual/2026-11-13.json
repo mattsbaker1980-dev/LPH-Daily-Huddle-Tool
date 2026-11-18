@@ -1,7 +1,7 @@
 {
  "date": "2026-11-13",
- "source": "0_Daily Job Detail_Dated 11_10_26 - 11_16_26.xlsx",
- "savedAt": "2026-11-17T13:25:31.539Z",
+ "source": "0_Daily Job Detail_Dated 11_11_26 - 11_17_26.xlsx",
+ "savedAt": "2026-11-18T13:24:20.473Z",
  "total": 8790.96,
  "firstTotal": 8790.96,
  "jobs": [
@@ -204,24 +204,6 @@
    "isLead": false
   },
   {
-   "job": "440536007",
-   "type": "Water Heater Concern - Tank - Age 0-6",
-   "bu": "Plumbing Demand",
-   "dept": "Plumbing",
-   "tech": "Derrick B.",
-   "techs": "Derrick B.",
-   "opp": true,
-   "converted": false,
-   "warranty": false,
-   "recall": false,
-   "revenue": 79,
-   "soldBy": "",
-   "estimates": 0,
-   "estSales": 0,
-   "scheduled": "2026-11-13",
-   "isLead": false
-  },
-  {
    "job": "440452002",
    "type": "Estimate - Tank Water Heater - Functional",
    "bu": "Plumbing Demand",
@@ -348,6 +330,24 @@
    "isLead": false
   },
   {
+   "job": "440536007",
+   "type": "Water Heater Concern - Tank - Age 0-6",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "tech": "Derrick B.",
+   "techs": "Derrick B.",
+   "opp": true,
+   "converted": false,
+   "warranty": false,
+   "recall": false,
+   "revenue": 79,
+   "soldBy": "",
+   "estimates": 0,
+   "estSales": 0,
+   "scheduled": "2026-11-13",
+   "isLead": false
+  },
+  {
    "job": "440200757",
    "type": "Estimate - Tankless Water Heater - Functional",
    "bu": "Plumbing Demand",
@@ -366,24 +366,6 @@
    "isLead": false
   },
   {
-   "job": "439587132",
-   "type": "Estimate - Plumbing - Functional",
-   "bu": "Plumbing Demand",
-   "dept": "Plumbing",
-   "tech": "Nick E.",
-   "techs": "Nick E.",
-   "opp": true,
-   "converted": false,
-   "warranty": false,
-   "recall": false,
-   "revenue": 0,
-   "soldBy": "",
-   "estimates": 5,
-   "estSales": 0,
-   "scheduled": "2026-11-13",
-   "isLead": true
-  },
-  {
    "job": "439101953",
    "type": "Toilet Concern",
    "bu": "Plumbing Demand",
@@ -398,6 +380,24 @@
    "soldBy": "",
    "estimates": 1,
    "estSales": 148.67,
+   "scheduled": "2026-11-13",
+   "isLead": true
+  },
+  {
+   "job": "439587132",
+   "type": "Estimate - Plumbing - Functional",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "tech": "Nick E.",
+   "techs": "Nick E.",
+   "opp": true,
+   "converted": false,
+   "warranty": false,
+   "recall": false,
+   "revenue": 0,
+   "soldBy": "",
+   "estimates": 5,
+   "estSales": 0,
    "scheduled": "2026-11-13",
    "isLead": true
   },

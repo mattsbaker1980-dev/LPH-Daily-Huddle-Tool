@@ -1,6 +1,6 @@
 {
  "date": "2026-11-12",
- "generatedAt": "2026-11-17T13:25:31.796Z",
+ "generatedAt": "2026-11-18T13:24:20.672Z",
  "plan": {
   "date": "2026-11-12",
   "capturedFrom": "1_Sold Work_Dated 11_12_26 - 11_12_26.xlsx",
@@ -562,7 +562,7 @@
  },
  "results": {
   "date": "2026-11-12",
-  "source": "0_Daily Job Detail_Dated 11_10_26 - 11_16_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_11_26 - 11_17_26.xlsx",
   "firstTotal": 4820,
   "depts": {
    "Plumbing": {
@@ -765,7 +765,7 @@
        "appt": "09:00",
        "cls": "spp",
        "excluded": null,
-       "later": "board:2026-11-17"
+       "later": "2026-11-17"
       },
       {
        "job": "347782620",
@@ -819,7 +819,7 @@
        "appt": "13:00",
        "cls": "demand",
        "excluded": null,
-       "later": "board:2026-11-17"
+       "later": "2026-11-17"
       }
      ],
      "added": [

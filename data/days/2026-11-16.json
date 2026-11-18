@@ -1,6 +1,6 @@
 {
  "date": "2026-11-16",
- "generatedAt": "2026-11-17T13:25:31.805Z",
+ "generatedAt": "2026-11-18T13:24:20.681Z",
  "plan": {
   "date": "2026-11-16",
   "capturedFrom": "3_Sold Work_Dated 11_16_26 - 11_16_26.xlsx",
@@ -698,11 +698,11 @@
  },
  "results": {
   "date": "2026-11-16",
-  "source": "0_Daily Job Detail_Dated 11_10_26 - 11_16_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_11_26 - 11_17_26.xlsx",
   "firstTotal": 18006.35,
   "depts": {
    "Plumbing": {
-    "actual": 17913.35,
+    "actual": 17813.35,
     "projection": 11612.31,
     "jobsCompleted": 29,
     "effects": [
@@ -724,8 +724,8 @@
       "key": "demand_ticket",
       "cat": "demand",
       "label": "Demand average ticket",
-      "amount": 5088.49,
-      "detail": "$1,309 avg vs $800 plan",
+      "amount": 4988.49,
+      "detail": "$1,299 avg vs $800 plan",
       "jobs": [
        {
         "job": "440789929",
@@ -778,9 +778,9 @@
       "converted": 10,
       "convRate": 0.6666666666666666,
       "planConv": 0.72,
-      "avgTicket": 1308.849,
+      "avgTicket": 1298.849,
       "planAvg": 800,
-      "revenue": 13186.49,
+      "revenue": 13086.49,
       "planRev": 5184,
       "plannedRan": 8,
       "addedRan": 7,
@@ -1107,6 +1107,27 @@
        "plannedAs": null
       },
       {
+       "job": "440790254",
+       "type": "Drain Stoppage - Interior Line",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 441.05,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 0,
+       "scheduled": "2026-11-16",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
        "job": "440792616",
        "type": "Drain Stoppage - Interior Line",
        "bu": "Plumbing Demand",
@@ -1121,27 +1142,6 @@
        "soldBy": "",
        "estimates": 1,
        "estSales": 366.95,
-       "scheduled": "2026-11-16",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
-       "job": "440790254",
-       "type": "Drain Stoppage - Interior Line",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Nick E.",
-       "techs": "Nick E.",
-       "opp": true,
-       "converted": true,
-       "warranty": false,
-       "recall": false,
-       "revenue": 541.05,
-       "soldBy": "",
-       "estimates": 1,
-       "estSales": 0,
        "scheduled": "2026-11-16",
        "isLead": false,
        "cls": "demand",
@@ -1192,14 +1192,29 @@
       }
      ]
     },
-    "variance": 6301.04,
-    "waived": [],
+    "variance": 6201.04,
+    "waived": [
+     {
+      "job": "440843570",
+      "tech": "Kevin J.",
+      "type": "Leak - Plumbing - Water Lines",
+      "fee": 49,
+      "reason": null
+     },
+     {
+      "job": "440718769",
+      "tech": "Tylor H.",
+      "type": "Leak - Plumbing - Water Lines",
+      "fee": 79,
+      "reason": null
+     }
+    ],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
      "jobsAccounted": 29,
-     "sumOfJobs": 17913.35,
-     "explained": 6301.04,
+     "sumOfJobs": 17813.35,
+     "explained": 6201.04,
      "ok": true
     }
    },
@@ -1351,12 +1366,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 67% vs 72% - Avg $1,309 vs $800 - Ran 15 vs 9 scheduled (1 rescheduled, 7 added). SPP: Conv 20% vs 40% - Avg $259 vs $350 - Ran 5 vs 14 scheduled (8 rescheduled, 1 went to warranty/callback).",
+  "Plumbing": "Demand: Conv 67% vs 72% - Avg $1,299 vs $800 - Ran 15 vs 9 scheduled (1 rescheduled, 7 added). SPP: Conv 20% vs 40% - Avg $259 vs $350 - Ran 5 vs 14 scheduled (8 rescheduled, 1 went to warranty/callback). 2 dispatch fees not charged ($128, 2 with no reason in notes).",
   "Sewer Service": "Demand: Conv 100% vs 60% - Avg $93 vs $242 - Ran 1 vs 0 scheduled (1 added).",
   "Sewer Install": "On plan."
  },
  "whyLong": {
-  "Plumbing": "Plumbing beat projection by $6,301 ($17,913 vs $11,612). Ran 15 demand calls vs 9 planned (1 rescheduled, 7 added during the day) +$3,456; converted 10 of 15 (67% vs 72%) -$640; average demand ticket $1,309 vs $800 +$5,088 — Nick's $5,334 water heater, Derrick's $4,075 functional. Ran 5 SPP calls vs 14 planned (8 rescheduled, 1 went to warranty/callback) -$1,260; converted 1 of 5 (20% vs 40%) -$350.",
+  "Plumbing": "Plumbing beat projection by $6,201 ($17,813 vs $11,612). Ran 15 demand calls vs 9 planned (1 rescheduled, 7 added during the day) +$3,456; converted 10 of 15 (67% vs 72%) -$640; average demand ticket $1,299 vs $800 +$4,988 — Nick's $5,334 water heater, Derrick's $4,075 functional. Ran 5 SPP calls vs 14 planned (8 rescheduled, 1 went to warranty/callback) -$1,260; converted 1 of 5 (20% vs 40%) -$350.",
   "Sewer Service": "Sewer Service beat projection by $93 ($93 vs $0). Ran 1 demand calls vs 0 planned (1 added during the day).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."
  }

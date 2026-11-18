@@ -1,6 +1,6 @@
 {
  "date": "2026-11-10",
- "generatedAt": "2026-11-17T13:25:31.789Z",
+ "generatedAt": "2026-11-18T13:24:20.664Z",
  "plan": {
   "date": "2026-11-10",
   "capturedFrom": "0_Sold Work_Dated 11_10_26 - 11_10_26.xlsx",
@@ -863,7 +863,7 @@
        "appt": "13:00",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-18"
       },
       {
        "job": "281103027",
