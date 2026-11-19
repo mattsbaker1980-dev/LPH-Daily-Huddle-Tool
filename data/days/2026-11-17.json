@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "generatedAt": "2026-11-18T13:24:20.687Z",
+ "generatedAt": "2026-11-19T13:38:23.531Z",
  "plan": {
   "date": "2026-11-17",
   "capturedFrom": "1_Sold Work_Dated 11_17_26 - 11_17_26.xlsx",
@@ -833,7 +833,7 @@
  },
  "results": {
   "date": "2026-11-17",
-  "source": "0_Daily Job Detail_Dated 11_11_26 - 11_17_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_12_26 - 11_18_26.xlsx",
   "firstTotal": 19289.96,
   "depts": {
    "Plumbing": {
@@ -874,8 +874,8 @@
       "key": "demand_fees",
       "cat": "demand",
       "label": "Fees on unconverted demand calls",
-      "amount": 49,
-      "detail": "1 call(s) with a dispatch/diagnostic fee"
+      "amount": 128,
+      "detail": "2 call(s) with a dispatch/diagnostic fee"
      },
      {
       "key": "spp_volume",
@@ -904,14 +904,7 @@
       "cat": "sold",
       "label": "Planned sold work billed differently than scheduled",
       "amount": -50,
-      "detail": "Bill $746 vs $796"
-     },
-     {
-      "key": "wcn",
-      "cat": "wcn",
-      "label": "Revenue on warranty / callback / no-opportunity calls",
-      "amount": 79,
-      "detail": "1 job(s)"
+      "detail": "Derrick $746 vs $796"
      }
     ],
     "cats": {
@@ -923,7 +916,7 @@
       "planConv": 0.72,
       "avgTicket": 935.5342857142857,
       "planAvg": 800,
-      "revenue": 6597.74,
+      "revenue": 6676.74,
       "planRev": 7488,
       "plannedRan": 8,
       "addedRan": 2,
@@ -970,7 +963,7 @@
        },
        {
         "job": "440845763",
-        "tech": "Josh R.",
+        "tech": "Tylor H.",
         "type": "Sold Work - Sewer Line Replacement - Partial",
         "planned": 9905.95,
         "actual": 9905.95,
@@ -978,7 +971,7 @@
        },
        {
         "job": "344541386",
-        "tech": "Bill P.",
+        "tech": "Derrick B.",
         "type": "Sold Work - Plumbing",
         "planned": 796.45,
         "actual": 746.45,
@@ -991,7 +984,7 @@
      "wcn": {
       "planned": 3,
       "ran": 9,
-      "revenue": 79
+      "revenue": 0
      }
     },
     "lists": {
@@ -1084,7 +1077,7 @@
        "appt": "",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-19"
       },
       {
        "job": "339032798",
@@ -1156,7 +1149,7 @@
        "appt": "07:30",
        "cls": "demand",
        "excluded": null,
-       "later": "board:2026-11-18"
+       "later": "2026-11-18"
       },
       {
        "job": "440948308",
@@ -1179,27 +1172,6 @@
      ],
      "added": [
       {
-       "job": "441012926",
-       "type": "Leak - Plumbing - Water Lines",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Derrick B.",
-       "techs": "Derrick B.",
-       "opp": true,
-       "converted": true,
-       "warranty": false,
-       "recall": false,
-       "revenue": 628.65,
-       "soldBy": "",
-       "estimates": 1,
-       "estSales": 659.15,
-       "scheduled": "2026-11-17",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "441293746",
        "type": "Drain Stoppage - Interior Line",
        "bu": "Plumbing Demand",
@@ -1221,12 +1193,33 @@
        "plannedAs": null
       },
       {
-       "job": "441345200",
-       "type": "Non-Repair - Plumbing",
+       "job": "441012926",
+       "type": "Leak - Plumbing - Water Lines",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
        "tech": "Derrick B.",
        "techs": "Derrick B.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 628.65,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 659.15,
+       "scheduled": "2026-11-17",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "441350321",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
        "opp": false,
        "converted": false,
        "warranty": false,
@@ -1242,12 +1235,12 @@
        "plannedAs": null
       },
       {
-       "job": "441350321",
+       "job": "441345200",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Nick E.",
-       "techs": "Nick E.",
+       "tech": "Derrick B.",
+       "techs": "Derrick B.",
        "opp": false,
        "converted": false,
        "warranty": false,
@@ -1286,7 +1279,15 @@
      ]
     },
     "variance": -2098.94,
-    "waived": [],
+    "waived": [
+     {
+      "job": "441008695",
+      "tech": "Nick E.",
+      "type": "Leak - Plumbing - Water Lines",
+      "fee": 49,
+      "reason": null
+     }
+    ],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
@@ -1441,7 +1442,15 @@
      ]
     },
     "variance": 0,
-    "waived": [],
+    "waived": [
+     {
+      "job": "441000488",
+      "tech": "Josh T.",
+      "type": "Sewer Camera Video Inspection - Tech Lead",
+      "fee": 93,
+      "reason": null
+     }
+    ],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
@@ -1454,9 +1463,9 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 70% vs 72% - Avg $936 vs $800 - Ran 10 vs 13 scheduled (1 rescheduled, 4 went to warranty/callback, 2 added). SPP: Conv 17% vs 40% - Avg $722 vs $350 - Ran 6 vs 14 scheduled (8 rescheduled).",
+  "Plumbing": "Demand: Conv 70% vs 72% - Avg $936 vs $800 - Ran 10 vs 13 scheduled (1 rescheduled, 4 went to warranty/callback, 2 added). SPP: Conv 17% vs 40% - Avg $722 vs $350 - Ran 6 vs 14 scheduled (8 rescheduled). 1 dispatch fee not charged ($49 – no reason in notes).",
   "Sewer Service": "Demand: Ran 0 vs 1 scheduled (1 didn't run).",
-  "Sewer Install": "Leads: Ran 1 vs 0 scheduled."
+  "Sewer Install": "1 dispatch fee not charged ($93 – no reason in notes). Leads: Ran 1 vs 0 scheduled."
  },
  "whyLong": {
   "Plumbing": "Plumbing missed projection by $2,099 ($19,290 vs $21,389). Ran 10 demand calls vs 13 planned (1 rescheduled, 4 went to warranty/callback, 2 added during the day) -$1,728; average demand ticket $936 vs $800 +$949 — Robert's $3,766 water heater. Ran 6 SPP calls vs 14 planned (8 rescheduled) -$1,120.",

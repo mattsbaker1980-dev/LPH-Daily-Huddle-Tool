@@ -1,6 +1,6 @@
 {
  "date": "2026-11-11",
- "generatedAt": "2026-11-18T13:24:20.668Z",
+ "generatedAt": "2026-11-19T13:38:23.511Z",
  "plan": {
   "date": "2026-11-11",
   "capturedFrom": "0_Sold Work_Dated 11_11_26 - 11_11_26.xlsx",
@@ -807,7 +807,7 @@
        "appt": "",
        "cls": "demand",
        "excluded": null,
-       "later": "board:2026-11-12"
+       "later": "2026-11-18"
       },
       {
        "job": "437808297",

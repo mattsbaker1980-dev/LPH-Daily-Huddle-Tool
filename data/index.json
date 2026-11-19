@@ -1,19 +1,39 @@
 {
- "updatedAt": "2026-11-18T13:24:20.690Z",
- "today": "2026-11-18",
- "yesterday": "2026-11-17",
+ "updatedAt": "2026-11-19T13:38:23.543Z",
+ "today": "2026-11-19",
+ "yesterday": "2026-11-18",
  "days": [
+  {
+   "date": "2026-11-19",
+   "hasPlan": true,
+   "hasResults": false,
+   "projection": {
+    "Plumbing": 8558.63,
+    "Sewer Service": 290.4,
+    "Sewer Install": 0
+   },
+   "actual": null,
+   "checks": null
+  },
   {
    "date": "2026-11-18",
    "hasPlan": true,
-   "hasResults": false,
+   "hasResults": true,
    "projection": {
     "Plumbing": 13133.66,
     "Sewer Service": 145.2,
     "Sewer Install": 0
    },
-   "actual": null,
-   "checks": null
+   "actual": {
+    "Plumbing": 11476.29,
+    "Sewer Service": 178,
+    "Sewer Install": 0
+   },
+   "checks": {
+    "Plumbing": true,
+    "Sewer Service": true,
+    "Sewer Install": true
+   }
   },
   {
    "date": "2026-11-17",
