@@ -1,6 +1,6 @@
 {
  "date": "2026-11-13",
- "generatedAt": "2026-11-19T13:53:05.212Z",
+ "generatedAt": "2026-11-20T13:36:22.862Z",
  "plan": {
   "date": "2026-11-13",
   "capturedFrom": "1_Sold Work_Dated 11_13_26 - 11_13_26.xlsx",
@@ -612,7 +612,7 @@
  },
  "results": {
   "date": "2026-11-13",
-  "source": "0_Daily Job Detail_Dated 11_12_26 - 11_18_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_13_26 - 11_19_26.xlsx",
   "firstTotal": 8790.96,
   "depts": {
    "Plumbing": {
@@ -820,7 +820,7 @@
        "appt": "15:30",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-20"
       },
       {
        "job": "346618023",
@@ -856,7 +856,7 @@
        "appt": "13:58",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-20"
       },
       {
        "job": "438736703",
@@ -942,27 +942,6 @@
        "plannedAs": null
       },
       {
-       "job": "440536007",
-       "type": "Water Heater Concern - Tank - Age 0-6",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Derrick B.",
-       "techs": "Derrick B.",
-       "opp": true,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 79,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-13",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "440496460",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
@@ -980,6 +959,27 @@
        "scheduled": "2026-11-13",
        "isLead": false,
        "cls": "wcn",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440536007",
+       "type": "Water Heater Concern - Tank - Age 0-6",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Derrick B.",
+       "techs": "Derrick B.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 79,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-13",
+       "isLead": false,
+       "cls": "demand",
        "planned": false,
        "plannedAs": null
       }

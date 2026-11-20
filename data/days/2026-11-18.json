@@ -1,6 +1,6 @@
 {
  "date": "2026-11-18",
- "generatedAt": "2026-11-19T13:53:05.231Z",
+ "generatedAt": "2026-11-20T13:36:22.890Z",
  "plan": {
   "date": "2026-11-18",
   "capturedFrom": "1_Sold Work_Dated 11_18_26 - 11_18_26.xlsx",
@@ -681,27 +681,27 @@
  },
  "results": {
   "date": "2026-11-18",
-  "source": "0_Daily Job Detail_Dated 11_12_26 - 11_18_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_13_26 - 11_19_26.xlsx",
   "firstTotal": 11654.29,
   "depts": {
    "Plumbing": {
-    "actual": 11476.29,
+    "actual": 11654.29,
     "projection": 13133.66,
-    "jobsCompleted": 21,
+    "jobsCompleted": 23,
     "effects": [
      {
       "key": "demand_volume",
       "cat": "demand",
       "label": "Demand calls run vs plan",
-      "amount": 576,
-      "detail": "6 run vs 5 planned"
+      "amount": 1152,
+      "detail": "7 run vs 5 planned"
      },
      {
       "key": "demand_conversion",
       "cat": "demand",
       "label": "Demand conversion",
-      "amount": -256,
-      "detail": "4 of 6 converted (67% vs 72% plan)"
+      "amount": -832,
+      "detail": "4 of 7 converted (57% vs 72% plan)"
      },
      {
       "key": "demand_ticket",
@@ -722,22 +722,22 @@
       "key": "spp_volume",
       "cat": "spp",
       "label": "SPP calls run vs plan",
-      "amount": -420,
-      "detail": "10 run vs 13 planned"
+      "amount": -280,
+      "detail": "11 run vs 13 planned"
      },
      {
       "key": "spp_conversion",
       "cat": "spp",
       "label": "SPP conversion",
-      "amount": -700,
-      "detail": "2 of 10 converted (20% vs 40% plan)"
+      "amount": -490,
+      "detail": "3 of 11 converted (27% vs 40% plan)"
      },
      {
       "key": "spp_ticket",
       "cat": "spp",
       "label": "SPP average ticket",
-      "amount": 935.95,
-      "detail": "$818 avg vs $350 plan",
+      "amount": 763.95,
+      "detail": "$605 avg vs $350 plan",
       "jobs": [
        {
         "job": "340092862",
@@ -758,32 +758,32 @@
     "cats": {
      "demand": {
       "planned": 5,
-      "ran": 6,
+      "ran": 7,
       "converted": 4,
-      "convRate": 0.6666666666666666,
+      "convRate": 0.5714285714285714,
       "planConv": 0.72,
       "avgTicket": 398.32,
       "planAvg": 800,
       "revenue": 1691.28,
       "planRev": 2880,
       "plannedRan": 5,
-      "addedRan": 1,
+      "addedRan": 2,
       "missed": 0,
       "rescheduled": 0,
       "reclassed": 0
      },
      "spp": {
       "planned": 13,
-      "ran": 10,
-      "converted": 2,
-      "convRate": 0.2,
+      "ran": 11,
+      "converted": 3,
+      "convRate": 0.2727272727272727,
       "planConv": 0.4,
-      "avgTicket": 817.9749999999999,
+      "avgTicket": 604.65,
       "planAvg": 350,
-      "revenue": 1635.95,
+      "revenue": 1813.95,
       "planRev": 1820,
       "plannedRan": 10,
-      "addedRan": 0,
+      "addedRan": 1,
       "missed": 0,
       "rescheduled": 3,
       "reclassed": 0
@@ -803,7 +803,7 @@
        },
        {
         "job": "440271750",
-        "tech": "Bill P.",
+        "tech": "Kevin J.",
         "type": "Sold Work - Plumbing",
         "planned": 4693.97,
         "actual": 4693.97,
@@ -912,6 +912,48 @@
      ],
      "added": [
       {
+       "job": "441340975",
+       "type": "Estimate - Plumbing - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Josh T.",
+       "techs": "Josh T.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 0,
+       "scheduled": "2026-11-18",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "441085764",
+       "type": "Plumbing System Check",
+       "bu": "Plumbing COD System Ck",
+       "dept": "Plumbing",
+       "tech": "Josh T.",
+       "techs": "Josh T.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 178,
+       "soldBy": "",
+       "estimates": 4,
+       "estSales": 0,
+       "scheduled": "2026-11-18",
+       "isLead": false,
+       "cls": "spp",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
        "job": "441416915",
        "type": "Water Treatment Concern",
        "bu": "Plumbing Demand",
@@ -955,59 +997,59 @@
       }
      ]
     },
-    "variance": -1657.37,
+    "variance": -1479.37,
     "waived": [],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
-     "jobsAccounted": 21,
-     "sumOfJobs": 11476.29,
-     "explained": -1657.37,
+     "jobsAccounted": 23,
+     "sumOfJobs": 11654.29,
+     "explained": -1479.37,
      "ok": true
     }
    },
    "Sewer Service": {
-    "actual": 178,
+    "actual": 0,
     "projection": 145.2,
-    "jobsCompleted": 1,
+    "jobsCompleted": 0,
     "effects": [
      {
       "key": "demand_volume",
       "cat": "demand",
       "label": "Demand calls run vs plan",
-      "amount": 0,
-      "detail": "1 run vs 1 planned"
+      "amount": -145.2,
+      "detail": "0 run vs 1 planned"
      },
      {
       "key": "demand_conversion",
       "cat": "demand",
       "label": "Demand conversion",
-      "amount": 96.8,
-      "detail": "1 of 1 converted (100% vs 60% plan)"
+      "amount": 0,
+      "detail": "0 of 0 converted (— vs 60% plan)"
      },
      {
       "key": "demand_ticket",
       "cat": "demand",
       "label": "Demand average ticket",
-      "amount": -64,
-      "detail": "$178 avg vs $242 plan",
+      "amount": 0,
+      "detail": "— avg vs $242 plan",
       "jobs": []
      }
     ],
     "cats": {
      "demand": {
       "planned": 1,
-      "ran": 1,
-      "converted": 1,
-      "convRate": 1,
+      "ran": 0,
+      "converted": 0,
+      "convRate": null,
       "planConv": 0.6,
-      "avgTicket": 178,
+      "avgTicket": null,
       "planAvg": 242,
-      "revenue": 178,
+      "revenue": 0,
       "planRev": 145.2,
-      "plannedRan": 1,
+      "plannedRan": 0,
       "addedRan": 0,
-      "missed": 0,
+      "missed": 1,
       "rescheduled": 0,
       "reclassed": 0
      },
@@ -1026,29 +1068,48 @@
      }
     },
     "lists": {
-     "missed": [],
+     "missed": [
+      {
+       "job": "441085764",
+       "type": "Sewer Camera Video Inspection - Svc Request",
+       "bu": "Sewer Service",
+       "dept": "Sewer Service",
+       "status": "Scheduled",
+       "techs": "Josh T.",
+       "tags": "DEM, Potential Member, SI LEAD",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "14:30",
+       "cls": "demand",
+       "excluded": null,
+       "later": null
+      }
+     ],
      "added": []
     },
-    "variance": 32.8,
+    "variance": -145.2,
     "waived": [],
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
-     "jobsAccounted": 1,
-     "sumOfJobs": 178,
-     "explained": 32.8,
+     "jobsAccounted": 0,
+     "sumOfJobs": 0,
+     "explained": -145.2,
      "ok": true
     }
    },
    "Sewer Install": {
     "actual": 0,
     "projection": 0,
-    "jobsCompleted": 1,
+    "jobsCompleted": 0,
     "effects": [],
     "cats": {
      "lead": {
       "planned": 1,
-      "ran": 1,
+      "ran": 0,
       "revenue": 0
      },
      "sold": {
@@ -1066,7 +1127,26 @@
      }
     },
     "lists": {
-     "missed": [],
+     "missed": [
+      {
+       "job": "441340975",
+       "type": "Estimate - Sewer Install",
+       "bu": "Sewer Installs",
+       "dept": "Sewer Install",
+       "status": "Scheduled",
+       "techs": "",
+       "tags": "EST, Potential Member",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "12:00",
+       "cls": "lead",
+       "excluded": null,
+       "later": null
+      }
+     ],
      "added": []
     },
     "variance": 0,
@@ -1074,7 +1154,7 @@
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
-     "jobsAccounted": 1,
+     "jobsAccounted": 0,
      "sumOfJobs": 0,
      "explained": 0,
      "ok": true
@@ -1083,13 +1163,13 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 67% vs 72% - Avg $398 vs $800 - Ran 6 vs 5 scheduled (1 added). SPP: Conv 20% vs 40% - Avg $818 vs $350 - Ran 10 vs 13 scheduled (3 rescheduled).",
-  "Sewer Service": "Demand: Conv 100% vs 60% - Avg $178 vs $242 - Ran 1 vs 1 scheduled.",
-  "Sewer Install": "Leads: Ran 1 vs 1 scheduled."
+  "Plumbing": "Demand: Conv 57% vs 72% - Avg $398 vs $800 - Ran 7 vs 5 scheduled (2 added). SPP: Conv 27% vs 40% - Avg $605 vs $350 - Ran 11 vs 13 scheduled (3 rescheduled, 1 added).",
+  "Sewer Service": "Demand: Ran 0 vs 1 scheduled (1 didn't run).",
+  "Sewer Install": "Leads: Ran 0 vs 1 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $1,657 ($11,476 vs $13,134). Ran 6 demand calls vs 5 planned (1 added during the day) +$576; average demand ticket $398 vs $800 -$1,607. Ran 10 SPP calls vs 13 planned (3 rescheduled) -$420; converted 2 of 10 (20% vs 40%) -$700; average SPP ticket $818 vs $350 +$936 — Tylor's $1,433 system check.",
-  "Sewer Service": "Sewer Service landed right on projection ($178 vs $145).",
-  "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 1 scheduled."
+  "Plumbing": "Plumbing missed projection by $1,479 ($11,654 vs $13,134). Ran 7 demand calls vs 5 planned (2 added during the day) +$1,152; converted 4 of 7 (57% vs 72%) -$832; average demand ticket $398 vs $800 -$1,607. Ran 11 SPP calls vs 13 planned (3 rescheduled, 1 added during the day); converted 3 of 11 (27% vs 40%) -$490; average SPP ticket $605 vs $350 +$764 — Tylor's $1,433 system check.",
+  "Sewer Service": "Sewer Service missed projection by $145 ($0 vs $145). Ran 0 demand calls vs 1 planned (1 planned didn't run).",
+  "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 1 scheduled."
  }
 }
