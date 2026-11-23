@@ -1,0 +1,24 @@
+{
+ "date": "2026-11-22",
+ "capturedFrom": "1_Sold Work_Dated 11_22_26 - 11_22_26.xlsx",
+ "savedAt": "2026-11-23T13:47:16.590Z",
+ "jobs": [
+  {
+   "job": "442132545",
+   "type": "Drain Stoppage - Main Line",
+   "bu": "Sewer Service",
+   "dept": "Sewer Service",
+   "status": "Scheduled",
+   "techs": "",
+   "tags": "DEM, EMERG, TGL OPP",
+   "opp": true,
+   "subtotal": 0,
+   "total": 0,
+   "soldBy": "",
+   "soldOn": "",
+   "appt": "09:00",
+   "cls": "demand",
+   "excluded": "No tech assigned"
+  }
+ ]
+}

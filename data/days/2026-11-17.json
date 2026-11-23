@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "generatedAt": "2026-11-20T13:36:22.873Z",
+ "generatedAt": "2026-11-23T13:47:16.820Z",
  "plan": {
   "date": "2026-11-17",
   "capturedFrom": "1_Sold Work_Dated 11_17_26 - 11_17_26.xlsx",
@@ -833,7 +833,7 @@
  },
  "results": {
   "date": "2026-11-17",
-  "source": "0_Daily Job Detail_Dated 11_13_26 - 11_19_26.xlsx",
+  "source": "5_Daily Job Detail_Dated 11_16_26 - 11_22_26.xlsx",
   "firstTotal": 19289.96,
   "depts": {
    "Plumbing": {
@@ -1172,27 +1172,6 @@
      ],
      "added": [
       {
-       "job": "441293746",
-       "type": "Drain Stoppage - Interior Line",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Josh T.",
-       "techs": "Josh T.",
-       "opp": true,
-       "converted": true,
-       "warranty": false,
-       "recall": false,
-       "revenue": 564.19,
-       "soldBy": "",
-       "estimates": 1,
-       "estSales": 484.24,
-       "scheduled": "2026-11-17",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "441012926",
        "type": "Leak - Plumbing - Water Lines",
        "bu": "Plumbing Demand",
@@ -1210,6 +1189,27 @@
        "scheduled": "2026-11-17",
        "isLead": false,
        "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "440707538",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": false,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-17",
+       "isLead": false,
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       },
@@ -1256,23 +1256,23 @@
        "plannedAs": null
       },
       {
-       "job": "440707538",
-       "type": "Non-Repair - Plumbing",
+       "job": "441293746",
+       "type": "Drain Stoppage - Interior Line",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Nick E.",
-       "techs": "Nick E.",
-       "opp": false,
-       "converted": false,
+       "tech": "Josh T.",
+       "techs": "Josh T.",
+       "opp": true,
+       "converted": true,
        "warranty": false,
        "recall": false,
-       "revenue": 0,
+       "revenue": 564.19,
        "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
+       "estimates": 1,
+       "estSales": 484.24,
        "scheduled": "2026-11-17",
        "isLead": false,
-       "cls": "wcn",
+       "cls": "demand",
        "planned": false,
        "plannedAs": null
       }

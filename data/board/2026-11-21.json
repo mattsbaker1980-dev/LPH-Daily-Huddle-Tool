@@ -1,0 +1,24 @@
+{
+ "date": "2026-11-21",
+ "capturedFrom": "2_Sold Work_Dated 11_21_26 - 11_21_26.xlsx",
+ "savedAt": "2026-11-23T13:47:16.592Z",
+ "jobs": [
+  {
+   "job": "442142562",
+   "type": "Sold Work - Plumbing",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "status": "Scheduled",
+   "techs": "Ethan J., Bill P.",
+   "tags": "2 HVAC SYS, Member, SLD WRK",
+   "opp": false,
+   "subtotal": 0,
+   "total": 0,
+   "soldBy": "",
+   "soldOn": "",
+   "appt": "09:00",
+   "cls": "sold",
+   "excluded": null
+  }
+ ]
+}
