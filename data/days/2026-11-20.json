@@ -1,6 +1,6 @@
 {
  "date": "2026-11-20",
- "generatedAt": "2026-11-23T13:47:16.836Z",
+ "generatedAt": "2026-11-24T13:47:04.425Z",
  "plan": {
   "date": "2026-11-20",
   "capturedFrom": "1_Sold Work_Dated 11_20_26 - 11_20_26.xlsx",
@@ -630,27 +630,27 @@
  },
  "results": {
   "date": "2026-11-20",
-  "source": "5_Daily Job Detail_Dated 11_16_26 - 11_22_26.xlsx",
+  "source": "5_Daily Job Detail_Dated 11_17_26 - 11_23_26.xlsx",
   "firstTotal": 17355.62,
   "depts": {
    "Plumbing": {
     "actual": 17355.62,
     "projection": 12304.75,
-    "jobsCompleted": 26,
+    "jobsCompleted": 25,
     "effects": [
      {
       "key": "demand_volume",
       "cat": "demand",
       "label": "Demand calls run vs plan",
-      "amount": 1152,
-      "detail": "11 run vs 9 planned"
+      "amount": 576,
+      "detail": "10 run vs 9 planned"
      },
      {
       "key": "demand_conversion",
       "cat": "demand",
       "label": "Demand conversion",
-      "amount": -2336,
-      "detail": "5 of 11 converted (45% vs 72% plan)"
+      "amount": -1760,
+      "detail": "5 of 10 converted (50% vs 72% plan)"
      },
      {
       "key": "demand_ticket",
@@ -708,7 +708,7 @@
         "tech": "Tylor",
         "type": "Warranty Repair - Plumbing",
         "planned": 0,
-        "later": null
+        "later": "board:2026-11-24"
        }
       ]
      }
@@ -716,17 +716,17 @@
     "cats": {
      "demand": {
       "planned": 9,
-      "ran": 11,
+      "ran": 10,
       "converted": 5,
-      "convRate": 0.45454545454545453,
+      "convRate": 0.5,
       "planConv": 0.72,
       "avgTicket": 2212.764,
       "planAvg": 800,
       "revenue": 11274.77,
       "planRev": 5184,
-      "plannedRan": 8,
+      "plannedRan": 7,
       "addedRan": 3,
-      "missed": 0,
+      "missed": 1,
       "rescheduled": 0,
       "reclassed": 1
      },
@@ -753,7 +753,7 @@
       "done": [
        {
         "job": "440956219",
-        "tech": "Josh R.",
+        "tech": "Robert R.",
         "type": "Sold Work - Plumbing",
         "planned": 780.62,
         "actual": 780.62,
@@ -761,7 +761,7 @@
        },
        {
         "job": "441312424",
-        "tech": "Josh R.",
+        "tech": "Nick E.",
         "type": "Sold Work - Plumbing",
         "planned": 2088.21,
         "actual": 2088.21,
@@ -769,7 +769,7 @@
        },
        {
         "job": "440598065",
-        "tech": "Bill P.",
+        "tech": "Nick E.",
         "type": "Sold Work - Plumbing",
         "planned": 995.85,
         "actual": 995.85,
@@ -790,7 +790,7 @@
         "tech": "Tylor",
         "type": "Warranty Repair - Plumbing",
         "planned": 0,
-        "later": null
+        "later": "board:2026-11-24"
        }
       ],
       "added": []
@@ -837,7 +837,7 @@
        "appt": "10:32",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-24"
       },
       {
        "job": "344857662",
@@ -858,6 +858,24 @@
        "later": null
       },
       {
+       "job": "441348169",
+       "type": "Estimate - Electrical",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "status": "Scheduled",
+       "techs": "Ryan K.",
+       "tags": "EST, Member",
+       "opp": true,
+       "subtotal": 0,
+       "total": 0,
+       "soldBy": "",
+       "soldOn": "",
+       "appt": "09:02",
+       "cls": "demand",
+       "excluded": null,
+       "later": null
+      },
+      {
        "job": "440708203",
        "type": "Warranty Repair - Plumbing",
        "bu": "Plumbing Demand",
@@ -873,10 +891,73 @@
        "appt": "10:30",
        "cls": "sold",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-24"
       }
      ],
      "added": [
+      {
+       "job": "442056568",
+       "type": "Well Pump Concern",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Ethan J.",
+       "techs": "Ethan J.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 8872.78,
+       "soldBy": "",
+       "estimates": 3,
+       "estSales": 8872.78,
+       "scheduled": "2026-11-20",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "441977971",
+       "type": "Toilet Concern",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Derrick B.",
+       "techs": "Derrick B.",
+       "opp": false,
+       "converted": false,
+       "warranty": true,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-20",
+       "isLead": false,
+       "cls": "wcn",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "441925698",
+       "type": "Faucet Concern",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Ethan J.",
+       "techs": "Ethan J.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 0,
+       "scheduled": "2026-11-20",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
       {
        "job": "441990710",
        "type": "Non-Repair - Plumbing",
@@ -920,48 +1001,6 @@
        "plannedAs": null
       },
       {
-       "job": "441925698",
-       "type": "Faucet Concern",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Ethan J.",
-       "techs": "Ethan J.",
-       "opp": true,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 1,
-       "estSales": 0,
-       "scheduled": "2026-11-20",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
-       "job": "441977971",
-       "type": "Toilet Concern",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Derrick B.",
-       "techs": "Derrick B.",
-       "opp": false,
-       "converted": false,
-       "warranty": true,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-20",
-       "isLead": false,
-       "cls": "wcn",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "441925726",
        "type": "Drain Stoppage - Main Line",
        "bu": "Plumbing Demand",
@@ -981,27 +1020,6 @@
        "cls": "demand",
        "planned": false,
        "plannedAs": null
-      },
-      {
-       "job": "442056568",
-       "type": "Well Pump Concern",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Ethan J.",
-       "techs": "Ethan J.",
-       "opp": true,
-       "converted": true,
-       "warranty": false,
-       "recall": false,
-       "revenue": 8872.78,
-       "soldBy": "",
-       "estimates": 3,
-       "estSales": 8872.78,
-       "scheduled": "2026-11-20",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
       }
      ]
     },
@@ -1010,7 +1028,7 @@
     "notesLoaded": true,
     "unexplained": 0,
     "check": {
-     "jobsAccounted": 26,
+     "jobsAccounted": 25,
      "sumOfJobs": 17355.62,
      "explained": 5050.87,
      "ok": true
@@ -1163,12 +1181,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 45% vs 72% - Avg $2,213 vs $800 - Ran 11 vs 9 scheduled (1 went to warranty/callback, 3 added). SPP: Conv 17% vs 40% - Avg $220 vs $350 - Ran 6 vs 9 scheduled (3 rescheduled).",
+  "Plumbing": "Demand: Conv 50% vs 72% - Avg $2,213 vs $800 - Ran 10 vs 9 scheduled (1 didn't run, 1 went to warranty/callback, 3 added). SPP: Conv 17% vs 40% - Avg $220 vs $350 - Ran 6 vs 9 scheduled (3 rescheduled).",
   "Sewer Service": "On plan.",
   "Sewer Install": "1 dispatch fee not charged ($79 – no reason in notes). Leads: Ran 1 vs 1 scheduled."
  },
  "whyLong": {
-  "Plumbing": "Plumbing beat projection by $5,051 ($17,356 vs $12,305). Ran 11 demand calls vs 9 planned (1 went to warranty/callback, 3 added during the day) +$1,152; converted 5 of 11 (45% vs 72%) -$2,336; average demand ticket $2,213 vs $800 +$7,064 — Ethan's $8,873 well pump concern. Ran 6 SPP calls vs 9 planned (3 rescheduled) -$420; converted 1 of 6 (17% vs 40%) -$490.",
+  "Plumbing": "Plumbing beat projection by $5,051 ($17,356 vs $12,305). Ran 10 demand calls vs 9 planned (1 planned didn't run, 1 went to warranty/callback, 3 added during the day) +$576; converted 5 of 10 (50% vs 72%) -$1,760; average demand ticket $2,213 vs $800 +$7,064 — Ethan's $8,873 well pump concern. Ran 6 SPP calls vs 9 planned (3 rescheduled) -$420; converted 1 of 6 (17% vs 40%) -$490.",
   "Sewer Service": "Sewer Service landed right on projection ($0 vs $0).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 1 sewer estimate visit(s) ran vs 1 scheduled."
  }

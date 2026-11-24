@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "generatedAt": "2026-11-23T13:47:16.820Z",
+ "generatedAt": "2026-11-24T13:47:04.406Z",
  "plan": {
   "date": "2026-11-17",
   "capturedFrom": "1_Sold Work_Dated 11_17_26 - 11_17_26.xlsx",
@@ -833,7 +833,7 @@
  },
  "results": {
   "date": "2026-11-17",
-  "source": "5_Daily Job Detail_Dated 11_16_26 - 11_22_26.xlsx",
+  "source": "5_Daily Job Detail_Dated 11_17_26 - 11_23_26.xlsx",
   "firstTotal": 19289.96,
   "depts": {
    "Plumbing": {
@@ -1172,6 +1172,27 @@
      ],
      "added": [
       {
+       "job": "441293746",
+       "type": "Drain Stoppage - Interior Line",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Josh T.",
+       "techs": "Josh T.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 564.19,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 484.24,
+       "scheduled": "2026-11-17",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
        "job": "441012926",
        "type": "Leak - Plumbing - Water Lines",
        "bu": "Plumbing Demand",
@@ -1214,27 +1235,6 @@
        "plannedAs": null
       },
       {
-       "job": "441345200",
-       "type": "Non-Repair - Plumbing",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Derrick B.",
-       "techs": "Derrick B.",
-       "opp": false,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-17",
-       "isLead": false,
-       "cls": "wcn",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "441350321",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
@@ -1256,23 +1256,23 @@
        "plannedAs": null
       },
       {
-       "job": "441293746",
-       "type": "Drain Stoppage - Interior Line",
+       "job": "441345200",
+       "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Josh T.",
-       "techs": "Josh T.",
-       "opp": true,
-       "converted": true,
+       "tech": "Derrick B.",
+       "techs": "Derrick B.",
+       "opp": false,
+       "converted": false,
        "warranty": false,
        "recall": false,
-       "revenue": 564.19,
+       "revenue": 0,
        "soldBy": "",
-       "estimates": 1,
-       "estSales": 484.24,
+       "estimates": 0,
+       "estSales": 0,
        "scheduled": "2026-11-17",
        "isLead": false,
-       "cls": "demand",
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       }

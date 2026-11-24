@@ -1,7 +1,7 @@
 {
  "date": "2026-11-21",
- "source": "5_Daily Job Detail_Dated 11_16_26 - 11_22_26.xlsx",
- "savedAt": "2026-11-23T13:47:16.578Z",
+ "source": "5_Daily Job Detail_Dated 11_17_26 - 11_23_26.xlsx",
+ "savedAt": "2026-11-24T13:47:04.116Z",
  "total": 992.42,
  "firstTotal": 992.42,
  "jobs": [
@@ -24,6 +24,24 @@
    "isLead": false
   },
   {
+   "job": "442169643",
+   "type": "Garbage Disposal Concern",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "tech": "Derrick B.",
+   "techs": "Derrick B.",
+   "opp": true,
+   "converted": true,
+   "warranty": false,
+   "recall": false,
+   "revenue": 277.1,
+   "soldBy": "",
+   "estimates": 1,
+   "estSales": 291.65,
+   "scheduled": "2026-11-21",
+   "isLead": false
+  },
+  {
    "job": "442171432",
    "type": "Well Pump Concern",
    "bu": "Plumbing Demand",
@@ -38,24 +56,6 @@
    "soldBy": "",
    "estimates": 1,
    "estSales": 380.29,
-   "scheduled": "2026-11-21",
-   "isLead": false
-  },
-  {
-   "job": "442169643",
-   "type": "Garbage Disposal Concern",
-   "bu": "Plumbing Demand",
-   "dept": "Plumbing",
-   "tech": "Derrick B.",
-   "techs": "Derrick B.",
-   "opp": true,
-   "converted": true,
-   "warranty": false,
-   "recall": true,
-   "revenue": 277.1,
-   "soldBy": "",
-   "estimates": 1,
-   "estSales": 291.65,
    "scheduled": "2026-11-21",
    "isLead": false
   },

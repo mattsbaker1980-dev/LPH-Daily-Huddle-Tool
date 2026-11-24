@@ -1,6 +1,6 @@
 {
  "date": "2026-11-16",
- "generatedAt": "2026-11-23T13:47:16.814Z",
+ "generatedAt": "2026-11-24T13:47:04.399Z",
  "plan": {
   "date": "2026-11-16",
   "capturedFrom": "3_Sold Work_Dated 11_16_26 - 11_16_26.xlsx",
@@ -853,7 +853,7 @@
        "appt": "11:20",
        "cls": "spp",
        "excluded": null,
-       "later": "board:2026-11-23"
+       "later": "2026-11-23"
       },
       {
        "job": "440454219",
@@ -871,7 +871,7 @@
        "appt": "10:30",
        "cls": "spp",
        "excluded": null,
-       "later": "board:2026-11-23"
+       "later": "2026-11-23"
       },
       {
        "job": "298733948",
@@ -979,7 +979,7 @@
        "appt": "12:14",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-24"
       },
       {
        "job": "438736703",
