@@ -1,6 +1,6 @@
 {
  "date": "2026-11-18",
- "generatedAt": "2026-11-24T13:47:04.412Z",
+ "generatedAt": "2026-11-25T13:46:41.762Z",
  "plan": {
   "date": "2026-11-18",
   "capturedFrom": "1_Sold Work_Dated 11_18_26 - 11_18_26.xlsx",
@@ -681,7 +681,7 @@
  },
  "results": {
   "date": "2026-11-18",
-  "source": "5_Daily Job Detail_Dated 11_17_26 - 11_23_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_18_26 - 11_24_26.xlsx",
   "firstTotal": 11654.29,
   "depts": {
    "Plumbing": {
@@ -912,27 +912,6 @@
      ],
      "added": [
       {
-       "job": "441340975",
-       "type": "Estimate - Plumbing - Functional",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Josh T.",
-       "techs": "Josh T.",
-       "opp": true,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 1,
-       "estSales": 0,
-       "scheduled": "2026-11-18",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "441085764",
        "type": "Plumbing System Check",
        "bu": "Plumbing COD System Ck",
@@ -971,6 +950,27 @@
        "scheduled": "2026-11-18",
        "isLead": false,
        "cls": "wcn",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "441340975",
+       "type": "Estimate - Plumbing - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Josh T.",
+       "techs": "Josh T.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 1,
+       "estSales": 0,
+       "scheduled": "2026-11-18",
+       "isLead": false,
+       "cls": "demand",
        "planned": false,
        "plannedAs": null
       },

@@ -1,10 +1,28 @@
 {
  "date": "2026-11-21",
- "source": "5_Daily Job Detail_Dated 11_17_26 - 11_23_26.xlsx",
- "savedAt": "2026-11-24T13:47:04.116Z",
+ "source": "0_Daily Job Detail_Dated 11_18_26 - 11_24_26.xlsx",
+ "savedAt": "2026-11-25T13:46:41.497Z",
  "total": 992.42,
  "firstTotal": 992.42,
  "jobs": [
+  {
+   "job": "442142562",
+   "type": "Sold Work - Plumbing",
+   "bu": "Plumbing Demand",
+   "dept": "Plumbing",
+   "tech": "Bill P.",
+   "techs": "Ethan J., Bill P.",
+   "opp": false,
+   "converted": false,
+   "warranty": false,
+   "recall": false,
+   "revenue": 0,
+   "soldBy": "",
+   "estimates": 0,
+   "estSales": 0,
+   "scheduled": "2026-11-21",
+   "isLead": false
+  },
   {
    "job": "442170024",
    "type": "Garbage Disposal Concern",
@@ -56,24 +74,6 @@
    "soldBy": "",
    "estimates": 1,
    "estSales": 380.29,
-   "scheduled": "2026-11-21",
-   "isLead": false
-  },
-  {
-   "job": "442142562",
-   "type": "Sold Work - Plumbing",
-   "bu": "Plumbing Demand",
-   "dept": "Plumbing",
-   "tech": "Bill P.",
-   "techs": "Ethan J., Bill P.",
-   "opp": false,
-   "converted": false,
-   "warranty": false,
-   "recall": false,
-   "revenue": 0,
-   "soldBy": "",
-   "estimates": 0,
-   "estSales": 0,
    "scheduled": "2026-11-21",
    "isLead": false
   }

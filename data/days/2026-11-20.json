@@ -1,6 +1,6 @@
 {
  "date": "2026-11-20",
- "generatedAt": "2026-11-24T13:47:04.425Z",
+ "generatedAt": "2026-11-25T13:46:41.773Z",
  "plan": {
   "date": "2026-11-20",
   "capturedFrom": "1_Sold Work_Dated 11_20_26 - 11_20_26.xlsx",
@@ -630,7 +630,7 @@
  },
  "results": {
   "date": "2026-11-20",
-  "source": "5_Daily Job Detail_Dated 11_17_26 - 11_23_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_18_26 - 11_24_26.xlsx",
   "firstTotal": 17355.62,
   "depts": {
    "Plumbing": {
@@ -708,7 +708,7 @@
         "tech": "Tylor",
         "type": "Warranty Repair - Plumbing",
         "planned": 0,
-        "later": "board:2026-11-24"
+        "later": "2026-11-24"
        }
       ]
      }
@@ -790,7 +790,7 @@
         "tech": "Tylor",
         "type": "Warranty Repair - Plumbing",
         "planned": 0,
-        "later": "board:2026-11-24"
+        "later": "2026-11-24"
        }
       ],
       "added": []
@@ -837,7 +837,7 @@
        "appt": "10:32",
        "cls": "spp",
        "excluded": null,
-       "later": "board:2026-11-24"
+       "later": "2026-11-24"
       },
       {
        "job": "344857662",
@@ -891,31 +891,10 @@
        "appt": "10:30",
        "cls": "sold",
        "excluded": null,
-       "later": "board:2026-11-24"
+       "later": "2026-11-24"
       }
      ],
      "added": [
-      {
-       "job": "442056568",
-       "type": "Well Pump Concern",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Ethan J.",
-       "techs": "Ethan J.",
-       "opp": true,
-       "converted": true,
-       "warranty": false,
-       "recall": false,
-       "revenue": 8872.78,
-       "soldBy": "",
-       "estimates": 3,
-       "estSales": 8872.78,
-       "scheduled": "2026-11-20",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
       {
        "job": "441977971",
        "type": "Toilet Concern",
@@ -959,6 +938,27 @@
        "plannedAs": null
       },
       {
+       "job": "442007216",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Josh T.",
+       "techs": "Josh T.",
+       "opp": false,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-20",
+       "isLead": false,
+       "cls": "wcn",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
        "job": "441990710",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
@@ -980,23 +980,23 @@
        "plannedAs": null
       },
       {
-       "job": "442007216",
-       "type": "Non-Repair - Plumbing",
+       "job": "442056568",
+       "type": "Well Pump Concern",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Josh T.",
-       "techs": "Josh T.",
-       "opp": false,
-       "converted": false,
+       "tech": "Ethan J.",
+       "techs": "Ethan J.",
+       "opp": true,
+       "converted": true,
        "warranty": false,
        "recall": false,
-       "revenue": 0,
+       "revenue": 8872.78,
        "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
+       "estimates": 3,
+       "estSales": 8872.78,
        "scheduled": "2026-11-20",
        "isLead": false,
-       "cls": "wcn",
+       "cls": "demand",
        "planned": false,
        "plannedAs": null
       },
