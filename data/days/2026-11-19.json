@@ -1,6 +1,6 @@
 {
  "date": "2026-11-19",
- "generatedAt": "2026-11-25T13:46:41.766Z",
+ "generatedAt": "2026-11-26T13:46:55.444Z",
  "plan": {
   "date": "2026-11-19",
   "capturedFrom": "1_Sold Work_Dated 11_19_26 - 11_19_26.xlsx",
@@ -579,7 +579,7 @@
  },
  "results": {
   "date": "2026-11-19",
-  "source": "0_Daily Job Detail_Dated 11_18_26 - 11_24_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_19_26 - 11_25_26.xlsx",
   "firstTotal": 10796.41,
   "depts": {
    "Plumbing": {
@@ -865,27 +865,6 @@
        "plannedAs": null
       },
       {
-       "job": "441830386",
-       "type": "Non-Repair - Plumbing",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Robert R.",
-       "techs": "Robert R.",
-       "opp": false,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-19",
-       "isLead": false,
-       "cls": "wcn",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "441756896",
        "type": "Garbage Disposal Concern",
        "bu": "Plumbing Demand",
@@ -903,6 +882,27 @@
        "scheduled": "2026-11-19",
        "isLead": false,
        "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "441830386",
+       "type": "Non-Repair - Plumbing",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Robert R.",
+       "techs": "Robert R.",
+       "opp": false,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-19",
+       "isLead": false,
+       "cls": "wcn",
        "planned": false,
        "plannedAs": null
       }

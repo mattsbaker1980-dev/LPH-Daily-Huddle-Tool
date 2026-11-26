@@ -1,6 +1,6 @@
 {
  "date": "2026-11-24",
- "generatedAt": "2026-11-25T13:46:41.787Z",
+ "generatedAt": "2026-11-26T13:46:55.464Z",
  "plan": {
   "date": "2026-11-24",
   "capturedFrom": "0_Sold Work_Dated 11_24_26 - 11_24_26.xlsx",
@@ -850,7 +850,7 @@
  },
  "results": {
   "date": "2026-11-24",
-  "source": "0_Daily Job Detail_Dated 11_18_26 - 11_24_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_19_26 - 11_25_26.xlsx",
   "firstTotal": 13735.56,
   "depts": {
    "Plumbing": {
@@ -1278,7 +1278,7 @@
        "appt": "14:00",
        "cls": "demand",
        "excluded": null,
-       "later": "board:2026-11-25"
+       "later": "2026-11-25"
       },
       {
        "job": "442438511",
@@ -1382,12 +1382,12 @@
        "plannedAs": null
       },
       {
-       "job": "442654904",
-       "type": "Water Heater Concern - Tank - Age 0-6",
+       "job": "442578158",
+       "type": "Water Treatment Concern",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Nick E.",
-       "techs": "Nick E.",
+       "tech": "Robert R.",
+       "techs": "Robert R.",
        "opp": false,
        "converted": false,
        "warranty": true,
@@ -1403,15 +1403,15 @@
        "plannedAs": null
       },
       {
-       "job": "442502726",
-       "type": "Non-Repair - Plumbing",
+       "job": "442654904",
+       "type": "Water Heater Concern - Tank - Age 0-6",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Layne B.",
-       "techs": "Layne B.",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
        "opp": false,
        "converted": false,
-       "warranty": false,
+       "warranty": true,
        "recall": false,
        "revenue": 0,
        "soldBy": "",
@@ -1445,12 +1445,12 @@
        "plannedAs": null
       },
       {
-       "job": "442572705",
+       "job": "442502726",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Josh R.",
-       "techs": "Josh R.",
+       "tech": "Layne B.",
+       "techs": "Layne B.",
        "opp": false,
        "converted": false,
        "warranty": false,
@@ -1466,15 +1466,15 @@
        "plannedAs": null
       },
       {
-       "job": "442578158",
-       "type": "Water Treatment Concern",
+       "job": "442572705",
+       "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Robert R.",
-       "techs": "Robert R.",
+       "tech": "Josh R.",
+       "techs": "Josh R.",
        "opp": false,
        "converted": false,
-       "warranty": true,
+       "warranty": false,
        "recall": false,
        "revenue": 0,
        "soldBy": "",
