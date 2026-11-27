@@ -1,6 +1,6 @@
 {
  "date": "2026-11-23",
- "generatedAt": "2026-11-26T13:46:55.456Z",
+ "generatedAt": "2026-11-27T13:46:30.715Z",
  "plan": {
   "date": "2026-11-23",
   "capturedFrom": "0_Sold Work_Dated 11_23_26 - 11_23_26.xlsx",
@@ -612,7 +612,7 @@
  },
  "results": {
   "date": "2026-11-23",
-  "source": "0_Daily Job Detail_Dated 11_19_26 - 11_25_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_20_26 - 11_26_26.xlsx",
   "firstTotal": 6058.52,
   "depts": {
    "Plumbing": {
@@ -814,7 +814,7 @@
        "appt": "12:19",
        "cls": "spp",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-27"
       },
       {
        "job": "441927046",
@@ -873,27 +873,6 @@
      ],
      "added": [
       {
-       "job": "442367535",
-       "type": "Drain Stoppage - Interior Line",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Nick E.",
-       "techs": "Nick E., Reese G.",
-       "opp": true,
-       "converted": true,
-       "warranty": false,
-       "recall": false,
-       "revenue": 242.86,
-       "soldBy": "",
-       "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-23",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
        "job": "442354748",
        "type": "Drain Stoppage - Interior Line",
        "bu": "Plumbing Demand",
@@ -905,6 +884,27 @@
        "warranty": false,
        "recall": false,
        "revenue": 79,
+       "soldBy": "",
+       "estimates": 0,
+       "estSales": 0,
+       "scheduled": "2026-11-23",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
+      {
+       "job": "442367535",
+       "type": "Drain Stoppage - Interior Line",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E., Reese G.",
+       "opp": true,
+       "converted": true,
+       "warranty": false,
+       "recall": false,
+       "revenue": 242.86,
        "soldBy": "",
        "estimates": 0,
        "estSales": 0,
@@ -1020,12 +1020,12 @@
        "plannedAs": null
       },
       {
-       "job": "442215603",
+       "job": "442291951",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Robert R.",
-       "techs": "Robert R.",
+       "tech": "Layne B.",
+       "techs": "Layne B.",
        "opp": false,
        "converted": false,
        "warranty": false,
@@ -1062,12 +1062,12 @@
        "plannedAs": null
       },
       {
-       "job": "442291951",
+       "job": "442215603",
        "type": "Non-Repair - Plumbing",
        "bu": "Plumbing Demand",
        "dept": "Plumbing",
-       "tech": "Layne B.",
-       "techs": "Layne B.",
+       "tech": "Robert R.",
+       "techs": "Robert R.",
        "opp": false,
        "converted": false,
        "warranty": false,

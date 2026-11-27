@@ -1,6 +1,6 @@
 {
  "date": "2026-11-25",
- "generatedAt": "2026-11-26T13:46:55.473Z",
+ "generatedAt": "2026-11-27T13:46:30.725Z",
  "plan": {
   "date": "2026-11-25",
   "capturedFrom": "1_Sold Work_Dated 11_25_26 - 11_25_26.xlsx",
@@ -612,7 +612,7 @@
  },
  "results": {
   "date": "2026-11-25",
-  "source": "0_Daily Job Detail_Dated 11_19_26 - 11_25_26.xlsx",
+  "source": "0_Daily Job Detail_Dated 11_20_26 - 11_26_26.xlsx",
   "firstTotal": 10283.13,
   "depts": {
    "Plumbing": {
@@ -745,8 +745,8 @@
       "planRev": 3456,
       "plannedRan": 4,
       "addedRan": 5,
-      "missed": 1,
-      "rescheduled": 0,
+      "missed": 0,
+      "rescheduled": 1,
       "reclassed": 1
      },
      "spp": {
@@ -882,7 +882,7 @@
        "appt": "09:00",
        "cls": "demand",
        "excluded": null,
-       "later": null
+       "later": "board:2026-11-27"
       },
       {
        "job": "442183911",
@@ -904,6 +904,27 @@
       }
      ],
      "added": [
+      {
+       "job": "442733519",
+       "type": "Estimate - Plumbing - Functional",
+       "bu": "Plumbing Demand",
+       "dept": "Plumbing",
+       "tech": "Nick E.",
+       "techs": "Nick E.",
+       "opp": true,
+       "converted": false,
+       "warranty": false,
+       "recall": false,
+       "revenue": 0,
+       "soldBy": "",
+       "estimates": 4,
+       "estSales": 0,
+       "scheduled": "2026-11-25",
+       "isLead": false,
+       "cls": "demand",
+       "planned": false,
+       "plannedAs": null
+      },
       {
        "job": "442758865",
        "type": "Drain Stoppage - Interior Line",
@@ -960,27 +981,6 @@
        "revenue": 49,
        "soldBy": "",
        "estimates": 0,
-       "estSales": 0,
-       "scheduled": "2026-11-25",
-       "isLead": false,
-       "cls": "demand",
-       "planned": false,
-       "plannedAs": null
-      },
-      {
-       "job": "442733519",
-       "type": "Estimate - Plumbing - Functional",
-       "bu": "Plumbing Demand",
-       "dept": "Plumbing",
-       "tech": "Nick E.",
-       "techs": "Nick E.",
-       "opp": true,
-       "converted": false,
-       "warranty": false,
-       "recall": false,
-       "revenue": 0,
-       "soldBy": "",
-       "estimates": 4,
        "estSales": 0,
        "scheduled": "2026-11-25",
        "isLead": false,
@@ -1232,12 +1232,12 @@
   }
  },
  "why": {
-  "Plumbing": "Demand: Conv 44% vs 72% - Avg $986 vs $800 - Ran 9 vs 6 scheduled (1 didn't run, 1 went to warranty/callback, 5 added). SPP: Conv 25% vs 40% - Avg $189 vs $350 - Ran 8 vs 11 scheduled (2 rescheduled, 1 went to warranty/callback). 1 dispatch fee not charged ($79 – no reason in notes).",
+  "Plumbing": "Demand: Conv 44% vs 72% - Avg $986 vs $800 - Ran 9 vs 6 scheduled (1 rescheduled, 1 went to warranty/callback, 5 added). SPP: Conv 25% vs 40% - Avg $189 vs $350 - Ran 8 vs 11 scheduled (2 rescheduled, 1 went to warranty/callback). 1 dispatch fee not charged ($79 – no reason in notes).",
   "Sewer Service": "Demand: Conv 0% vs 60% - Ran 1 vs 1 scheduled.",
   "Sewer Install": "On plan."
  },
  "whyLong": {
-  "Plumbing": "Plumbing missed projection by $858 ($10,283 vs $11,141). Ran 9 demand calls vs 6 planned (1 planned didn't run, 1 went to warranty/callback, 5 added during the day) +$1,728; converted 4 of 9 (44% vs 72%) -$1,984; average demand ticket $986 vs $800 +$745 — Derrick's $3,078 water heater. Ran 8 SPP calls vs 11 planned (2 rescheduled, 1 went to warranty/callback) -$420; converted 2 of 8 (25% vs 40%) -$420. $449 of scheduled sold work didn't finish (Nick's $449 sold work).",
+  "Plumbing": "Plumbing missed projection by $858 ($10,283 vs $11,141). Ran 9 demand calls vs 6 planned (1 rescheduled, 1 went to warranty/callback, 5 added during the day) +$1,728; converted 4 of 9 (44% vs 72%) -$1,984; average demand ticket $986 vs $800 +$745 — Derrick's $3,078 water heater. Ran 8 SPP calls vs 11 planned (2 rescheduled, 1 went to warranty/callback) -$420; converted 2 of 8 (25% vs 40%) -$420. $449 of scheduled sold work didn't finish (Nick's $449 sold work).",
   "Sewer Service": "Sewer Service missed projection by $145 ($0 vs $145).",
   "Sewer Install": "Sewer Install landed right on projection ($0 vs $0). 0 sewer estimate visit(s) ran vs 0 scheduled."
  }
